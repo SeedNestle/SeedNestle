@@ -1,23 +1,56 @@
-/* app.component.css or styles.css */
 .full-screen-container {
-    position: fixed;    /* Fix the container in place */
-    top: 0;             /* Align to the top of the viewport */
-    left: 0;            /* Align to the left of the viewport */
-    width: 100vw;       /* Take full width of the viewport */
-    height: 100vh;      /* Take full height of the viewport */
-    display: flex;
-    justify-content: center;  /* Centers the image horizontally */
-    align-items: center;      /* Centers the image vertically */
-    overflow: hidden;   /* Prevent scrolling */
-  }
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #000000;
+}
+
+.center-image {
+  width: 50%;
+  height: 60%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
   .center-image {
-    width: 50%;         /* Make image take the full width */
-    height: 60%;        /* Make image take the full height */
-    object-fit: cover;   /* Ensure the image covers the container, cropping if needed */
+      width: 70%;
+      height: auto;
   }
-  
-/* From Uiverse.io by Li-Deheng */ 
+  h1 {
+      font-size: 1.8em;
+      top: 20px;
+      left: 10px;
+  }
+  .loader .circle {
+      width: 15px;
+      height: 15px;
+      margin: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .center-image {
+      width: 80%;
+      height: auto;
+  }
+  h1 {
+      font-size: 1.5em;
+      top: 10px;
+      left: 5px;
+  }
+  .loader .circle {
+      width: 10px;
+      height: 10px;
+      margin: 4px;
+  }
+}
+
 .loader {
   display: flex;
   justify-content: center;
@@ -113,67 +146,60 @@
 
 @keyframes circle-keys {
   0% {
-    transform: scale(1);
-    opacity: 1;
+      transform: scale(1);
+      opacity: 1;
   }
-
   50% {
-    transform: scale(1.5);
-    opacity: 0.5;
+      transform: scale(1.5);
+      opacity: 0.5;
   }
-
   100% {
-    transform: scale(1);
-    opacity: 1;
+      transform: scale(1);
+      opacity: 1;
   }
 }
 
 @keyframes dot-keys {
   0% {
-    transform: scale(1);
+      transform: scale(1);
   }
-
   50% {
-    transform: scale(0);
+      transform: scale(0);
   }
-
   100% {
-    transform: scale(1);
+      transform: scale(1);
   }
 }
 
 @keyframes outline-keys {
   0% {
-    transform: scale(0);
-    outline: solid 20px var(--color);
-    outline-offset: 0;
-    opacity: 1;
+      transform: scale(0);
+      outline: solid 20px var(--color);
+      outline-offset: 0;
+      opacity: 1;
   }
-
   100% {
-    transform: scale(1);
-    outline: solid 0 transparent;
-    outline-offset: 20px;
-    opacity: 0;
+      transform: scale(1);
+      outline: solid 0 transparent;
+      outline-offset: 20px;
+      opacity: 0;
   }
 }
-
 
 @keyframes colorChange {
-  0% { color: #087246; }   /* Red */
-  25% { color: #1f381e; }  /* Orange */
-  50% { color: #167008; }  /* Yellow */
-  75% { color: #224522; }  /* Green */
-  100% { color: #7df282; } /* Back to Red */
+  0% { color: #087246; }
+  25% { color: #1f381e; }
+  50% { color: #167008; }
+  75% { color: #224522; }
+  100% { color: #7df282; }
 }
 
-/* Apply animation to h1 element */
 h1 {
   font-family: Arial, sans-serif;
   font-size: 2em;
   position: absolute;
-      top: 60px;     /* Distance from the top */
-      left: 20px;    /* Distance from the left */
-      margin: 0;
-      animation: colorChange 3s infinite;  /* 3 seconds for a smooth loop */
+  top: 80px;
+  left: 20px;
+  margin: 0;
+  animation: colorChange 3s infinite;
 }
