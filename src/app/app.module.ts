@@ -6,6 +6,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 
+import { AchivementsComponent } from './components/achivements/achivements.component';
+import { GalleryComponent } from './components/gallery/gallery.component';
+
 // import other components...
 
 import { routes } from './app.routes'; // Import routes from app.routes.ts
@@ -16,6 +19,8 @@ import { routes } from './app.routes'; // Import routes from app.routes.ts
     HeaderComponent,
     FooterComponent,
     HomeComponent,
+    AchivementsComponent,
+    GalleryComponent
     
     // other components...
   ],
