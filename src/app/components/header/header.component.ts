@@ -19,4 +19,7 @@ export class HeaderComponent {
 achivements(){
   this.router.navigate(['/achivements']);
 }
+products(){
+  this.router.navigate(['/products']);
+}
 }

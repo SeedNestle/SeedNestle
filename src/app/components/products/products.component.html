@@ -1,0 +1,12 @@
+<p>Products works!</p>
+<h2>Cart Items</h2>
+
+<div *ngFor="let cart of cartItems">
+  <h3>Cart ID: {{ cart.id }}</h3>
+  <ul>
+    <li *ngFor="let item of cart.items">
+      Product ID: {{ item.productID }}, Name: {{ item.name }}, 
+      Quantity: {{ item.quantity }}, Price: {{ item.price }}
+    </li>
+  </ul>
+</div>

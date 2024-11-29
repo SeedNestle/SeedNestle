@@ -3,10 +3,12 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 
+import { ProductsComponent } from './components/products/products.component';
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, FooterComponent], // Import HeaderComponent and FooterComponent here
+  imports: [RouterOutlet, HeaderComponent, FooterComponent], 
   template: `
     <app-header></app-header>
     <router-outlet></router-outlet>
