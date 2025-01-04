@@ -1,82 +1,104 @@
 /* Navbar container */
 .navbar {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    background-color: #333;
-    padding: 10px 20px;
-    position: relative;
-  }
-  
-  /* Logo and text styling */
-  .navbar-brand {
-    display: flex;
-    align-items: center;
-    color: white;
-    text-decoration: none;
-  }
-  
-  .navbar-brand img {
-    margin-right: 10px;  /* Space between logo and text */
-  }
-  
-  .navbar-brand span {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  /* Navigation Links */
-  .nav-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;  /* Take up remaining space to center the links */
-    padding-left: 100px; /* Offset for logo + text */
-  }
-  
-  .nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    padding: 8px 16px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .nav-links a:hover {
-    background-color: #555;
-    border-radius: 4px;
-  }
-  
-  /* Icons for Account and Cart */
-  .header-icons {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .header-icons i {
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
-  }
-  
-  .header-icons i:hover {
-    color: #f8a;
-  }
-  
-  /* Media query for mobile responsiveness */
-  @media screen and (max-width: 768px) {
-    .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #54554a;
+  padding: 10px 20px;
+  position: relative;
+}
+
+/* Logo and text styling */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-brand img {
+  margin-right: 10px; /* Space between logo and text */
+}
+
+.navbar-brand span {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;  /* Take up remaining space to center the links */
+  padding-left: 100px; /* Offset for logo + text */
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 16px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: #555;
+  border-radius: 4px;
+}
+
+/* Icons for Account and Cart */
+.header-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.header-icons i {
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.header-icons i:hover {
+  color: #f8a;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+  display: none; /* Hidden by default */
+  cursor: pointer;
+  font-size: 30px;
+  color: white;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .navbar {
       flex-direction: column;
       align-items: flex-start;
-    }
-  
-    .nav-links {
+  }
+
+  .nav-links {
+      display: none; /* Hide nav links on mobile */
       flex-direction: column;
       gap: 10px;
-    }
-  
-    .header-icons {
-      margin-top: 10px;
-    }
+      width: 100%; /* Ensure the links take full width on mobile */
+      padding: 10px 0;
   }
-  
+
+  .header-icons {
+      margin-top: 10px;
+  }
+
+  /* Show hamburger menu on mobile */
+  .hamburger-menu {
+      display: block;
+      color: white;
+      background-color: white;
+  }
+
+  /* Show the menu when it's active */
+  .nav-links.active {
+      display: flex;
+  }
+}

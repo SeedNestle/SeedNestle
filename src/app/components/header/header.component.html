@@ -1,25 +1,32 @@
-<!-- Logo with Text -->
-<nav class="navbar">
-    <a class="navbar-brand" href="#">
 
+<nav class="navbar">
+  <a class="navbar-brand" href="#">
       <img src="../../../assets/toplogo.png" width="50" height="50" class="d-inline-block align-top" alt="Company Logo">
       SEEDNESTLE
-    </a>
- 
-  
-  <!-- Navigation Links -->
-  <nav class="nav-links">
-    <a routerLink="/home">Home</a>
-    <a routerLink="/shop">Shop</a>
-    <a routerLink="/categories" (click)="products()">products</a>
-    <a routerLink="/deals" (click)="achivements()">achivements</a>
-    <a routerLink="/gallery" (click)="gallery()">gallery</a>
-  </nav>
-  
-  <!-- Icons for User Account and Cart -->
-  <div class="header-icons">
-    <i class="fas fa-user"></i> <!-- Account Icon -->
-    <i class="fas fa-shopping-cart"></i> <!-- Cart Icon -->
-  </div>
+  </a>
 
+
+
+  <!-- Navigation Links (Initially hidden on mobile) -->
+  <nav class="nav-links">
+      <a routerLink="/home">Home</a>
+      <a routerLink="/shop">Shop</a>
+      <a routerLink="/categories" (click)="products()">Products</a>
+      <a routerLink="/deals" (click)="achivements()">Achievements</a>
+      <a routerLink="/gallery" (click)="gallery()">Gallery</a>
   </nav>
+
+ 
+</nav>
+
+
+
+<script>
+  // Toggle the nav-links when hamburger icon is clicked
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+
+  hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+  });
+</script>
