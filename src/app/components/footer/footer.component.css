@@ -9,7 +9,7 @@ body, html {
 
 /* Content wrapper to take up remaining space */
 .content-wrap {
-    flex: 1;
+    flex: 1; /* Ensures the content takes up the remaining space */
 }
 
 /* Footer styling */
@@ -20,13 +20,16 @@ footer {
     color: #ffffff;
     padding: 20px 0;
     width: 100%;
+    flex-shrink: 0; /* Ensures footer doesn't shrink when content is minimal */
 }
 
+/* Footer section headings */
 .footer-section h3 {
     color: #f5a623;
     margin-bottom: 10px;
 }
 
+/* Footer section list */
 .footer-section ul {
     list-style: none;
     padding: 0;
@@ -63,5 +66,19 @@ footer {
     background-color: #000000;
     color: #ffffff;
     width: 100%;
-    flex-shrink: 0;
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+/* Feature icon styling */
+.feature-icon {
+    width: 50px; /* Adjust the size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Slightly round the corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover animation */
+}
+
+.feature-icon:hover {
+    transform: scale(1.1); /* Enlarge slightly on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Make the shadow more prominent */
 }

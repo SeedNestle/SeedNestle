@@ -3,10 +3,24 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #54554a;
+  background-color: #0f3f02;
   padding: 10px 20px;
   position: relative;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
+.navbar-brand img {
+  width: 50px; /* Ensure the size is consistent */
+  height: 50px;
+  border-radius: 30%; /* Makes the image round */
+  transition: transform 0.3s ease; /* Smooth zoom effect */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for better visibility */
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.2); /* Zoom effect on hover */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Enhance shadow during zoom */
+}
+
 
 /* Logo and text styling */
 .navbar-brand {
@@ -14,15 +28,12 @@
   align-items: center;
   color: white;
   text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .navbar-brand img {
   margin-right: 10px; /* Space between logo and text */
-}
-
-.navbar-brand span {
-  font-size: 24px;
-  font-weight: bold;
 }
 
 /* Navigation Links */
@@ -30,8 +41,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 1;  /* Take up remaining space to center the links */
-  padding-left: 100px; /* Offset for logo + text */
+  flex: 1 1 auto; /* Flexible width for links */
 }
 
 .nav-links a {
@@ -43,62 +53,38 @@
 }
 
 .nav-links a:hover {
-  background-color: #555;
+  background-color: #88eb90;
   border-radius: 4px;
 }
 
-/* Icons for Account and Cart */
-.header-icons {
-  display: flex;
-  gap: 20px;
-}
-
-.header-icons i {
-  color: white;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-.header-icons i:hover {
-  color: #f8a;
-}
-
-/* Hamburger Menu */
-.hamburger-menu {
+/* Toggle Menu Button (Visible on Mobile) */
+.toggle-menu {
   display: none; /* Hidden by default */
   cursor: pointer;
-  font-size: 30px;
+  font-size: 24px;
   color: white;
 }
 
-/* Mobile responsiveness */
+/* Mobile Responsiveness */
 @media screen and (max-width: 768px) {
-  .navbar {
-      flex-direction: column;
-      align-items: flex-start;
-  }
-
   .nav-links {
-      display: none; /* Hide nav links on mobile */
-      flex-direction: column;
-      gap: 10px;
-      width: 100%; /* Ensure the links take full width on mobile */
-      padding: 10px 0;
+      display: none; /* Hide nav links by default */
+      flex-direction: column; /* Stack links vertically */
+      gap: 10px; /* Add spacing between links */
+      width: 100%; /* Full width for links */
+      padding: 10px 0; /* Add padding for spacing */
+      background-color:  rgba(124, 124, 124, 0.8); /* Match navbar background */
+      position: absolute; /* Overlay the links */
+      top: 50px; /* Position below the navbar */
+      left: 0;
+      z-index: 20;
   }
 
-  .header-icons {
-      margin-top: 10px;
-  }
-
-  /* Show hamburger menu on mobile */
-  .hamburger-menu {
-      display: block;
-      color: white;
-      background-color: white;
-  }
-
-  /* Show the menu when it's active */
   .nav-links.active {
-      display: flex;
+      display: flex; /* Show links when active */
+  }
+
+  .toggle-menu {
+      display: block; /* Show the toggle menu button */
   }
 }
