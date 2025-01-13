@@ -1,5 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 /* styles.css */
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+} */
 body {
     background-color: rgba(247, 247, 247, 0.735);
     color: rgb(199, 236, 194);  /* Optional: Change text color to make it visible on black background */
