@@ -100,13 +100,13 @@ body {
 /* Media Query for Small Screens (Mobile) */
 @media (max-width: 768px) {
     .card {
-        width: calc(50% - 8px); /* Two cards per row with a gap */
+        width: calc(50% - 16px); /* Two cards per row with a gap */
     }
 }
 
 /* Media Query for Extra Small Screens (Mobile < 480px) */
 @media (max-width: 480px) {
     .card {
-        width: 100%; /* One card per row */
+        width: calc(50% - 8px); /* One card per row */
     }
 }

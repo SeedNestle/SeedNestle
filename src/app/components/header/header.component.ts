@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class HeaderComponent {
   constructor(private router: Router) {}
 
-  menuOpen = false;
+  menuOpen : boolean = false;
 
   toggleMenu(): void {
     this.menuOpen = !this.menuOpen;
@@ -18,14 +18,21 @@ export class HeaderComponent {
 
   gallery() {
     this.router.navigate(['/gallery']);
-    
-    
- 
-}
-achivements(){
-  this.router.navigate(['/achivements']);
-}
-products(){
-  this.router.navigate(['/products']);
-}
+  }
+
+  achivements() {
+    this.router.navigate(['/achivements']);
+  }
+
+  products() {
+    this.router.navigate(['/products']);
+  }
+
+  closeMenu() {
+    this.menuOpen = false; // Close the menu when a link is clicked
+  }
+
+  home() {
+    this.router.navigate(['/home']);
+  }
 }

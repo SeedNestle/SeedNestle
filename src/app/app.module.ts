@@ -14,6 +14,7 @@ import { environment } from '../environment'; // Ensure this points to your envi
 // import other components...
 
 import { routes } from './app.routes'; // Import routes from app.routes.ts
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { routes } from './app.routes'; // Import routes from app.routes.ts
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
+    CommonModule
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
   ],
