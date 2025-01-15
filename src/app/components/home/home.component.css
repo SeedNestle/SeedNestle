@@ -12,7 +12,7 @@ body, html {
 }
 
 /* Main Landing Page Container */
-.landing-container {
+.landing-container { 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,7 +74,7 @@ body, html {
 @media screen and (max-width: 768px) {
     .landing-container{
         height: 80vh;
-        width: 80vh;
+        
         
     }
     .landing-content h1 {
@@ -90,11 +90,17 @@ body, html {
         padding: 8px 16px;
     }
 }
+@media screen and (max-width: 412px) {
+    .landing-container {
+        height: 100vh;
+        background-size: cover; /* Ensures the image covers the container */
+        background-position: center; /* Center the image */
+    }
 
 
 
 
-
+  }
 
 
 
@@ -389,7 +395,7 @@ h1 {
   .subscribe button:hover {
     background-color: #556b2f;
   }
-  /* From Uiverse.io by MuhammadHasann */ 
+   
 button {
     position: relative;
     padding: 15px 45px;
@@ -539,5 +545,124 @@ button {
       padding: 8px 16px;
       font-size: 12px;
     }
+  }
+
+
+  /* follow us on insta */
+
+  .follow-insta {
+    text-align: center;
+    margin: 20px;
+  
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: #6aa84f;
+    }
+  
+    .insta-row {
+      display: flex;
+      flex-wrap: wrap; /* Keep wrapping behavior for smaller screens */
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+  
+      .insta-item {
+        flex: 1 1 calc(50% - 10px); /* Default: Two per row on smaller screens */
+        max-width: calc(50% - 10px);
+        text-align: center;
+  
+        img {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+          border-radius: 8px;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          cursor: pointer;
+        }
+  
+        img:hover {
+          transform: scale(1.05);
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+  
+    .insta-icons-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+      gap: 10px;
+  
+      .icon-item {
+        flex: 1;
+        text-align: center;
+  
+        .icon {
+          width: 42px;
+          height: 42px;
+          margin-bottom: 5px;
+        }
+  
+        p {
+          margin: 0;
+          font-size: 1rem;
+          color: #444;
+        }
+      }
+    }
+  
+    /* Media Query for Laptop Screens */
+    @media (min-width: 1024px) {
+      .insta-row, .insta-icons-row {
+        flex-wrap: nowrap; /* Prevent wrapping */
+        gap: 20px; /* Adjust gap between items for better spacing */
+      }
+  
+      .insta-item, .icon-item {
+        flex: 1 1 auto; /* Make all items take equal space in one row */
+        max-width: 20%; /* Restrict max-width to fit all items in one row */
+      }
+    }
+  
+    /* Responsive Design for Mobile Screens (Unchanged) */
+    @media (max-width: 768px) {
+      .insta-row {
+        gap: 10px;
+      }
+  
+      .insta-item {
+        flex: 1 1 calc(50% - 10px); /* Two items per row */
+        max-width: calc(50% - 10px);
+      }
+  
+      .insta-icons-row {
+        flex-wrap: nowrap; /* Prevents wrapping for icons */
+        gap: 5px; /* Reduced gap for icons */
+      }
+  
+      .icon-item {
+        flex: 1 1 auto; /* Icons stay in one row */
+      }
+    }
+  }
+  
+  .follow-insta .insta-item img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  /* Hover effect (for desktop and tablets) */
+  .follow-insta .insta-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Tap and focus effect (for mobile devices) */
+  .follow-insta .insta-item img:active, 
+  .follow-insta .insta-item img:focus {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   }
   
