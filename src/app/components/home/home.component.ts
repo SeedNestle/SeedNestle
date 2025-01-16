@@ -8,6 +8,8 @@ import { CommonModule } from '@angular/common';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+
+  
   questions = [
     {
       title: 'I want to style my house/business with plants',
