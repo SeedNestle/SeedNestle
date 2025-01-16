@@ -8,12 +8,8 @@ import { HomeComponent } from './components/home/home.component';
 import { ProductsComponent } from './components/products/products.component';
 import { AchivementsComponent } from './components/achivements/achivements.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
-import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
-import { provideFirestore, getFirestore } from '@angular/fire/firestore';
-import { environment } from '../environment'; // Ensure this points to your environment
-// import other components...
 
-import { routes } from './app.routes'; // Import routes from app.routes.ts
+import { routes } from './app.routes';
 import { CommonModule } from '@angular/common';
 
 @NgModule({
@@ -25,17 +21,14 @@ import { CommonModule } from '@angular/common';
     AchivementsComponent,
     GalleryComponent,
     ProductsComponent
-    
-    // other components...
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
-    CommonModule,
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideFirestore(() => getFirestore()),
+    CommonModule
+   
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

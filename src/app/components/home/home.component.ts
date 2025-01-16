@@ -1,17 +1,14 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, FormsModule, HttpClientModule],
-
+  imports: [CommonModule],  // Optional, required if you use directives like *ngFor, *ngIf
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrls: ['./home.component.css']  // Corrected typo here: 'styleUrl' -> 'styleUrls'
 })
 export class HomeComponent {
-
-  
-
   questions = [
     {
       title: 'I want to style my house/business with plants',
@@ -24,8 +21,7 @@ export class HomeComponent {
       expanded: false,
     },
     {
-      title:
-        'I need someone to look after plants (personal or commercial) on an ongoing basis',
+      title: 'I need someone to look after plants (personal or commercial) on an ongoing basis',
       description: 'I’m here to help your plants thrive! Our Plant Maintenance Services keep your plants happy and healthy. Grab a quote for maintenance plan here. We offer ongoing plant care and maintenance services.',
       expanded: false,
     },
