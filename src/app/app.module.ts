@@ -31,7 +31,7 @@ import { CommonModule } from '@angular/common';
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
-    CommonModule
+    CommonModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
   ],
