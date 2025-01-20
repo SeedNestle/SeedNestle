@@ -12,8 +12,8 @@
 
   <!-- Navigation Links -->
   <nav class="nav-links" [class.active]="menuOpen">
-    <a routerLink="/home" (click)="home(); closeMenu()">Home</a>
-    <a routerLink="/deals" (click)="achivements(); closeMenu()">About Us</a>
-    <a routerLink="/gallery" (click)="gallery(); closeMenu()">Gallery</a>
+    <a (click)="navigateTo('/home');">Home</a>
+    <a (click)="navigateTo('/achivements');">About Us</a>
+    <a (click)="navigateTo('/gallery');">Gallery</a>
   </nav>
 </nav>
