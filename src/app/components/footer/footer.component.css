@@ -1,84 +1,117 @@
-/* Wrapper for the entire page to keep footer at bottom */
-body, html {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
+.footer {
+    background-color: #EFE3C2; /* Lig85A947ht beige background */
+    color: #333; /* Dark text color */
+    padding: 2rem 1rem;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  .footer-logo {
     display: flex;
     flex-direction: column;
-}
-
-/* Content wrapper to take up remaining space */
-.content-wrap {
-    flex: 1; /* Ensures the content takes up the remaining space */
-}
-
-/* Footer styling */
-footer {
-    display: flex;
-    justify-content: space-around;
-    background-color: #1c1c1c;
-    color: #ffffff;
-    padding: 20px 0;
-    width: 100%;
-    flex-shrink: 0; /* Ensures footer doesn't shrink when content is minimal */
-}
-
-/* Footer section headings */
-.footer-section h3 {
-    color: #f5a623;
-    margin-bottom: 10px;
-}
-
-/* Footer section list */
-.footer-section ul {
+    align-items: flex-start;
+    margin-right: 1rem;
+  }
+  
+  .logo {
+    width: 60px; /* Size of the main logo */
+    height: auto;
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-logo h2 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  .footer-about {
+    text-align: center;
+    flex: 1;
+    padding: 0 1rem;
+  }
+  
+  .footer-about p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0.5rem 0;
+  }
+  
+  .footer-explore,
+  .footer-contact {
+    text-align: right;
+    min-width: 200px;
+  }
+  
+  .footer-explore h3,
+  .footer-contact h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-explore ul,
+  .footer-contact ul {
     list-style: none;
     padding: 0;
-}
-
-.footer-section ul li {
-    margin: 5px 0;
-}
-
-.footer-section ul li a {
-    color: #ffffff;
+  }
+  
+  .footer-explore ul li,
+  .footer-contact ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-explore ul li a,
+  .footer-contact ul li a {
     text-decoration: none;
-}
-
-.footer-section ul li a:hover {
+    color: inherit;
+  }
+  
+  .footer-explore ul li a:hover,
+  .footer-contact ul li a:hover {
     text-decoration: underline;
-}
-
-/* Social icons styling */
-.social-icons {
-    display: flex;
-    gap: 15px;
-}
-
-.social-icons a {
-    color: #ffffff;
-    font-size: 18px;
-}
-
-/* Footer Bottom Section styling */
-.footer-bottom {
-    text-align: center;
-    padding: 10px;
-    background-color: #000000;
-    color: #ffffff;
-    width: 100%;
-    flex-shrink: 0; /* Prevent shrinking */
-}
-
-/* Feature icon styling */
-.feature-icon {
-    width: 50px; /* Adjust the size */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10px; /* Slightly round the corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover animation */
-}
-
-.feature-icon:hover {
-    transform: scale(1.1); /* Enlarge slightly on hover */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Make the shadow more prominent */
-}
+  }
+  
+  /* Instagram Logo Styling */
+  .instagram-logo {
+    width: 48px; /* Small image size */
+    height: auto;
+    margin-right: 0.5rem; /* Space between logo and text */
+    vertical-align: middle; /* Align logo with text */
+  }
+  
+  .footer-contact ul li a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .footer-contact ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-logo,
+    .footer-about,
+    .footer-explore,
+    .footer-contact {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+  
+    .footer-logo {
+      align-items: center;
+    }
+  }
+  

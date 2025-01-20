@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #0f3f02;
+  background-color: #123524;
   padding: 10px 20px;
   position: relative;
   flex-wrap: wrap; /* Allow wrapping for smaller screens */
@@ -73,7 +73,8 @@
       gap: 10px; /* Add spacing between links */
       width: 100%; /* Full width for links */
       padding: 10px 0; /* Add padding for spacing */
-      background-color:  rgba(124, 124, 124, 0.8); /* Match navbar background */
+      background-color: rgba(159, 131, 131, 0.5);
+      /* Match navbar background */
       position: absolute; /* Overlay the links */
       top: 50px; /* Position below the navbar */
       left: 0;
