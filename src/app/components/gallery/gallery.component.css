@@ -102,11 +102,23 @@ body {
     .card {
         width: calc(50% - 16px); /* Two cards per row with a gap */
     }
+    .card__title {
+        font-size: 20px; /* Reduced font size for smaller screens */
+    }
+    .card__description {
+        font-size: 12px; /* Adjust description font size */
+    }
 }
 
 /* Media Query for Extra Small Screens (Mobile < 480px) */
 @media (max-width: 480px) {
     .card {
         width: calc(50% - 8px); /* One card per row */
+    }
+    .card__title {
+        font-size: 18px; /* Further reduced font size */
+    }
+    .card__description {
+        font-size: 11px; /* Smaller description font size */
     }
 }
