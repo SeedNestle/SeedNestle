@@ -38,6 +38,17 @@ body, html {
 
 
 
+/* CEO Section */
+
+/* Updated CEO Section */
+
+
+
+
+
+
+
+
 
 .features-container {
     display: flex;
@@ -216,7 +227,7 @@ h1 {
 .block {
     animation: appear linear;
     animation-timeline: view();
-    animation-range: entry 0% cover 40%;
+    animation-range: entry 20% cover 30%;
 }
 
 
