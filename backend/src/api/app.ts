@@ -7,7 +7,7 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(cors({
-  origin: '*', // This allows all domains
+  origin: 'https://seednestle.vercel.app', // This allows all domains
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify allowed methods
   credentials: true
 }));
@@ -21,11 +21,8 @@ mongoose.connect(MONGO_URI)
   .catch(err => console.error('MongoDB Connection Error:', err));
 
 // Routes
-import subscriberRoutes from './routes/subscriberRoutes';
+import subscriberRoutes from '../routes/subscriberRoutes';
 app.use('/api', subscriberRoutes);
 
 // Start Server
-const PORT = 3000;
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
+export default app;

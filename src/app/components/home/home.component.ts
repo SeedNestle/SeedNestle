@@ -25,7 +25,7 @@ export class HomeComponent {
     }
 
     // Make the API call
-    this.http.post('http://localhost:3000/api/subscribe', { email: this.email })
+    this.http.post('https://seednestle.vercel.app/api/subscribe', { email: this.email })
       .subscribe({
         next: (response: any) => {
           this.message = response.message || 'Subscription successful!';
