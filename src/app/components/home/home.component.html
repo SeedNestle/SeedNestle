@@ -114,10 +114,23 @@
 <div class="subscribe">
   <h2>Subscribe to our newsletter</h2>
   <p>Sign up and be the first to know of sales, events and exclusives</p>
-  <form  >
-    <input  type="email" placeholder="Your email"  name="email" required  />
+  <div *ngIf="isError && message" class="error">
+    {{ message }}
+  </div>
 
-<button type="submit" >
+  <!-- Success message -->
+  <div *ngIf="!isError && message" class="message-success">
+    {{ message }}
+  </div>
+  <form  >
+    <input
+    type="email"
+    [(ngModel)]="email"
+    name="email"
+    placeholder="Enter your email"
+    required
+  />
+<button type="submit" (click)="subscribe()">
   Submit
   <div class="icon-1">
     <svg

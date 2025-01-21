@@ -45,7 +45,7 @@
 }
 
 .nav-links a {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 253, 253);
   text-decoration: none;
   font-size: 16px;
   padding: 8px 16px;
@@ -73,12 +73,18 @@
       gap: 10px; /* Add spacing between links */
       width: 100%; /* Full width for links */
       padding: 10px 0; /* Add padding for spacing */
-      background-color: rgba(198, 228, 229, 0.379);
+      background-color: rgba(198, 228, 229, 0.507);
       /* Match navbar background */
       position: absolute; /* Overlay the links */
       top: 50px; /* Position below the navbar */
       left: 0;
       z-index: 20;
+  
+ 
+      
+  }
+  .nav-links a {
+    color: black;
   }
 
   .nav-links.active {

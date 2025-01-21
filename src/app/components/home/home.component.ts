@@ -1,14 +1,54 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { FormsModule } from '@angular/forms'; // Required for ngModel
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule],  // Optional, required if you use directives like *ngFor, *ngIf
+  imports: [CommonModule,FormsModule,HttpClientModule],  // Optional, required if you use directives like *ngFor, *ngIf
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']  // Corrected typo here: 'styleUrl' -> 'styleUrls'
 })
 export class HomeComponent {
+  email: string = '';
+  message: string = ''; // To display success or error messages
+  isError: boolean = false; // To style the message accordingly
+
+  constructor(private http: HttpClient) {}
+
+  subscribe() {
+    // Validate email format before making the request
+    if (!this.isValidEmail(this.email)) {
+      this.message = 'Enter a valid email address';
+      this.isError = true;
+      return;
+    }
+
+    // Make the API call
+    this.http.post('http://localhost:3000/api/subscribe', { email: this.email })
+      .subscribe({
+        next: (response: any) => {
+          this.message = response.message || 'Subscription successful!';
+          this.isError = false; // Success message
+        },
+        error: (error: any) => {
+          this.message = error.error.error || 'Failed to subscribe';
+          this.isError = true; // Error message
+        }
+      });
+  }
+
+  isValidEmail(email: string): boolean {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+
+  
+
+
+
+
+
   questions = [
     {
       title: 'I want to style my house/business with plants',
