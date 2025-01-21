@@ -6,7 +6,12 @@ const app = express();
 
 // Middleware
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: '*', // This allows all domains
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify allowed methods
+  credentials: true
+}));
+
 
 // MongoDB Connection String
 const MONGO_URI = 'mongodb+srv://admin:admin%400258@seednestledb.8odvf.mongodb.net/?retryWrites=true&w=majority&appName=SeedNestleDB';

@@ -40,7 +40,7 @@ router.post('/subscribe', async (req: Request, res: Response): Promise<void> => 
     res.status(201).json({ message: 'Subscription successful' });
   } catch (error) {
     console.error(error);
-    res.status(500).json({ error: 'Failed to subscribe ,' });
+    res.status(500).json({ error: 'Failed to subscribe' });
   }
 });
 
