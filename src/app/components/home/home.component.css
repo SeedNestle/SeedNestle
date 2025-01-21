@@ -289,28 +289,6 @@ h1 {
     }
   }
   
-/* Error message container */
-/* Error message styles */
-.error {
-  color: red;
-  font-size: 16px;
-  margin-top: 20px;
-  border: 1px solid red;
-  padding: 10px;
-  border-radius: 4px;
-  background-color: #ffe6e6;
-}
-
-/* Success message styles */
-.message-success {
-  color: green !important;
-  font-size: 16px;
-  margin-top: 20px;
-  border: 1px solid green;
-  padding: 10px;
-  border-radius: 4px;
-  background-color: #e6ffe6;
-}
 
 
   /* subscribe */
