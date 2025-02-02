@@ -1,3 +1,7 @@
-import app from './api/app';
+import app from "./api/app";
 
-export default app;
+const PORT = process.env.PORT || 3001;
+
+app.listen(PORT, () => {
+  console.log(`✅ Server is running on port ${PORT}`);
+});
