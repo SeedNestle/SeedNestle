@@ -2,12 +2,12 @@
   "version": 2,
   "builds": [
     {
-      "src": "dist/seed-nestle/browser/**",
-      "use": "@vercel/static"
-    },
-    {
       "src": "backend/dist/api/app.js",
       "use": "@vercel/node"
+    },
+    {
+      "src": "dist/seed-nestle/browser/**",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
