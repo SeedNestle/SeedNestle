@@ -6,8 +6,8 @@
       "use": "@vercel/node"
     },
     {
-      "src": "dist/seed-nestle/browser/**",
-      "use": "@vercel/static-build"
+      "src": "dist/seed-nestle/browser/**/*",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
