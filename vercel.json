@@ -20,5 +20,5 @@
       "dest": "/index.html"
     }
   ],
-  "public": "dist/seed-nestle/browser"
+  "public": true  
 }
