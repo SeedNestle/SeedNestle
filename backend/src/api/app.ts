@@ -9,7 +9,7 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 app.use(cors({
-  origin: 'https://seednestle.vercel.app', // Allow frontend requests
+  origin: '*', // Allow frontend requests
   methods: ['GET', 'POST'],
   credentials: true
 }));
