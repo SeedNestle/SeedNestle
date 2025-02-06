@@ -2,18 +2,17 @@
   "version": 2,
   "builds": [
     {
-      "src": "dist/seed-nestle/browser/**",
-      "use": "@vercel/static"
+      "src": "angular.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist/seed-nestle/browser"
+      }
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/dist/seed-nestle/browser/$1"
-    },
-    {
-      "src": "/",
-      "dest": "/dist/seed-nestle/browser/index.html"
+      "dest": "/index.html"
     }
   ]
 }
