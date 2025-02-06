@@ -2,14 +2,23 @@
   "version": 2,
   "builds": [
     {
+      "src": "backend/dist/api/app.js",
+      "use": "@vercel/node"
+    },
+    {
       "src": "package.json",
       "use": "@vercel/static-build"
     }
   ],
   "routes": [
     {
+      "src": "/api/(.*)",
+      "dest": "backend/dist/api/app.js"
+    },
+    {
       "src": "/(.*)",
       "dest": "/index.html"
     }
-  ]
+  ],
+  "public": "dist/seed-nestle/browser"
 }
