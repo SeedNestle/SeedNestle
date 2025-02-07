@@ -6,8 +6,7 @@
     "start": "ng serve",
     "build": "ng build --configuration=production",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "serve:ssr:SeedNestle": "node dist/seed-nestle/server/server.mjs"
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {
@@ -19,17 +18,16 @@
     "@angular/forms": "^17.3.0",
     "@angular/platform-browser": "^17.3.0",
     "@angular/platform-browser-dynamic": "^17.3.0",
-    "@angular/platform-server": "^17.3.0",
     "@angular/router": "^17.3.0",
     "@vercel/analytics": "^1.4.1",
     "bootstrap": "^5.3.3",
-    "firebase": "^11.3.0",
+    "firebase": "^10.14.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.14.3"
+    "zone.js": "^0.15.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^17.3.11",
+    "@angular-devkit/build-angular": "^17.3.9",
     "@angular/cli": "^17.3.11",
     "@angular/compiler-cli": "^17.3.0",
     "@types/jasmine": "~5.1.0",
