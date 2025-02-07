@@ -1,24 +1,10 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "backend/dist/api/app.js",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build"
-    }
-  ],
+  "build": {
+    "src": "angular.json",
+    "use": "@vercel/static-build",
+    "config": {}
+  },
   "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "backend/dist/api/app.js"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
-  ],
-  "public": true  
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
 }
