@@ -1,54 +1,89 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms'; // Required for ngModel
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { HttpClient, HttpClientModule, HttpHeaders } from '@angular/common/http';
+
+interface ApiResponse {
+  message: string;
+  status: number;
+}
+
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule,FormsModule,HttpClientModule],  // Optional, required if you use directives like *ngFor, *ngIf
+  imports: [CommonModule, FormsModule, HttpClientModule],
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']  // Corrected typo here: 'styleUrl' -> 'styleUrls'
+  styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
   email: string = '';
-  message: string = ''; // To display success or error messages
-  isError: boolean = false; // To style the message accordingly
+  message: string = ''; 
+  isError: boolean = false; 
 
   constructor(private http: HttpClient) {}
 
   subscribe() {
-    // Validate email format before making the request
-    if (!this.isValidEmail(this.email)) {
-      this.message = 'Enter a valid email address';
+    const trimmedEmail = this.email.trim();
+
+    if (!this.isValidEmail(trimmedEmail)) {
+      this.message = '❌ Enter a valid email address';
       this.isError = true;
       return;
     }
 
-    // Make the API call
-    this.http.post('https://your-backend.vercel.app/api/subscribe', { email: this.email })
+    this.message = ''; // Reset message before sending request
+    this.isError = false;
 
+    const scriptURL = "https://script.google.com/macros/s/AKfycby3Aw1w_4CEi3iZzbVA3lDjzj0yA6q7JuT63zwWoGg5pppsyogoCXOsSef7F5R-2-SMIw/exec";
+    const formData = { email: trimmedEmail };
+
+    const headers = new HttpHeaders({
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "POST, GET, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type"
+    });
+
+    this.http.post<ApiResponse>(scriptURL, formData, { headers, responseType: 'json' })
       .subscribe({
-        next: (response: any) => {
-          this.message = response.message || 'Subscription successful!';
-          this.isError = false; // Success message
+        next: (response: ApiResponse) => {
+          console.log('Response:', response);
+          this.handleResponse(response.message);
         },
         error: (error: any) => {
           console.error('Subscription Error:', error);
-          this.message = error.error.error || 'Failed to subscribe';
-          this.isError = true; // Error message
+          this.message = '❌ Failed to subscribe. Please try again.';
+          this.isError = true;
         }
       });
+  }
+
+  handleResponse(responseMessage: string) {
+    const message = responseMessage.toLowerCase().trim();
+
+    switch (message) {
+      case 'success':
+        this.message = '✅ Subscription successful!';
+        this.isError = false;
+        break;
+      case 'already registered':
+        this.message = '⚠️ Email is already registered!';
+        this.isError = true;
+        break;
+      case 'invalid email':
+        this.message = '❌ Invalid email format!';
+        this.isError = true;
+        break;
+      default:
+        this.message = '❌ Unexpected response. Try again!';
+        this.isError = true;
+    }
   }
 
   isValidEmail(email: string): boolean {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   }
-
-  
-
-
-
 
 
   questions = [
