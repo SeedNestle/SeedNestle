@@ -116,9 +116,9 @@ body {
         width: calc(50% - 8px); /* One card per row */
     }
     .card__title {
-        font-size: 18px; /* Further reduced font size */
+        font-size: 12px; /* Further reduced font size */
     }
     .card__description {
-        font-size: 11px; /* Smaller description font size */
+        font-size: 8px; /* Smaller description font size */
     }
 }
