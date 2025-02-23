@@ -1,8 +1,11 @@
-<div class="container">
-  <h2>Select a Product Type</h2>
-  <button onclick="window.angularComponent.selectType('Electronics')">Electronics</button>
-  <button onclick="window.angularComponent.selectType('Clothing')">Clothing</button>
-  <button onclick="window.angularComponent.selectType('Books')">Books</button>
-</div>
+<div class="dashboard">
+  <div class="categories">
+    <button id="plants-btn">Plants</button>
+    <button id="accessories-btn">Accessories</button>
+    <button id="fertilizers-btn">Fertilizers</button>
+  </div>
 
-<div id="product-container"></div>
+  <div id="products-container" class="products-grid">
+    <!-- Products will be dynamically inserted here -->
+  </div>
+</div>
