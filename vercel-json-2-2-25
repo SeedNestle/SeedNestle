@@ -1,24 +1,232 @@
-{
-  "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": { "distDir": "dist/seed-nestle" }
-    },
-    {
-      "src": "backend/src/index.ts",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "backend/src/index.ts"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
-  ]
+// {
+//   "version": 2,
+//   "builds": [
+//     {
+//       "src": "package.json",
+//       "use": "@vercel/static-build",
+//       "config": { "distDir": "dist/seed-nestle" }
+//     },
+//     {
+//       "src": "backend/src/index.ts",
+//       "use": "@vercel/node"
+//     }
+//   ],
+//   "routes": [
+//     {
+//       "src": "/api/(.*)",
+//       "dest": "backend/src/index.ts"
+//     },
+//     {
+//       "src": "/(.*)",
+//       "dest": "/index.html"
+//     }
+//   ]
+// }
+
+
+.dashboard {
+  padding: 20px;
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.categories button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.products-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.product-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 250px;
+  overflow: hidden;
+  padding: 15px;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.image-container {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.image-container img {
+  width: 150px !important;
+  height: 150px !important;
+  object-fit: contain; /* Maintains aspect ratio without cropping */
+}
+
+.discount-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #ffcc00;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.product-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 15px 0 5px;
+}
+
+.price {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.old-price {
+  text-decoration: line-through; /* This will create the strikethrough effect */
+  color: gray;
+  margin-right: 5px;
+  font-size: 14px;
+}
+
+
+.new-price {
+  color: green;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.rating {
+  color: #f4c430;
+  font-size: 16px;
+  margin: 8px 0;
+}
+
+.action-button {
+  display: block;
+  background: #008000;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+.action-button:hover {
+  background: #006400;
+}
+.order-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  text-align: center;
+}
+
+.popup-content {
+  max-width: 300px;
+}
+
+.whatsapp-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px;
+  background: #25D366;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.close-popup {
+  margin-top: 10px;
+  padding: 5px 10px;
+  border: none;
+  background: red;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+/* Full-screen dark overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark transparent background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Ensure it appears on top */
+}
+
+/* Popup box */
+.order-popup {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 350px;
+  width: 90%;
+}
+
+/* WhatsApp button */
+.whatsapp-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px;
+  background: #25D366;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/* Close button */
+.close-popup {
+  margin-top: 10px;
+  padding: 5px 15px;
+  border: none;
+  background: red;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
 }
