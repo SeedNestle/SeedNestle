@@ -20,17 +20,17 @@ export class ProductsComponent implements AfterViewInit {
   categories: { [key: string]: Product[] } = {
     Plants: [
       {
-        name: 'Thuja Plant - XL',
-        image: 'assets/alovera.jpg',
-        oldPrice: 2449,
-        newPrice: 1999,
+        name: 'Mammillaria carmenae',
+        image: 'assets/top1-Mammillaria carmenae.jpg',
+        oldPrice: 169,
+        newPrice: 149,
         discount: 18,
         images: ['assets/alovera.jpg', 'assets/top16.jpg', 'assets/top19.jpg'],
-        description: 'A beautiful Thuja plant that enhances your garden decor.',
-        advantages: ['Air purifier', 'Easy to maintain']
+        description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
+        advantages: ['Indoor Plant', 'Easy to maintain']
       },
       {
-        name: 'Monstera',
+        name: 'chocolate plant',
         image: 'assets/Monstera.jpg',
         oldPrice: 2449,
         newPrice: 1999,
