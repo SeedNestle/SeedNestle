@@ -21,6 +21,341 @@ export class ProductsComponent implements AfterViewInit {
     Plants: [
       {
         name: 'Mammillaria carmenae',
+        image: 'assets/top1-Mammillaria carmenae.webp',
+        oldPrice: 169,
+        newPrice: 149,
+        discount: 18,
+        images: ['assets/alovera.jpg', 'assets/top16.jpg', 'assets/top19.jpg'],
+        description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
+        advantages: ['Indoor Plant', 'Easy to maintain']
+      },
+      {
+        name: 'Mammillaria carmenae',
+        image: 'assets/top2-chocolate soldier-Kalanchoe tomentosa.webp',
+        oldPrice: 169,
+        newPrice: 149,
+        discount: 18,
+        images: ['assets/alovera.jpg', 'assets/top16.jpg', 'assets/top19.jpg'],
+        description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
+        advantages: ['Indoor Plant', 'Easy to maintain']
+      },
+      {
+        name: 'Mammillaria carmenae',
+        image: 'assets/top3-Euphobia%20japonica.webp',
+        oldPrice: 169,
+        newPrice: 149,
+        discount: 18,
+        images: ['assets/alovera.jpg', 'assets/top16.jpg', 'assets/top19.jpg'],
+        description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
+        advantages: ['Indoor Plant', 'Easy to maintain']
+      },
+      {
+        name: 'Mammillaria carmenae',
+        image: 'assets/top4Pachyphytum%20Compactum.webp',
+        oldPrice: 169,
+        newPrice: 149,
+        discount: 18,
+        images: ['assets/alovera.jpg', 'assets/top16.jpg', 'assets/top19.jpg'],
+        description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
+        advantages: ['Indoor Plant', 'Easy to maintain']
+      },
+      {
+        name: 'Mammillaria carmenae',
+        image: 'assets/top5-Echeveria%20lilacina.webp',
+        oldPrice: 169,
+        newPrice: 149,
+        discount: 18,
+        images: ['assets/alovera.jpg', 'assets/top16.jpg', 'assets/top19.jpg'],
+        description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
+        advantages: ['Indoor Plant', 'Easy to maintain']
+      },
+      {
+        name: 'Mammillaria carmenae',
+        image: 'assets/top6-pedpoudhe%20sempervivum%20calcareum.webp',
+        oldPrice: 169,
+        newPrice: 149,
+        discount: 18,
+        images: ['assets/alovera.jpg', 'assets/top16.jpg', 'assets/top19.jpg'],
+        description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
+        advantages: ['Indoor Plant', 'Easy to maintain']
+      },
+      {
+        name: 'Mammillaria carmenae',
+        image: 'assets/top7-Euphorbia.webp',
+        oldPrice: 169,
+        newPrice: 149,
+        discount: 18,
+        images: ['assets/alovera.jpg', 'assets/top16.jpg', 'assets/top19.jpg'],
+        description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
+        advantages: ['Indoor Plant', 'Easy to maintain']
+      },
+      {
+        name: 'Mammillaria carmenae',
+        image: 'assets/top8-Echeveria.webp',
+        oldPrice: 169,
+        newPrice: 149,
+        discount: 18,
+        images: ['assets/alovera.jpg', 'assets/top16.jpg', 'assets/top19.jpg'],
+        description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
+        advantages: ['Indoor Plant', 'Easy to maintain']
+      },
+      {
+        name: 'Mammillaria carmenae',
+        image: 'assets/top9-sedum%20clavantum.webp',
+        oldPrice: 169,
+        newPrice: 149,
+        discount: 18,
+        images: ['assets/alovera.jpg', 'assets/top16.jpg', 'assets/top19.jpg'],
+        description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
+        advantages: ['Indoor Plant', 'Easy to maintain']
+      },
+      {
+        name: 'Mammillaria carmenae',
+        image: 'assets/top10-echeveria.webp',
+        oldPrice: 169,
+        newPrice: 149,
+        discount: 18,
+        images: ['assets/alovera.jpg', 'assets/top16.jpg', 'assets/top19.jpg'],
+        description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
+        advantages: ['Indoor Plant', 'Easy to maintain']
+      },
+      {
+        name: 'Mammillaria carmenae',
+        image: 'assets/top11-Pedilanthus,%20Euphorbia%20tithymaloides.webp',
+        oldPrice: 169,
+        newPrice: 149,
+        discount: 18,
+        images: ['assets/alovera.jpg', 'assets/top16.jpg', 'assets/top19.jpg'],
+        description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
+        advantages: ['Indoor Plant', 'Easy to maintain']
+      },
+      {
+        name: 'Mammillaria carmenae',
+        image: 'assets/top12-Echeveria.webp',
+        oldPrice: 169,
+        newPrice: 149,
+        discount: 18,
+        images: ['assets/alovera.jpg', 'assets/top16.jpg', 'assets/top19.jpg'],
+        description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
+        advantages: ['Indoor Plant', 'Easy to maintain']
+      },
+      {
+        name: 'Mammillaria carmenae',
+        image: 'assets/top13-Pedilanthus%20Tithymaloides.webp',
+        oldPrice: 169,
+        newPrice: 149,
+        discount: 18,
+        images: ['assets/alovera.jpg', 'assets/top16.jpg', 'assets/top19.jpg'],
+        description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
+        advantages: ['Indoor Plant', 'Easy to maintain']
+      },
+      {
+        name: 'Mammillaria carmenae',
+        image: 'assets/top14-Echeveria%20green%20spoon.webp',
+        oldPrice: 169,
+        newPrice: 149,
+        discount: 18,
+        images: ['assets/alovera.jpg', 'assets/top16.jpg', 'assets/top19.jpg'],
+        description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
+        advantages: ['Indoor Plant', 'Easy to maintain']
+      },
+      {
+        name: 'Mammillaria carmenae',
+        image: 'assets/top15%20sedum%20lineare.webp',
+        oldPrice: 169,
+        newPrice: 149,
+        discount: 18,
+        images: ['assets/alovera.jpg', 'assets/top16.jpg', 'assets/top19.jpg'],
+        description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
+        advantages: ['Indoor Plant', 'Easy to maintain']
+      },
+      {
+        name: 'Mammillaria carmenae',
+        image: 'assets/top1-Mammillaria carmenae.jpg',
+        oldPrice: 169,
+        newPrice: 149,
+        discount: 18,
+        images: ['assets/alovera.jpg', 'assets/top16.jpg', 'assets/top19.jpg'],
+        description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
+        advantages: ['Indoor Plant', 'Easy to maintain']
+      },
+      {
+        name: 'Mammillaria carmenae',
+        image: 'assets/top1-Mammillaria carmenae.jpg',
+        oldPrice: 169,
+        newPrice: 149,
+        discount: 18,
+        images: ['assets/alovera.jpg', 'assets/top16.jpg', 'assets/top19.jpg'],
+        description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
+        advantages: ['Indoor Plant', 'Easy to maintain']
+      },
+      {
+        name: 'chocolate plant',
+        image: 'assets/Monstera.jpg',
+        oldPrice: 2449,
+        newPrice: 1999,
+        discount: 18,
+        images: ['assets/Monstera.jpg', 'assets/top19.jpg', 'assets/top11.1.jpg'],
+        description: 'A beautiful Thuja plant that enhances your garden decor.',
+        advantages: ['Air purifier', 'Easy to maintain']
+      },
+      {
+        name: 'chocolate plant',
+        image: 'assets/Monstera.jpg',
+        oldPrice: 2449,
+        newPrice: 1999,
+        discount: 18,
+        images: ['assets/Monstera.jpg', 'assets/top19.jpg', 'assets/top11.1.jpg'],
+        description: 'A beautiful Thuja plant that enhances your garden decor.',
+        advantages: ['Air purifier', 'Easy to maintain']
+      },
+      {
+        name: 'chocolate plant',
+        image: 'assets/Monstera.jpg',
+        oldPrice: 2449,
+        newPrice: 1999,
+        discount: 18,
+        images: ['assets/Monstera.jpg', 'assets/top19.jpg', 'assets/top11.1.jpg'],
+        description: 'A beautiful Thuja plant that enhances your garden decor.',
+        advantages: ['Air purifier', 'Easy to maintain']
+      },
+      {
+        name: 'chocolate plant',
+        image: 'assets/Monstera.jpg',
+        oldPrice: 2449,
+        newPrice: 1999,
+        discount: 18,
+        images: ['assets/Monstera.jpg', 'assets/top19.jpg', 'assets/top11.1.jpg'],
+        description: 'A beautiful Thuja plant that enhances your garden decor.',
+        advantages: ['Air purifier', 'Easy to maintain']
+      },
+      {
+        name: 'chocolate plant',
+        image: 'assets/Monstera.jpg',
+        oldPrice: 2449,
+        newPrice: 1999,
+        discount: 18,
+        images: ['assets/Monstera.jpg', 'assets/top19.jpg', 'assets/top11.1.jpg'],
+        description: 'A beautiful Thuja plant that enhances your garden decor.',
+        advantages: ['Air purifier', 'Easy to maintain']
+      },
+      {
+        name: 'chocolate plant',
+        image: 'assets/Monstera.jpg',
+        oldPrice: 2449,
+        newPrice: 1999,
+        discount: 18,
+        images: ['assets/Monstera.jpg', 'assets/top19.jpg', 'assets/top11.1.jpg'],
+        description: 'A beautiful Thuja plant that enhances your garden decor.',
+        advantages: ['Air purifier', 'Easy to maintain']
+      },
+      {
+        name: 'chocolate plant',
+        image: 'assets/Monstera.jpg',
+        oldPrice: 2449,
+        newPrice: 1999,
+        discount: 18,
+        images: ['assets/Monstera.jpg', 'assets/top19.jpg', 'assets/top11.1.jpg'],
+        description: 'A beautiful Thuja plant that enhances your garden decor.',
+        advantages: ['Air purifier', 'Easy to maintain']
+      },
+      {
+        name: 'chocolate plant',
+        image: 'assets/Monstera.jpg',
+        oldPrice: 2449,
+        newPrice: 1999,
+        discount: 18,
+        images: ['assets/Monstera.jpg', 'assets/top19.jpg', 'assets/top11.1.jpg'],
+        description: 'A beautiful Thuja plant that enhances your garden decor.',
+        advantages: ['Air purifier', 'Easy to maintain']
+      },
+      {
+        name: 'chocolate plant',
+        image: 'assets/Monstera.jpg',
+        oldPrice: 2449,
+        newPrice: 1999,
+        discount: 18,
+        images: ['assets/Monstera.jpg', 'assets/top19.jpg', 'assets/top11.1.jpg'],
+        description: 'A beautiful Thuja plant that enhances your garden decor.',
+        advantages: ['Air purifier', 'Easy to maintain']
+      },
+      {
+        name: 'chocolate plant',
+        image: 'assets/Monstera.jpg',
+        oldPrice: 2449,
+        newPrice: 1999,
+        discount: 18,
+        images: ['assets/Monstera.jpg', 'assets/top19.jpg', 'assets/top11.1.jpg'],
+        description: 'A beautiful Thuja plant that enhances your garden decor.',
+        advantages: ['Air purifier', 'Easy to maintain']
+      },
+      {
+        name: 'chocolate plant',
+        image: 'assets/Monstera.jpg',
+        oldPrice: 2449,
+        newPrice: 1999,
+        discount: 18,
+        images: ['assets/Monstera.jpg', 'assets/top19.jpg', 'assets/top11.1.jpg'],
+        description: 'A beautiful Thuja plant that enhances your garden decor.',
+        advantages: ['Air purifier', 'Easy to maintain']
+      },
+      {
+        name: 'chocolate plant',
+        image: 'assets/Monstera.jpg',
+        oldPrice: 2449,
+        newPrice: 1999,
+        discount: 18,
+        images: ['assets/Monstera.jpg', 'assets/top19.jpg', 'assets/top11.1.jpg'],
+        description: 'A beautiful Thuja plant that enhances your garden decor.',
+        advantages: ['Air purifier', 'Easy to maintain']
+      },
+      {
+        name: 'chocolate plant',
+        image: 'assets/Monstera.jpg',
+        oldPrice: 2449,
+        newPrice: 1999,
+        discount: 18,
+        images: ['assets/Monstera.jpg', 'assets/top19.jpg', 'assets/top11.1.jpg'],
+        description: 'A beautiful Thuja plant that enhances your garden decor.',
+        advantages: ['Air purifier', 'Easy to maintain']
+      },
+      {
+        name: 'Pedilanthus Plant - XL',
+        image: 'assets/Pedilanthus.png',
+        oldPrice: 2449,
+        newPrice: 1999,
+        discount: 18,
+        images: ['assets/top8-Echeveria.jpg', 'assets/top13.1.jpg', 'assets/top20.jpg'],
+        description: 'A beautiful Thuja plant that enhances your garden decor.',
+        advantages: ['Air purifier', 'Easy to maintain']
+      }
+    ],
+    
+    Terrarium : [
+      {
+        name: 'Watering Can',
+        image: 'assets/watering_can.jpg',
+        oldPrice: 4999999,
+        newPrice: 399,
+        discount: 20,
+        images: ['assets/watering_can.jpg', 'assets/top21.jpg'],
+        description: 'A high-quality watering can for easy plant care.',
+        advantages: ['Durable material', 'Easy to use']
+      },
+      {
+        name: 'Gardening Gloves',
+        image: 'assets/gloves.jpg',
+        oldPrice: 299,
+        newPrice: 249,
+        discount: 17,
+        images: ['assets/gloves.jpg', 'assets/top23.jpg'],
+        description: 'Protect your hands while gardening.',
+        advantages: ['Comfortable', 'Durable']
+      }
+    ],
+    Accessories: [
+      {
+        name: 'Mammillaria carmenae',
         image: 'assets/top1-Mammillaria carmenae.jpg',
         oldPrice: 169,
         newPrice: 149,
@@ -50,26 +385,36 @@ export class ProductsComponent implements AfterViewInit {
         advantages: ['Air purifier', 'Easy to maintain']
       }
     ],
-    Accessories: [
+    Gift: [
       {
-        name: 'Watering Can',
-        image: 'assets/watering_can.jpg',
-        oldPrice: 499,
-        newPrice: 399,
-        discount: 20,
-        images: ['assets/watering_can.jpg', 'assets/top21.jpg'],
-        description: 'A high-quality watering can for easy plant care.',
-        advantages: ['Durable material', 'Easy to use']
+        name: 'Mammillaria carmenae',
+        image: 'assets/top1-Mammillaria carmenae.jpg',
+        oldPrice: 169,
+        newPrice: 149,
+        discount: 18,
+        images: ['assets/alovera.jpg', 'assets/top16.jpg', 'assets/top19.jpg'],
+        description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
+        advantages: ['Indoor Plant', 'Easy to maintain']
       },
       {
-        name: 'Gardening Gloves',
-        image: 'assets/gloves.jpg',
-        oldPrice: 299,
-        newPrice: 249,
-        discount: 17,
-        images: ['assets/gloves.jpg', 'assets/top23.jpg'],
-        description: 'Protect your hands while gardening.',
-        advantages: ['Comfortable', 'Durable']
+        name: 'chocolate plant',
+        image: 'assets/Monstera.jpg',
+        oldPrice: 2449,
+        newPrice: 1999,
+        discount: 18,
+        images: ['assets/Monstera.jpg', 'assets/top19.jpg', 'assets/top11.1.jpg'],
+        description: 'A beautiful Thuja plant that enhances your garden decor.',
+        advantages: ['Air purifier', 'Easy to maintain']
+      },
+      {
+        name: 'Pedilanthus Plant - XL',
+        image: 'assets/Pedilanthus.png',
+        oldPrice: 2449,
+        newPrice: 1999,
+        discount: 18,
+        images: ['assets/top8-Echeveria.jpg', 'assets/top13.1.jpg', 'assets/top20.jpg'],
+        description: 'A beautiful Thuja plant that enhances your garden decor.',
+        advantages: ['Air purifier', 'Easy to maintain']
       }
     ],
     Fertilizers: [
@@ -100,7 +445,9 @@ export class ProductsComponent implements AfterViewInit {
     this.renderProducts('Plants');
 
     document.getElementById('plants-btn')?.addEventListener('click', () => this.renderProducts('Plants'));
+    document.getElementById('terrarium-btn')?.addEventListener('click', () => this.renderProducts('Terrarium'));
     document.getElementById('accessories-btn')?.addEventListener('click', () => this.renderProducts('Accessories'));
+    document.getElementById('gift-btn')?.addEventListener('click', () => this.renderProducts('Gift'));
     document.getElementById('fertilizers-btn')?.addEventListener('click', () => this.renderProducts('Fertilizers'));
   }
 
