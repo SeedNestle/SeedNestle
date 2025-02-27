@@ -20,11 +20,11 @@ export class ProductsComponent implements AfterViewInit {
   categories: { [key: string]: Product[] } = {
     Plants: [
       {
-        name: 'Mammillaria carmenae',
+        name: 'shiffty plant',
         image: 'assets/top1-Mammillaria carmenae.webp',
-        oldPrice: 169,
-        newPrice: 149,
-        discount: 18,
+        oldPrice: 269,
+        newPrice: 159,
+        discount: 12,
         images: ['assets/alovera.jpg', 'assets/top16.jpg', 'assets/top19.jpg'],
         description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
         advantages: ['Indoor Plant', 'Easy to maintain']
@@ -34,7 +34,7 @@ export class ProductsComponent implements AfterViewInit {
         image: 'assets/top2-chocolate soldier-Kalanchoe tomentosa.webp',
         oldPrice: 169,
         newPrice: 149,
-        discount: 18,
+        discount: 12,
         images: ['assets/alovera.jpg', 'assets/top16.jpg', 'assets/top19.jpg'],
         description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
         advantages: ['Indoor Plant', 'Easy to maintain']
@@ -179,146 +179,8 @@ export class ProductsComponent implements AfterViewInit {
         description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
         advantages: ['Indoor Plant', 'Easy to maintain']
       },
-      {
-        name: 'Mammillaria carmenae',
-        image: 'assets/top1-Mammillaria carmenae.jpg',
-        oldPrice: 169,
-        newPrice: 149,
-        discount: 18,
-        images: ['assets/alovera.jpg', 'assets/top16.jpg', 'assets/top19.jpg'],
-        description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
-        advantages: ['Indoor Plant', 'Easy to maintain']
-      },
-      {
-        name: 'chocolate plant',
-        image: 'assets/Monstera.jpg',
-        oldPrice: 2449,
-        newPrice: 1999,
-        discount: 18,
-        images: ['assets/Monstera.jpg', 'assets/top19.jpg', 'assets/top11.1.jpg'],
-        description: 'A beautiful Thuja plant that enhances your garden decor.',
-        advantages: ['Air purifier', 'Easy to maintain']
-      },
-      {
-        name: 'chocolate plant',
-        image: 'assets/Monstera.jpg',
-        oldPrice: 2449,
-        newPrice: 1999,
-        discount: 18,
-        images: ['assets/Monstera.jpg', 'assets/top19.jpg', 'assets/top11.1.jpg'],
-        description: 'A beautiful Thuja plant that enhances your garden decor.',
-        advantages: ['Air purifier', 'Easy to maintain']
-      },
-      {
-        name: 'chocolate plant',
-        image: 'assets/Monstera.jpg',
-        oldPrice: 2449,
-        newPrice: 1999,
-        discount: 18,
-        images: ['assets/Monstera.jpg', 'assets/top19.jpg', 'assets/top11.1.jpg'],
-        description: 'A beautiful Thuja plant that enhances your garden decor.',
-        advantages: ['Air purifier', 'Easy to maintain']
-      },
-      {
-        name: 'chocolate plant',
-        image: 'assets/Monstera.jpg',
-        oldPrice: 2449,
-        newPrice: 1999,
-        discount: 18,
-        images: ['assets/Monstera.jpg', 'assets/top19.jpg', 'assets/top11.1.jpg'],
-        description: 'A beautiful Thuja plant that enhances your garden decor.',
-        advantages: ['Air purifier', 'Easy to maintain']
-      },
-      {
-        name: 'chocolate plant',
-        image: 'assets/Monstera.jpg',
-        oldPrice: 2449,
-        newPrice: 1999,
-        discount: 18,
-        images: ['assets/Monstera.jpg', 'assets/top19.jpg', 'assets/top11.1.jpg'],
-        description: 'A beautiful Thuja plant that enhances your garden decor.',
-        advantages: ['Air purifier', 'Easy to maintain']
-      },
-      {
-        name: 'chocolate plant',
-        image: 'assets/Monstera.jpg',
-        oldPrice: 2449,
-        newPrice: 1999,
-        discount: 18,
-        images: ['assets/Monstera.jpg', 'assets/top19.jpg', 'assets/top11.1.jpg'],
-        description: 'A beautiful Thuja plant that enhances your garden decor.',
-        advantages: ['Air purifier', 'Easy to maintain']
-      },
-      {
-        name: 'chocolate plant',
-        image: 'assets/Monstera.jpg',
-        oldPrice: 2449,
-        newPrice: 1999,
-        discount: 18,
-        images: ['assets/Monstera.jpg', 'assets/top19.jpg', 'assets/top11.1.jpg'],
-        description: 'A beautiful Thuja plant that enhances your garden decor.',
-        advantages: ['Air purifier', 'Easy to maintain']
-      },
-      {
-        name: 'chocolate plant',
-        image: 'assets/Monstera.jpg',
-        oldPrice: 2449,
-        newPrice: 1999,
-        discount: 18,
-        images: ['assets/Monstera.jpg', 'assets/top19.jpg', 'assets/top11.1.jpg'],
-        description: 'A beautiful Thuja plant that enhances your garden decor.',
-        advantages: ['Air purifier', 'Easy to maintain']
-      },
-      {
-        name: 'chocolate plant',
-        image: 'assets/Monstera.jpg',
-        oldPrice: 2449,
-        newPrice: 1999,
-        discount: 18,
-        images: ['assets/Monstera.jpg', 'assets/top19.jpg', 'assets/top11.1.jpg'],
-        description: 'A beautiful Thuja plant that enhances your garden decor.',
-        advantages: ['Air purifier', 'Easy to maintain']
-      },
-      {
-        name: 'chocolate plant',
-        image: 'assets/Monstera.jpg',
-        oldPrice: 2449,
-        newPrice: 1999,
-        discount: 18,
-        images: ['assets/Monstera.jpg', 'assets/top19.jpg', 'assets/top11.1.jpg'],
-        description: 'A beautiful Thuja plant that enhances your garden decor.',
-        advantages: ['Air purifier', 'Easy to maintain']
-      },
-      {
-        name: 'chocolate plant',
-        image: 'assets/Monstera.jpg',
-        oldPrice: 2449,
-        newPrice: 1999,
-        discount: 18,
-        images: ['assets/Monstera.jpg', 'assets/top19.jpg', 'assets/top11.1.jpg'],
-        description: 'A beautiful Thuja plant that enhances your garden decor.',
-        advantages: ['Air purifier', 'Easy to maintain']
-      },
-      {
-        name: 'chocolate plant',
-        image: 'assets/Monstera.jpg',
-        oldPrice: 2449,
-        newPrice: 1999,
-        discount: 18,
-        images: ['assets/Monstera.jpg', 'assets/top19.jpg', 'assets/top11.1.jpg'],
-        description: 'A beautiful Thuja plant that enhances your garden decor.',
-        advantages: ['Air purifier', 'Easy to maintain']
-      },
-      {
-        name: 'chocolate plant',
-        image: 'assets/Monstera.jpg',
-        oldPrice: 2449,
-        newPrice: 1999,
-        discount: 18,
-        images: ['assets/Monstera.jpg', 'assets/top19.jpg', 'assets/top11.1.jpg'],
-        description: 'A beautiful Thuja plant that enhances your garden decor.',
-        advantages: ['Air purifier', 'Easy to maintain']
-      },
+      
+      
       {
         name: 'Pedilanthus Plant - XL',
         image: 'assets/Pedilanthus.png',
@@ -331,24 +193,7 @@ export class ProductsComponent implements AfterViewInit {
       }
     ],
     
-    Terrarium : [
-      {
-<<<<<<< HEAD
-        name: 'Coco&Coir',
-        image: 'assets/coco.webp',
-        oldPrice: 499,
-=======
-        name: 'Watering Can',
-        image: 'assets/watering_can.jpg',
-        oldPrice: 4999999,
->>>>>>> 6a694119b403583eaea57152810cf6fc40828fc7
-        newPrice: 399,
-        discount: 20,
-        images: ['assets/coco.webp'],
-        description: 'Coco and coir pots are biodegradable plant containers made from natural coconut coir fibers. These eco-friendly pots serve as an excellent alternative to plastic pots and are widely used in gardening, horticulture, and nursery applications.',
-        advantages: [' Eco-Friendly & Biodegradable  Sustainable alternative to plastic, decomposes naturally'
-,'Boosts Root Growth – Prevents root binding and reduces transplant shock.']
-      },
+    Accessories : [
       {
         name: 'Pebbals Stone',
         image: 'assets/pebbels.webp',
@@ -380,38 +225,7 @@ export class ProductsComponent implements AfterViewInit {
         advantages: ['The drainage holes are vital for safeguarding delicate roots against rot, fungus, and bacteria.']
       }
     ],
-    Accessories: [
-      {
-        name: 'Mammillaria carmenae',
-        image: 'assets/top1-Mammillaria carmenae.jpg',
-        oldPrice: 169,
-        newPrice: 149,
-        discount: 18,
-        images: ['assets/alovera.jpg', 'assets/top16.jpg', 'assets/top19.jpg'],
-        description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
-        advantages: ['Indoor Plant', 'Easy to maintain']
-      },
-      {
-        name: 'chocolate plant',
-        image: 'assets/Monstera.jpg',
-        oldPrice: 2449,
-        newPrice: 1999,
-        discount: 18,
-        images: ['assets/Monstera.jpg', 'assets/top19.jpg', 'assets/top11.1.jpg'],
-        description: 'A beautiful Thuja plant that enhances your garden decor.',
-        advantages: ['Air purifier', 'Easy to maintain']
-      },
-      {
-        name: 'Pedilanthus Plant - XL',
-        image: 'assets/Pedilanthus.png',
-        oldPrice: 2449,
-        newPrice: 1999,
-        discount: 18,
-        images: ['assets/top8-Echeveria.jpg', 'assets/top13.1.jpg', 'assets/top20.jpg'],
-        description: 'A beautiful Thuja plant that enhances your garden decor.',
-        advantages: ['Air purifier', 'Easy to maintain']
-      }
-    ],
+    
     Gift: [
       {
         name: 'Mammillaria carmenae',

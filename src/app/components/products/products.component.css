@@ -259,4 +259,55 @@
  .button:active {
   filter: brightness(.8);
  }
- 
+ .categories {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two per row */
+  gap: 10px;
+  justify-content: center;
+  max-width: 400px; /* Adjust width for better layout */
+  margin: 0 auto;
+}
+.categories button:hover,
+.categories button:active { /* Fix for touch devices */
+  background-color: #d4f5e9; /* Change color on hover */
+  transform: scale(1.05);
+}
+
+
+.categories button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  font-size: 14px;
+  min-width: 100px; /* Ensures buttons don’t get too small */
+  flex-grow: 1; /* Allows them to expand */
+  text-align: center;
+  white-space: nowrap; /* Prevents text wrapping */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .categories {
+    gap: 5px;
+  }
+
+  .categories button {
+    font-size: 12px;
+    min-width: 80px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .categories {
+    flex-direction: column; /* Stack buttons on smaller screens */
+    align-items: center;
+  }
+
+  .categories button {
+    width: 90%; /* Makes buttons full-width */
+    max-width: 150px;
+  }
+}
