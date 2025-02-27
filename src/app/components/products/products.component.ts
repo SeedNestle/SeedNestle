@@ -52,24 +52,45 @@ export class ProductsComponent implements AfterViewInit {
     ],
     Accessories: [
       {
-        name: 'Watering Can',
-        image: 'assets/watering_can.jpg',
+        name: 'Coco&Coir',
+        image: 'assets/coco.webp',
         oldPrice: 499,
         newPrice: 399,
         discount: 20,
-        images: ['assets/watering_can.jpg', 'assets/top21.jpg'],
-        description: 'A high-quality watering can for easy plant care.',
-        advantages: ['Durable material', 'Easy to use']
+        images: ['assets/coco.webp'],
+        description: 'Coco and coir pots are biodegradable plant containers made from natural coconut coir fibers. These eco-friendly pots serve as an excellent alternative to plastic pots and are widely used in gardening, horticulture, and nursery applications.',
+        advantages: [' Eco-Friendly & Biodegradable  Sustainable alternative to plastic, decomposes naturally'
+,'Boosts Root Growth – Prevents root binding and reduces transplant shock.']
       },
       {
-        name: 'Gardening Gloves',
-        image: 'assets/gloves.jpg',
+        name: 'Pebbals Stone',
+        image: 'assets/pebbels.webp',
         oldPrice: 299,
         newPrice: 249,
         discount: 17,
-        images: ['assets/gloves.jpg', 'assets/top23.jpg'],
-        description: 'Protect your hands while gardening.',
-        advantages: ['Comfortable', 'Durable']
+        images: ['assets/pebbels.webp'],
+        description: 'Using pebbles and stones in plant arrangements is a common practice that enhances both the aesthetic appeal and health of your plants. Here’s why adding stones to your plant setup can be beneficial',
+        advantages: ['At the Bottom of the Pot – Helps with drainage and prevents waterlogging.','Helps prevent mold and fungal infections by improving aeration.']
+      },
+      {
+        name: 'Small Black Pots',
+        image: 'assets/BlackPots.webp',
+        oldPrice: 299,
+        newPrice: 249,
+        discount: 17,
+        images: ['assets/BlackPots.webp'],
+        description: 'This 10Club package includes 24 UV-treated and anti-fade planter pots, each measuring 15.2D x 15.2W x 14H and designed with wide top support for easy carrying. Made from high-grade UV-treated plastic, these pots are exceptionally durable and resistant to fading, providing robust support at the top for effortless handling.',
+        advantages: ['The drainage holes are vital for safeguarding delicate roots against rot, fungus, and bacteria.']
+      },
+      {
+        name: 'Small Brown Pots',
+        image: 'assets/BrownPot.webp',
+        oldPrice: 299,
+        newPrice: 249,
+        discount: 17,
+        images: ['assets/BrownPot.webp'],
+        description: 'This 10Club package includes 24 UV-treated and anti-fade planter pots, each measuring 15.2D x 15.2W x 14H and designed with wide top support for easy carrying. Made from high-grade UV-treated plastic, these pots are exceptionally durable and resistant to fading, providing robust support at the top for effortless handling.',
+        advantages: ['The drainage holes are vital for safeguarding delicate roots against rot, fungus, and bacteria.']
       }
     ],
     Fertilizers: [
