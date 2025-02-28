@@ -223,6 +223,166 @@ export class ProductsComponent implements AfterViewInit {
         images: ['assets/BrownPot.webp'],
         description: 'This 10Club package includes 24 UV-treated and anti-fade planter pots, each measuring 15.2D x 15.2W x 14H and designed with wide top support for easy carrying. Made from high-grade UV-treated plastic, these pots are exceptionally durable and resistant to fading, providing robust support at the top for effortless handling.',
         advantages: ['The drainage holes are vital for safeguarding delicate roots against rot, fungus, and bacteria.']
+      },
+      {
+        name: 'Black-sm-Plates',
+        image: 'assets/black-pot.webp',
+        oldPrice: 58,
+        newPrice: 48,
+        discount: 17,
+        images: ['assets/black-pot.webp'],
+        description: 'Small black plates for plants are perfect for keeping your plant area clean and stylish. These plates help collect excess water and soil, preventing spills and maintaining a neat space. Made from durable plastic or ceramic, they are lightweight, easy to clean, and complement any indoor or outdoor setting.',
+        advantages: ['Prevents water spills and soil messDurable and lightweight material']
+      },
+      {
+        name: 'Blue-Oval-pot',
+        image: 'assets/blue-3-pot.webp',
+        oldPrice: 258,
+        newPrice: 218,
+        discount: 17,
+        images: ['assets/blue-3-pot.webp'],
+        description: 'The Blue Oval Pot is a sleek and modern planter designed to add elegance to any indoor or outdoor space. Its oval shape provides ample room for plant roots to grow, while the vibrant blue color enhances the aesthetics of your garden, balcony, or home.',
+        advantages: ['Durable and weather-resistant materi','Lightweight and easy to move']
+      },
+      {
+        name: 'Blue-Fade-white-pot',
+        image: 'assets/blue-se-pot.webp',
+        oldPrice: 268,
+        newPrice: 198,
+        discount: 17,
+        images: ['assets/blue-se-pot.webp'],
+        description: 'The Blue & White Fade Color Pot is a beautifully designed planter that adds a touch of elegance to any space. Its smooth gradient from deep blue to soft white creates a modern and calming aesthetic, perfect for indoor and outdoor plant décor',
+        advantages: ['Ideal for small to medium-sized plants','Lightweight and easy to move']
+      },
+      {
+        name: 'Brown-oval-pot',
+        image: 'assets/brown-3-pot.webp',
+        oldPrice: 258,
+        newPrice: 218,
+        discount: 17,
+        images: ['assets/brown-3-pot.webp'],
+        description: 'The Blue Oval Pot is a sleek and modern planter designed to add elegance to any indoor or outdoor space. Its oval shape provides ample room for plant roots to grow, while the vibrant blue color enhances the aesthetics of your garden, balcony, or home.',
+        advantages: ['Durable and weather-resistant materi','Lightweight and easy to move']
+      },
+      {
+        name: 'Brown-sm-Plates',
+        image: 'assets/brown-pot.webp',
+        oldPrice: 58,
+        newPrice: 48,
+        discount: 17,
+        images: ['assets/brown-pot.webp'],
+        description: 'Small black plates for plants are perfect for keeping your plant area clean and stylish. These plates help collect excess water and soil, preventing spills and maintaining a neat space. Made from durable plastic or ceramic, they are lightweight, easy to clean, and complement any indoor or outdoor setting.',
+        advantages: ['Prevents water spills and soil messDurable and lightweight material']
+      },
+      {
+        name: 'Brown-Single-pot',
+        image: 'assets/brown-single-pot.webp',
+        oldPrice: 58,
+        newPrice: 48,
+        discount: 17,
+        images: ['assets/brown-single-pot.webp'],
+        description: 'The Brown Pot is a classic and versatile planter that blends naturally with any indoor or outdoor setting. Its earthy tone complements all types of plants, adding a warm and rustic charm to your space',
+        advantages: ['Natural earthy tone enhances plant aesthetics Available in ceramic, terracotta, or plastic materials']
+      },
+      {
+        name: 'Green-Fade-white-pot',
+        image: 'assets/green-se-pot.webp',
+        oldPrice: 268,
+        newPrice: 198,
+        discount: 17,
+        images: ['assets/green-se-pot.webp'],
+        description: 'The Green & White Fade Color Pot is a beautifully designed planter that adds a touch of elegance to any space. Its smooth gradient from deep blue to soft white creates a modern and calming aesthetic, perfect for indoor and outdoor plant décor',
+        advantages: ['Ideal for small to medium-sized plants','Lightweight and easy to move']
+      },
+      {
+        name: 'Green-plastic',
+        image: 'assets/green-sm-pot.webp',
+        oldPrice: 38,
+        newPrice: 18,
+        discount: 17,
+        images: ['assets/green-sm-pot.webp'],
+        description: 'The Green Pot is a classic and versatile planter that blends naturally with any indoor or outdoor setting. Its earthy tone complements all types of plants, adding a warm and rustic charm to your space',
+        advantages: ['Natural earthy tone enhances plant aesthetics Available in ceramic, terracotta, or plastic materials']
+      },
+      {
+        name: 'Pink-Fade-white-pot',
+        image: 'assets/pink-se-pot.webp',
+        oldPrice: 268,
+        newPrice: 198,
+        discount: 17,
+        images: ['assets/pink-se-pot.webp'],
+        description: 'The Pink & White Fade Color Pot is a beautifully designed planter that adds a touch of elegance to any space. Its smooth gradient from deep blue to soft white creates a modern and calming aesthetic, perfect for indoor and outdoor plant décor',
+        advantages: ['Ideal for small to medium-sized plants','Lightweight and easy to move']
+      },
+      {
+        name: 'Purple-plastic',
+        image: 'assets/purple-sm-pot.webp',
+        oldPrice: 38,
+        newPrice: 18,
+        discount: 17,
+        images: ['assets/purple-sm-pot.webp'],
+        description: 'The Purple Pot is a classic and versatile planter that blends naturally with any indoor or outdoor setting. Its earthy tone complements all types of plants, adding a warm and rustic charm to your space',
+        advantages: ['Natural earthy tone enhances plant aesthetics Available in ceramic, terracotta, or plastic materials']
+      },
+      {
+        name: 'Gupta Pebbels',
+        image: 'assets/rock1.webp',
+        oldPrice: 78,
+        newPrice: 58,
+        discount: 17,
+        images: ['assets/rock1.webp'],
+        description: 'Gupta Pebbles are premium-quality decorative stones used for enhancing plant arrangements, aquariums, pathways, and home décor. These natural pebbles improve soil drainage, prevent weed growth, and add a stylish touch to indoor and outdoor gardens.',
+        advantages: ['Enhances plant aesthetics with a natural and elegant look','Helps retain soil moisture and prevent erosion']
+      },
+      {
+        name: 'Gupta Pebbels-varient',
+        image: 'assets/rock2.webp',
+        oldPrice: 78,
+        newPrice: 58,
+        discount: 17,
+        images: ['assets/rock2.webp'],
+        description: 'Gupta Pebbles are premium-quality decorative stones used for enhancing plant arrangements, aquariums, pathways, and home décor. These natural pebbles improve soil drainage, prevent weed growth, and add a stylish touch to indoor and outdoor gardens.',
+        advantages: ['Enhances plant aesthetics with a natural and elegant look','Helps retain soil moisture and prevent erosion']
+      },
+      {
+        name: 'White-sm-Plates',
+        image: 'assets/white-plate.webp',
+        oldPrice: 58,
+        newPrice: 48,
+        discount: 17,
+        images: ['assets/white-plate.webp'],
+        description: 'Small white plates for plants are perfect for keeping your plant area clean and stylish. These plates help collect excess water and soil, preventing spills and maintaining a neat space. Made from durable plastic or ceramic, they are lightweight, easy to clean, and complement any indoor or outdoor setting.',
+        advantages: ['Prevents water spills and soil messDurable and lightweight material']
+      },
+      {
+        name: 'WHite-Single-pot',
+        image: 'assets/white-single-sm.webp',
+        oldPrice: 58,
+        newPrice: 48,
+        discount: 17,
+        images: ['assets/white-single.webp'],
+        description: 'The White Pot is a classic and versatile planter that blends naturally with any indoor or outdoor setting. Its earthy tone complements all types of plants, adding a warm and rustic charm to your space',
+        advantages: ['Natural earthy tone enhances plant aesthetics Available in ceramic, terracotta, or plastic materials']
+      },
+      {
+        name: 'White-sm-plastic',
+        image: 'assets/white-sm-pot.webp',
+        oldPrice: 38,
+        newPrice: 18,
+        discount: 17,
+        images: ['assets/white-sm-pot.webp'],
+        description: 'The White Pot is a classic and versatile planter that blends naturally with any indoor or outdoor setting. Its earthy tone complements all types of plants, adding a warm and rustic charm to your space',
+        advantages: ['Natural earthy tone enhances plant aesthetics Available in ceramic, terracotta, or plastic materials']
+      },
+      {
+        name: 'White-hard-Pots',
+        image: 'assets/white-smB-pot.webp',
+        oldPrice: 58,
+        newPrice: 48,
+        discount: 17,
+        images: ['assets/white-smB-pot.webp'],
+        description: '',
+        advantages: ['']
       }
     ],
     
