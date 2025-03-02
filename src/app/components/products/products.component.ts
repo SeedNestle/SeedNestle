@@ -25,142 +25,142 @@ export class ProductsComponent implements AfterViewInit {
         oldPrice: 269,
         newPrice: 159,
         discount: 12,
-        images: ['assets/alovera.jpg', 'assets/top16.jpg', 'assets/top19.jpg'],
+        images: ['assets/top1-Mammillaria carmenae.webp', 'assets/top16.jpg', 'assets/top19.jpg'],
         description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
         advantages: ['Indoor Plant', 'Easy to maintain']
       },
       {
-        name: 'Mammillaria carmenae',
+        name: 'chocolate plant (Kalanchoe)',
         image: 'assets/top2-chocolate soldier-Kalanchoe tomentosa.webp',
         oldPrice: 169,
         newPrice: 149,
         discount: 12,
-        images: ['assets/alovera.jpg', 'assets/top16.jpg', 'assets/top19.jpg'],
+        images: ['assets/top2-chocolate soldier-Kalanchoe tomentosa.webp', 'assets/top16.jpg', 'assets/top19.jpg'],
         description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
         advantages: ['Indoor Plant', 'Easy to maintain']
       },
       {
-        name: 'Mammillaria carmenae',
+        name: 'Euphorbia japonica',
         image: 'assets/top3-Euphobia%20japonica.webp',
         oldPrice: 169,
         newPrice: 149,
         discount: 18,
-        images: ['assets/alovera.jpg', 'assets/top16.jpg', 'assets/top19.jpg'],
+        images: ['assets/top3-Euphobia%20japonica.webp', 'assets/top16.jpg', 'assets/top19.jpg'],
         description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
         advantages: ['Indoor Plant', 'Easy to maintain']
       },
       {
-        name: 'Mammillaria carmenae',
+        name: 'Pachyphytum compactum',
         image: 'assets/top4Pachyphytum%20Compactum.webp',
         oldPrice: 169,
         newPrice: 149,
         discount: 18,
-        images: ['assets/alovera.jpg', 'assets/top16.jpg', 'assets/top19.jpg'],
+        images: ['assets/top4Pachyphytum%20Compactum.webp', 'assets/top16.jpg', 'assets/top19.jpg'],
         description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
         advantages: ['Indoor Plant', 'Easy to maintain']
       },
       {
-        name: 'Mammillaria carmenae',
+        name: 'Echeveria lilacina',
         image: 'assets/top5-Echeveria%20lilacina.webp',
         oldPrice: 169,
         newPrice: 149,
         discount: 18,
-        images: ['assets/alovera.jpg', 'assets/top16.jpg', 'assets/top19.jpg'],
+        images: ['assets/top5-Echeveria%20lilacina.webp', 'assets/top16.jpg', 'assets/top19.jpg'],
         description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
         advantages: ['Indoor Plant', 'Easy to maintain']
       },
       {
-        name: 'Mammillaria carmenae',
+        name: 'Sempervivum calcareum',
         image: 'assets/top6-pedpoudhe%20sempervivum%20calcareum.webp',
         oldPrice: 169,
         newPrice: 149,
         discount: 18,
-        images: ['assets/alovera.jpg', 'assets/top16.jpg', 'assets/top19.jpg'],
+        images: ['assets/top6-pedpoudhe%20sempervivum%20calcareum.webp', 'assets/top16.jpg', 'assets/top19.jpg'],
         description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
         advantages: ['Indoor Plant', 'Easy to maintain']
       },
       {
-        name: 'Mammillaria carmenae',
+        name: 'Euphorbia globosa',
         image: 'assets/top7-Euphorbia.webp',
         oldPrice: 169,
         newPrice: 149,
         discount: 18,
-        images: ['assets/alovera.jpg', 'assets/top16.jpg', 'assets/top19.jpg'],
+        images: ['assets/top7-Euphorbia.webp', 'assets/top16.jpg', 'assets/top19.jpg'],
         description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
         advantages: ['Indoor Plant', 'Easy to maintain']
       },
       {
-        name: 'Mammillaria carmenae',
+        name: 'Echeveria',
         image: 'assets/top8-Echeveria.webp',
         oldPrice: 169,
         newPrice: 149,
         discount: 18,
-        images: ['assets/alovera.jpg', 'assets/top16.jpg', 'assets/top19.jpg'],
+        images: ['assets/top8-Echeveria.webp', 'assets/top16.jpg', 'assets/top19.jpg'],
         description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
         advantages: ['Indoor Plant', 'Easy to maintain']
       },
       {
-        name: 'Mammillaria carmenae',
+        name: 'Sedum clavatum',
         image: 'assets/top9-sedum%20clavantum.webp',
         oldPrice: 169,
         newPrice: 149,
         discount: 18,
-        images: ['assets/alovera.jpg', 'assets/top16.jpg', 'assets/top19.jpg'],
+        images: ['assets/top9-sedum%20clavantum.webp', 'assets/top16.jpg', 'assets/top19.jpg'],
         description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
         advantages: ['Indoor Plant', 'Easy to maintain']
       },
       {
-        name: 'Mammillaria carmenae',
+        name: 'Echeveria',
         image: 'assets/top10-echeveria.webp',
         oldPrice: 169,
         newPrice: 149,
         discount: 18,
-        images: ['assets/alovera.jpg', 'assets/top16.jpg', 'assets/top19.jpg'],
+        images: ['assets/top10-echeveria.webp', 'assets/top16.jpg', 'assets/top19.jpg'],
         description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
         advantages: ['Indoor Plant', 'Easy to maintain']
       },
       {
-        name: 'Mammillaria carmenae',
+        name: 'Pedilanthus',
         image: 'assets/top11-Pedilanthus,%20Euphorbia%20tithymaloides.webp',
         oldPrice: 169,
         newPrice: 149,
         discount: 18,
-        images: ['assets/alovera.jpg', 'assets/top16.jpg', 'assets/top19.jpg'],
+        images: ['assets/top11-Pedilanthus,%20Euphorbia%20tithymaloides.webp', 'assets/top16.jpg', 'assets/top19.jpg'],
         description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
         advantages: ['Indoor Plant', 'Easy to maintain']
       },
       {
-        name: 'Mammillaria carmenae',
+        name: 'Echeveria',
         image: 'assets/top12-Echeveria.webp',
         oldPrice: 169,
         newPrice: 149,
         discount: 18,
-        images: ['assets/alovera.jpg', 'assets/top16.jpg', 'assets/top19.jpg'],
+        images: ['assets/top12-Echeveria.webp', 'assets/top16.jpg', 'assets/top19.jpg'],
         description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
         advantages: ['Indoor Plant', 'Easy to maintain']
       },
       {
-        name: 'Mammillaria carmenae',
+        name: 'Pedilanthus tithymaloides',
         image: 'assets/top13-Pedilanthus%20Tithymaloides.webp',
         oldPrice: 169,
         newPrice: 149,
         discount: 18,
-        images: ['assets/alovera.jpg', 'assets/top16.jpg', 'assets/top19.jpg'],
+        images: ['assets/top13-Pedilanthus%20Tithymaloides.webp', 'assets/top16.jpg', 'assets/top19.jpg'],
         description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
         advantages: ['Indoor Plant', 'Easy to maintain']
       },
       {
-        name: 'Mammillaria carmenae',
+        name: 'Echeveria (Green Spoon)',
         image: 'assets/top14-Echeveria%20green%20spoon.webp',
         oldPrice: 169,
         newPrice: 149,
         discount: 18,
-        images: ['assets/alovera.jpg', 'assets/top16.jpg', 'assets/top19.jpg'],
+        images: ['assets/top14-Echeveria%20green%20spoon.webp', 'assets/top16.jpg', 'assets/top19.jpg'],
         description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
         advantages: ['Indoor Plant', 'Easy to maintain']
       },
       {
-        name: 'Mammillaria carmenae',
+        name: 'Sedum lineare',
         image: 'assets/top15%20sedum%20lineare.webp',
         oldPrice: 169,
         newPrice: 149,
@@ -170,26 +170,125 @@ export class ProductsComponent implements AfterViewInit {
         advantages: ['Indoor Plant', 'Easy to maintain']
       },
       {
-        name: 'Mammillaria carmenae',
-        image: 'assets/top1-Mammillaria carmenae.jpg',
+        name: 'Haworthia cymbiformis',
+        image: 'assets/top16.webp',
         oldPrice: 169,
         newPrice: 149,
         discount: 18,
-        images: ['assets/alovera.jpg', 'assets/top16.jpg', 'assets/top19.jpg'],
+        images: ['assets/top16.webp', 'assets/top16.jpg', 'assets/top19.jpg'],
         description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
         advantages: ['Indoor Plant', 'Easy to maintain']
       },
-      
-      
       {
-        name: 'Pedilanthus Plant - XL',
-        image: 'assets/Pedilanthus.png',
-        oldPrice: 2449,
-        newPrice: 1999,
+        name: 'Euphorbia trigona',
+        image: 'assets/top17%20euphorbia%20trigona.webp',
+        oldPrice: 169,
+        newPrice: 149,
         discount: 18,
-        images: ['assets/top8-Echeveria.jpg', 'assets/top13.1.jpg', 'assets/top20.jpg'],
-        description: 'A beautiful Thuja plant that enhances your garden decor.',
-        advantages: ['Air purifier', 'Easy to maintain']
+        images: ['assets/top17%20euphorbia%20trigona.webp', 'assets/top16.jpg', 'assets/top19.jpg'],
+        description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
+        advantages: ['Indoor Plant', 'Easy to maintain']
+      },
+      {
+        name: 'Mammillaria gracilis',
+        image: 'assets/top18%20mammilaria%20gracillis.webp',
+        oldPrice: 169,
+        newPrice: 149,
+        discount: 18,
+        images: ['assets/top18%20mammilaria%20gracillis.webp', 'assets/top16.jpg', 'assets/top19.jpg'],
+        description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
+        advantages: ['Indoor Plant', 'Easy to maintain']
+      },
+      {
+        name: 'Pachyphytum oviferum',
+        image: 'assets/top19.webp',
+        oldPrice: 169,
+        newPrice: 149,
+        discount: 18,
+        images: ['assets/top19.webp', 'assets/top16.jpg', 'assets/top19.jpg'],
+        description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
+        advantages: ['Indoor Plant', 'Easy to maintain']
+      },
+      {
+        name: 'Agave Burnt Burgundy',
+        image: 'assets/top20.webp',
+        oldPrice: 169,
+        newPrice: 149,
+        discount: 18,
+        images: ['assets/top20.webp', 'assets/top16.jpg', 'assets/top19.jpg'],
+        description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
+        advantages: ['Indoor Plant', 'Easy to maintain']
+      },
+      {
+        name: 'Mammillaria elongata Green',
+        image: 'assets/top21.webp',
+        oldPrice: 169,
+        newPrice: 149,
+        discount: 18,
+        images: ['assets/top21.webpg', 'assets/top16.jpg', 'assets/top19.jpg'],
+        description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
+        advantages: ['Indoor Plant', 'Easy to maintain']
+      },
+      {
+        name: 'Haworthia cooperi',
+        image: 'assets/top22%20Haworthia%20cooperi.webp',
+        oldPrice: 169,
+        newPrice: 149,
+        discount: 18,
+        images: ['assets/top22%20Haworthia%20cooperi.webp', 'assets/top16.jpg', 'assets/top19.jpg'],
+        description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
+        advantages: ['Indoor Plant', 'Easy to maintain']
+      },
+      {
+        name: 'Lenophyllum texanum',
+        image: 'assets/top23.webp',
+        oldPrice: 169,
+        newPrice: 149,
+        discount: 18,
+        images: ['assets/top23.webp', 'assets/top16.jpg', 'assets/top19.jpg'],
+        description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
+        advantages: ['Indoor Plant', 'Easy to maintain']
+      },
+      {
+        name: 'Sedum Little Gem',
+        image: 'assets/top24%20sedum%20little%20gem.webp',
+        oldPrice: 169,
+        newPrice: 149,
+        discount: 18,
+        images: ['assets/top24%20sedum%20little%20gem.webp', 'assets/top16.jpg', 'assets/top19.jpg'],
+        description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
+        advantages: ['Indoor Plant', 'Easy to maintain']
+      },
+      {
+        name: 'Aloe Pink Bluish',
+        image: 'assets/top25.webp',
+        oldPrice: 169,
+        newPrice: 149,
+        discount: 18,
+        images: ['assets/top25.webp', 'assets/top16.jpg', 'assets/top19.jpg'],
+        description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
+        advantages: ['Indoor Plant', 'Easy to maintain']
+      },
+      {
+        name: 'Haworthia retusa',
+        image: 'assets/top26%20haworthia%20retusa.webp',
+        oldPrice: 169,
+        newPrice: 149,
+        discount: 18,
+        images: ['assets/top26%20haworthia%20retusa.webp', 'assets/top16.jpg', 'assets/top19.jpg'],
+        description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
+        advantages: ['Indoor Plant', 'Easy to maintain']
+      },
+
+      {
+        name: 'Haworthia fasciata',
+        image: 'assets/top27%20haworthia%20fasciata.webp',
+        oldPrice: 169,
+        newPrice: 149,
+        discount: 18,
+        images: ['assets/top27%20haworthia%20fasciata.webp', 'assets/top16.jpg', 'assets/top19.jpg'],
+        description: 'Mammillaria carmenae is a small, globular, slow-growing cactus with soft white spines and crown-like pink or white flowers, ideal for low-maintenance collections.',
+        advantages: ['Indoor Plant', 'Easy to maintain']
       }
     ],
     
