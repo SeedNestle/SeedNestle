@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
+import { Router } from '@angular/router';
 import { EmailService } from '../../services/email.service';
 
 
@@ -18,7 +18,11 @@ export class HomeComponent {
   
   isError: boolean = false; 
 
-  constructor(private emailService: EmailService) {}
+  constructor(private emailService: EmailService,private router: Router) {}
+
+  navigateTo(path: string) {
+    this.router.navigate([path]); // Navigate to the given path
+  }
 
   subscribe() {
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;

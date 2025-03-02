@@ -656,23 +656,151 @@ button:hover .icon-3 {
   right: 20px;
   display: flex;
   align-items: center;
-  background: #25d366;
-  padding: 10px;
+  background: #488345;
+  padding:5px;
   border-radius: 25px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-decoration: none;
-  color: white;
+  color: rgb(255, 255, 255);
   font-weight: bold;
-  font-size: 14px;
+  font-size: 11px;
   transition: transform 0.3s ease-in-out;
 }
 
 .whatsapp-float img {
-  width: 30px;
-  height: 30px;
-  margin-right: 10px;
+  width: 25px;
+  height: 25px;
+  margin-right: 1px;
 }
 
 .whatsapp-float:hover {
   transform: scale(1.1);
+}
+
+
+
+
+/* explore to product page */
+.animated-button {
+  position: relative;
+  display: inline-flex;
+  margin-top: 12px;
+  align-items: center;
+  justify-content: center; /* Ensure text stays centered */
+  gap: 6px; /* Space between text & icons */
+  padding: 10px 20px; /* Reduce size */
+  font-size: 14px; /* Reduce text size */
+  font-weight: 500;
+  color: #1f387e;
+  background-color: #c5e5e4;
+  border: 2px solid transparent;
+  border-radius: 40px; /* Slightly rounded */
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 0 0 2px #ffffff;
+  overflow: hidden;
+}
+
+/* Reduce icon size */
+.animated-button svg {
+  width: 16px; /* Make smaller */
+  height: 16px;
+  fill: #1f387e;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Left arrow positioning */
+.animated-button .arr-2 {
+  transform: translateX(-10px);
+  opacity: 0;
+}
+
+/* Right arrow positioning */
+.animated-button .arr-1 {
+  transform: translateX(10px);
+  opacity: 0;
+}
+
+/* Circle effect */
+.animated-button .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15px;
+  height: 15px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+/* Text transition */
+.animated-button .text {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.animated-button:hover {
+  background-color: #a3d2ca;
+  color: #212121;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+}
+
+/* Arrow movements on hover */
+.animated-button:hover .arr-2 {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.animated-button:hover .arr-1 {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Circle expands on hover */
+
+.product-button-container {
+  display: flex;
+  justify-content: flex-start; /* Adjusts alignment */
+  margin-top: 128px; /* Adjust if needed */
+  margin-left: 25px;
+}
+
+
+.btn-product {
+  color: rgb(14, 12, 11);
+  
+  text-decoration: none;
+  border: 2px solid rgb(189, 186, 8);
+  padding: 8px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: bold;
+  background: transparent;
+  position: relative;
+  transition: all 1s;
+  overflow: hidden;
+}
+
+.btn-product:hover {
+  color: white;
+}
+
+.btn-product::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  top: 0;
+  left: -40px;
+  transform: skewX(45deg);
+  background-color: rgb(17, 173, 98);
+  z-index: -1;
+  transition: all 1s;
+}
+
+.btn-product:hover::before {
+  width: 160%;
 }
