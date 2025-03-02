@@ -291,6 +291,18 @@ export class ProductsComponent implements AfterViewInit {
         advantages: ['Indoor Plant', 'Easy to maintain']
       }
     ],
+    Terrarium : [
+      {
+        name: 'No Products Go Back',
+        image: 'assets/',
+        oldPrice: 0,
+        newPrice: 0,
+        discount: 0,
+        images: [''],
+        description: '.',
+        advantages: ['']
+      },
+    ],
     
     Accessories : [
       {
@@ -557,6 +569,7 @@ export class ProductsComponent implements AfterViewInit {
         advantages: ['']
       }
     ],
+    
     
     Gift: [
       {
