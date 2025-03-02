@@ -255,6 +255,16 @@ export class ProductsComponent implements AfterViewInit {
         advantages: ['Ideal for small to medium-sized plants','Lightweight and easy to move']
       },
       {
+        name: 'German-Ceramic',
+        image: 'assets/rich-pot.webp',
+        oldPrice: 2268,
+        newPrice: 1998,
+        discount: 17,
+        images: ['assets/rich-pot.webp'],
+        description: 'The German Pink Color Pot is a beautifully designed planter that adds a touch of elegance to any space. Its smooth gradient from deep blue to soft white creates a modern and calming aesthetic, perfect for indoor and outdoor plant décor',
+        advantages: ['Ideal for small to medium-sized plants','Lightweight and easy to move']
+      },
+      {
         name: 'Brown-oval-pot',
         image: 'assets/brown-3-pot.webp',
         oldPrice: 258,
@@ -345,6 +355,69 @@ export class ProductsComponent implements AfterViewInit {
         advantages: ['Enhances plant aesthetics with a natural and elegant look','Helps retain soil moisture and prevent erosion']
       },
       {
+        name: 'Red-Ceramic',
+        image: 'assets/red-ceramic.jpg',
+        oldPrice: 778,
+        newPrice: 658,
+        discount: 17,
+        images: ['assets/red-ceramic.jpg'],
+        description: 'A red ceramic pot is a stylish and durable planter made from high-quality ceramic material with a smooth, glossy, or matte red finish. It adds a vibrant touch to any indoor or outdoor space, making it perfect for showcasing plants, flowers, or succulents.',
+        advantages: ['Ideal for home decor, office desks, patios, and gardens.','Glossy or matte red glaze for an elegant and eye-catching look.']
+      },
+      {
+        name: 'White-Ceramic',
+        image: 'assets/white-ceramic.webp',
+        oldPrice: 778,
+        newPrice: 658,
+        discount: 17,
+        images: ['assets/white-ceramic.webp'],
+        description: 'A White ceramic pot is a stylish and durable planter made from high-quality ceramic material with a smooth, glossy, or matte red finish. It adds a vibrant touch to any indoor or outdoor space, making it perfect for showcasing plants, flowers, or succulents.',
+        advantages: ['Ideal for home decor, office desks, patios, and gardens.','Glossy or matte red glaze for an elegant and eye-catching look.']
+      },
+      {
+        name: 'Budda-Pot',
+        image: 'assets/budda_pot.webp',
+        oldPrice: 180,
+        newPrice: 120,
+        discount: 17,
+        images: ['assets/budda_pot.webp'],
+        description: 'A Buddha pot is a beautifully crafted planter featuring a serene Buddha face or statue design. It is perfect for adding a touch of peace, spirituality, and elegance to any space.',
+        advantages: [' Features a calm and meditative Buddha face, symbolizing tranquility and mindfulness.']
+        
+      },
+      {
+        name: 'Blue-Hang',
+        image: 'assets/blue-hang.webp',
+        oldPrice: 180,
+        newPrice: 120,
+        discount: 17,
+        images: ['assets/blue-hang.webp'],
+        description: 'A one-hook side pot is a space-saving and stylish planter designed to hang securely on gates, railings, or fences. It is perfect for adding greenery to small spaces like balconies, patios, and entrances.',
+        advantages: ['Features a single sturdy hook for easy hanging on gates or railings.','Weather-resistant coating to prevent rust and fading.']
+      },
+      {
+        name: 'Green-Hang',
+        image: 'assets/green-hang.webp',
+        oldPrice: 180,
+        newPrice: 120,
+        discount: 17,
+        images: ['assets/green-hang.webp'],
+        description: 'A one-hook side pot is a space-saving and stylish planter designed to hang securely on gates, railings, or fences. It is perfect for adding greenery to small spaces like balconies, patios, and entrances.',
+        advantages: ['Features a single sturdy hook for easy hanging on gates or railings.','Weather-resistant coating to prevent rust and fading.']
+      },
+      {
+        name: 'RSP-pot',
+        image: 'assets/pot4.webp',
+        oldPrice: 608,
+        newPrice: 400,
+        discount: 17,
+        images: ['assets/pot4.webp'],
+        description: 'A Resin Sandstone Pot is a lightweight yet durable planter that mimics the natural texture and look of real sandstone while offering the resilience of resin. It is perfect for both indoor and outdoor plant decor.',
+        advantages: ['Elegant and natural stone-like texture, blending seamlessly with various decor styles.']
+      },
+      
+
+      {
         name: 'White-sm-Plates',
         image: 'assets/white-plate.webp',
         oldPrice: 58,
@@ -420,25 +493,16 @@ export class ProductsComponent implements AfterViewInit {
     ],
     Fertilizers: [
       {
-        name: 'Organic Compost',
-        image: 'assets/compost.jpg',
+        name: 'Medi_Spray',
+        image: 'assets/medi-spray.webp',
         oldPrice: 599,
         newPrice: 499,
         discount: 17,
-        images: ['assets/compost.jpg', 'assets/top25.jpg'],
-        description: 'Nutrient-rich organic compost for healthy plants.',
-        advantages: ['Improves soil fertility', 'Eco-friendly']
+        images: ['assets/medi-spray.webp'],
+        description: 'A Medi Spray is a convenient aerosol or liquid spray used for medical and healthcare purposes, such as wound care, pain relief, or disinfecting surfaces. It is designed for easy application without direct contact, promoting hygiene and quick relief.',
+        advantages: ['Used for cleaning wounds, cuts, and burns to prevent infection.', ' Prevents and treats fungal infections like powdery mildew and leaf spots.']
       },
-      {
-        name: 'Liquid Fertilizer',
-        image: 'assets/liquid_fertilizer.jpg',
-        oldPrice: 399,
-        newPrice: 349,
-        discount: 12,
-        images: ['assets/liquid_fertilizer.jpg', 'assets/ZZ plant.jpg'],
-        description: 'Boost plant growth with this liquid fertilizer.',
-        advantages: ['Fast absorption', 'Easy to apply']
-      }
+      
     ]
   };
 
