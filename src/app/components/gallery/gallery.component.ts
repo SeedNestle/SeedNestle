@@ -1,11 +1,16 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-gallery',
- 
   templateUrl: './gallery.component.html',
-  styleUrl: './gallery.component.css'
+  styleUrls: ['./gallery.component.css']
 })
 export class GalleryComponent {
 
+  constructor(private router: Router) {}
+
+  goToProductsPage() {
+    this.router.navigate(['/products']);  // Navigates to /products page
+  }
 }

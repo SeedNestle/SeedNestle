@@ -122,3 +122,15 @@ body {
         font-size: 8px; /* Smaller description font size */
     }
 }
+
+
+span {
+    color: blue;          /* Text color */
+    text-decoration: underline; /* Underline the text */
+    cursor: pointer;      /* Show pointer cursor on hover */
+  }
+  
+  span:hover {
+    color: darkblue; /* Slightly darker blue on hover */
+  }
+  

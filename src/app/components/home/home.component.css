@@ -190,13 +190,11 @@ h1 {
   width: 600px;
   height: 170px;
 }
-.block:nth-child(7) {
-  
-}
+/* gif */
 .block:nth-child(8) {
   background: rgba(208, 211, 172, 0.735);
   width: 600px;
-  height: 200px;
+  height: 220px;
 }
 .block:nth-child(9) {
   background: rgb(232, 88, 67);
@@ -762,11 +760,21 @@ button:hover .icon-3 {
 /* Circle expands on hover */
 
 .product-button-container {
+  position: absolute;
+  bottom: 10px; /* Adjust spacing from bottom */
+  left: 0;
+  width: 100%;
   display: flex;
-  justify-content: flex-start; /* Adjusts alignment */
-  margin-top: 128px; /* Adjust if needed */
-  margin-left: 25px;
+  justify-content: center;
+  align-items: center;
 }
+
+.block:last-child {
+  position: relative; /* Ensure the button container is positioned within the block */
+  padding-bottom: 50px; /* Ensure space for button */
+}
+
+
 
 
 .btn-product {
