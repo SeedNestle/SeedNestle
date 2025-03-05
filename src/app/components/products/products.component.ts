@@ -202,7 +202,7 @@ export class ProductsComponent implements AfterViewInit {
       {
         name: 'Pachyphytum oviferum',
         image: 'assets/top19.webp',
-        oldPrice: 169,
+        oldPrice: 179,
         newPrice: 149,
         discount: 18,
         images: ['assets/top19.webp', 'assets/top16.jpg', 'assets/top19.jpg'],
