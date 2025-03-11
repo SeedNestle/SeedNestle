@@ -1,355 +1,248 @@
-.dashboard {
-  padding: 20px;
-}
-
-.categories {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.categories button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  background-color: #f0f0f0;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.products-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.product-card {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  width: 250px;
-  overflow: hidden;
-  padding: 15px;
-  position: relative;
-  transition: transform 0.3s ease-in-out;
-}
-
-.product-card:hover {
-  transform: translateY(-5px);
-}
-
-.image-container {
-  width: 150px;
-  height: 150px;
-  overflow: hidden;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-}
-
-.image-container img {
-  width: 150px !important;
-  height: 150px !important;
-  object-fit: contain; /* Maintains aspect ratio without cropping */
-}
-
-.discount-badge {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background: #ffcc00;
-  color: black;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.product-name {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 15px 0 5px;
-}
-
-.price {
-  font-size: 16px;
-  color: #555;
-  margin-bottom: 5px;
-}
-
-.old-price {
-  text-decoration: line-through; /* This will create the strikethrough effect */
-  color: gray;
-  margin-right: 5px;
-  font-size: 14px;
-}
-
-
-.new-price {
-  color: green;
-  font-weight: bold;
-  font-size: 18px;
-}
-
-.rating {
-  color: #f4c430;
-  font-size: 16px;
-  margin: 8px 0;
-}
-
-.action-button {
-  display: block;
-  background: #008000;
-  color: white;
-  border: none;
-  padding: 12px;
-  border-radius: 5px;
-  cursor: pointer;
-  width: 100%;
-  font-size: 16px;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-top: 10px;
-}
-
-.action-button:hover {
-  background: #006400;
-}
-.order-popup {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-  text-align: center;
-}
-
-.popup-content {
-  max-width: 300px;
-}
-
-.whatsapp-link {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px;
-  background: #25D366;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-}
-
-.close-popup {
-  margin-top: 10px;
-  padding: 5px 10px;
-  border: none;
-  background: red;
-  color: white;
-  cursor: pointer;
-  border-radius: 5px;
-}
-/* Full-screen dark overlay */
-.popup-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Dark transparent background */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000; /* Ensure it appears on top */
-}
-
-/* Popup box */
-.order-popup {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
-  text-align: center;
-  max-width: 350px;
-  width: 90%;
-}
-
-/* WhatsApp button */
-.whatsapp-link {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px;
-  background: #25D366;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-}
-
-/* Close button */
-.close-popup {
-  margin-top: 10px;
-  padding: 5px 15px;
-  border: none;
-  background: red;
-  color: white;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-/* From Uiverse.io by nikk7007 */ 
-.button {
-  --color: #00A97F;
-  padding: 0.8em 1.7em;
-  background-color: transparent;
-  border-radius: .3em;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  transition: .5s;
-  font-weight: 400;
-  font-size: 17px;
-  border: 1px solid;
-  font-family: inherit;
-  text-transform: uppercase;
-  color: var(--color);
-  z-index: 1;
- }
- 
- .button::before, .button::after {
-  content: '';
-  display: block;
-  width: 50px;
-  height: 50px;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  border-radius: 50%;
-  z-index: -1;
-  background-color: var(--color);
-  transition: 1s ease;
- }
- 
- .button::before {
-  top: -1em;
-  left: -1em;
- }
- 
- .button::after {
-  left: calc(100% + 1em);
-  top: calc(100% + 1em);
- }
- 
- .button:hover::before, .button:hover::after {
-  height: 410px;
-  width: 410px;
- }
- 
- .button:hover {
-  color: rgb(10, 25, 30);
- }
- 
- .button:active {
-  filter: brightness(.8);
- }
- .categories {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two per row */
-  gap: 10px;
-  justify-content: center;
-  max-width: 400px; /* Adjust width for better layout */
-  margin: 0 auto;
-}
-.categories button:hover,
-.categories button:active { /* Fix for touch devices */
-  background-color: #d4f5e9; /* Change color on hover */
-  transform: scale(1.05);
-}
-
-
-.categories button {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  background-color: #f0f0f0;
-  cursor: pointer;
-  font-size: 14px;
-  min-width: 100px; /* Ensures buttons don’t get too small */
-  flex-grow: 1; /* Allows them to expand */
-  text-align: center;
-  white-space: nowrap; /* Prevents text wrapping */
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .categories {
-    gap: 5px;
+/* Category Filters */
+.category-filters {
+    text-align: center;
+    margin-bottom: 20px;
   }
-
-  .categories button {
+  
+  .category-filters button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .category-filters button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Product Grid */
+  .product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .product-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 220px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .product-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .product-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .product-card h3 {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+  
+  .product-card .price {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .product-card .discount {
+    background-color: #f44336;
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
     font-size: 12px;
-    min-width: 80px;
-    padding: 8px;
+    position: absolute;
+    margin-left: -5px;
+    margin-top: -5px;
   }
-}
-
-@media (max-width: 480px) {
-  .categories {
-    flex-direction: column; /* Stack buttons on smaller screens */
+  
+  /* Buttons */
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .view-btn, .cart-btn {
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .view-btn {
+    background-color: #2196F3;
+    color: white;
+  }
+  
+  .view-btn:hover {
+    background-color: #1976D2;
+  }
+  
+  .cart-btn {
+    background-color: #eb9634;
+    color: white;
+  }
+  
+  .cart-btn:hover {
+    background-color: #F57C00;
+  }
+  
+  /* Change cart button when added */
+  .cart-btn.added {
+    background-color: #4CAF50;
+    color: white;
+    cursor: default;
+  }
+  
+  /* Modal Overlay */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
     align-items: center;
   }
-
-  .categories button {
-    width: 90%; /* Makes buttons full-width */
-    max-width: 150px;
+  
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    position: relative;
   }
-}
-
-
-
-
-#products-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 16px;
-  padding: 10px;
-}
-
-.product-card {
-  text-align: center;
-  background: #fff;
-  border: 1px solid #ddd;
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.product-card:hover {
-  transform: scale(1.05);
-}
-
-.image-container img {
-  width: 100%;
-  height: auto;
-  max-width: 150px;
-}
-
-@media screen and (max-width: 768px) {
-  #products-container {
-    grid-template-columns: repeat(2, 1fr); /* Two items per row */
+  
+  .modal-content img {
+    width: 100%;
+    height: 350px;
+    border-radius: 10px;
   }
-}
-
-@media screen and (max-width: 480px) {
-  #products-container {
-    grid-template-columns: repeat(2, 1fr); /* Still two per row for small screens */
+  
+  .modal-content h2 {
+    margin: 10px 0;
   }
-}
+  
+  .modal-content p {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .modal-content .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 52px;
+    cursor: pointer;
+    color: #f10c0c;
+    
+  }
+  
+  .modal-content .close:hover {
+    color: #333;
+  }
+  
+
+  @media (max-width: 768px) {
+    .product-grid {
+      justify-content: center;
+    }
+  
+    .product-card {
+      width: calc(50% - 20px); /* Two per row */
+    }
+  }
+  
+  /* One product per row for mobile devices */
+  @media (max-width: 480px) {
+    .product-card {
+      width: 45%;
+    }
+      .view-btn, .cart-btn {
+        border: none;
+        padding: 6px 10px;
+        font-size: 13px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Floating Cart Icon */
+.cart-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #1f1911;
+    color: rgb(230, 109, 109);
+    padding: 12px;
+    border-radius: 50%;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .cart-icon:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Cart Counter Badge */
+  .cart-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: red;
+    color: white;
+    font-size: 12px;
+    padding: 4px 6px;
+    border-radius: 50%;
+  }
+  
+  /* Responsive Cart Button */
+  @media (max-width: 768px) {
+    .cart-icon {
+      bottom: 15px;
+      right: 15px;
+      font-size: 18px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .cart-icon {
+      bottom: 10px;
+      right: 10px;
+      font-size: 16px;
+    }
+  }
+  

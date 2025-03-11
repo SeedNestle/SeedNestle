@@ -1,21 +1,47 @@
-<marquee behavior="scroll" direction="left" style="background: #ffcc00; color: black; padding: 10px; font-weight: bold;">
-  📢 Sorry for the inconvenience. As a small startup, we are trying to cut down costs and provide the most optimal prices. 
-  We are currently taking WhatsApp orders. Click the "BUY NOW" button to send your order via WhatsApp. 
-  We will process your order and send verifications to your mobile phone. Please cooperate and help us grow. Thank you! 🙏
-</marquee>
+<!-- Category Filters -->
+<div class="category-filters">
+  <button *ngFor="let category of categories" (click)="filterByCategory(category)">
+    {{ category }}
+  </button>
+</div>
 
+<!-- Product Grid -->
+<div class="product-grid">
+  <div class="product-card" *ngFor="let product of filteredProducts">
+    <span class="discount">{{ product.discount }}</span>
+    <img [src]="product.image" [alt]="product.name">
+    <h3>{{ product.name }}</h3>
+    <p class="price"><del>₹{{ product.originalPrice }}</del> ₹{{ product.price }}</p>
 
-<div class="dashboard">
-  <div class="categories">
-    <button id="plants-btn" class="button">Succulents & Cactus</button>
-    <button id="terrarium-btn" class="button">Terrarium Plants</button>
-    <button id="accessories-btn" class="button">Accessories</button>
-    <button id="gift-btn" class="button">Gift Hamperes</button>
-    <button id="fertilizers-btn" class="button">Fertilizers</button>
-
+    <div class="button-group">
+      <button class="view-btn" (click)="openProductDetails(product)">VIEW</button>
+      <button class="cart-btn" (click)="toggleCart(product)">
+        {{ product.addedToCart ? 'ADDED' : 'ADD TO CART' }}
+      </button>
+      
+    </div>
   </div>
+</div>
 
-  <div id="products-container" class="products-grid">
+<!-- Product Details Modal -->
+<div *ngIf="selectedProduct" class="modal-overlay">
+  <div class="modal-content">
+    <span class="close" (click)="closeProductDetails()">&times;</span>
+    <img [src]="selectedProduct.image" [alt]="selectedProduct.name">
+    <h2>{{ selectedProduct.name }}</h2>
+    <p><strong>Discount:</strong> {{ selectedProduct.discount }}</p>
+    <p><strong>Price:</strong> ₹{{ selectedProduct.price }}</p>
+    <p><strong>Description:</strong> A beautiful plant to enhance your space.</p>
+    <button class="cart-btn" (click)="toggleCart(selectedProduct)">
+      {{ selectedProduct.addedToCart ? 'ADDED' : 'ADD TO CART' }}
+    </button>
     
   </div>
+</div>
+
+
+
+<div class="cart-icon" (click)="goToCart()">
+  🛒
+  <span *ngIf="cartCount > 0" class="cart-badge">{{ cartCount }}</span>
 </div>
