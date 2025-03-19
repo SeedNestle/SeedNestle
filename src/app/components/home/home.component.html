@@ -141,6 +141,23 @@
 </div>
 
 
+
+<div class="testimonial-section">
+  <h3 class="testimonial-title">FROM THE PEOPLE</h3>
+  <div class="stars">★★★★★</div>
+  <p class="testimonial-text">
+    {{ reviews[currentIndex].text }}
+  </p>
+  <p class="testimonial-author">{{ reviews[currentIndex].author }}</p>
+  <div class="testimonial-navigation">
+    <span class="nav-left" (click)="prevReview()">&lt;</span>
+    <span class="nav-right" (click)="nextReview()">&gt;</span>
+  </div>
+</div>
+
+
+
+
 <div class="subscribe">
   <h2>Subscribe to our newsletter</h2>
   <p>Sign up and be the first to know of sales, events and exclusives</p>

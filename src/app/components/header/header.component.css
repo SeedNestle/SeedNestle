@@ -6,92 +6,177 @@
   background-color: #123524;
   padding: 10px 20px;
   position: relative;
-  flex-wrap: wrap; /* Allow wrapping for smaller screens */
-}
-.navbar-brand img {
-  width: 50px; /* Ensure the size is consistent */
-  height: 50px;
-  border-radius: 30%; /* Makes the image round */
-  transition: transform 0.3s ease; /* Smooth zoom effect */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for better visibility */
 }
 
-.navbar-brand img:hover {
-  transform: scale(1.2); /* Zoom effect on hover */
-  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Enhance shadow during zoom */
-}
-
-
-/* Logo and text styling */
+/* Logo styling */
 .navbar-brand {
   display: flex;
   align-items: center;
   color: white;
-  text-decoration: none;
   font-size: 24px;
   font-weight: bold;
+  text-decoration: none;
 }
 
 .navbar-brand img {
-  margin-right: 10px; /* Space between logo and text */
+  width: 50px;
+  height: 50px;
+  border-radius: 30%;
+  margin-right: 10px;
 }
 
-/* Navigation Links */
+/* Mobile Toggle Button */
+.toggle-menu {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Sidebar (Mobile Menu) */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -60%;
+  width: 60%;
+  height: 100%;
+  background: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease-in-out;
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+/* Close Button */
+.close-btn {
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+/* Sidebar Links */
+.sidebar a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px;
+  display: block;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown a {
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  background: #f5f5f5;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.dropdown-menu a {
+  padding: 5px;
+  font-size: 16px;
+}
+
+/* Overlay to close menu when clicking outside */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .toggle-menu {
+    display: block;
+  }
+
+  .sidebar {
+    z-index: 20;
+  }
+}
+/* Desktop Navigation */
 .nav-links {
   display: flex;
-  justify-content: center;
+  gap: 20px;
   align-items: center;
-  flex: 1 1 auto; /* Flexible width for links */
+  justify-content: center;
+  cursor: pointer;
+  flex-grow: 1; /* Ensures it takes available space */
 }
 
 .nav-links a {
-  color: rgb(255, 253, 253);
-  text-decoration: none;
-  font-size: 16px;
-  padding: 8px 16px;
-  transition: background-color 0.3s ease;
-}
-
-.nav-links a:hover {
-  background-color: #88eb90;
-  border-radius: 4px;
-}
-
-/* Toggle Menu Button (Visible on Mobile) */
-.toggle-menu {
-  display: none; /* Hidden by default */
-  cursor: pointer;
-  font-size: 24px;
   color: white;
+  text-decoration: none;
+  font-size: 18px;
 }
 
-/* Mobile Responsiveness */
+/* Ensure nav links appear on larger screens */
+@media screen and (min-width: 769px) {
+  .nav-links {
+    display: flex !important;
+  }
+}
+
+/* Hide desktop nav links on mobile */
 @media screen and (max-width: 768px) {
   .nav-links {
-      display: none; /* Hide nav links by default */
-      flex-direction: column; /* Stack links vertically */
-      gap: 10px; /* Add spacing between links */
-      width: 100%; /* Full width for links */
-      padding: 10px 0; /* Add padding for spacing */
-      background-color: rgba(198, 228, 229, 0.507);
-      /* Match navbar background */
-      position: absolute; /* Overlay the links */
-      top: 50px; /* Position below the navbar */
-      left: 0;
-      z-index: 20;
-  
- 
-      
+    display: none;
   }
-  .nav-links a {
-    color: black;
-  }
+}
+/* Hover Effects & Cursor Pointer */
+.nav-links a,
+.sidebar a,
+.dropdown a,
+.toggle-menu,
+.close-btn {
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
 
-  .nav-links.active {
-      display: flex; /* Show links when active */
-  }
+/* Change color on hover */
+.nav-links a:hover,
+.sidebar a:hover,
+.dropdown a:hover {
+  color: #f4a261; /* Soft orange highlight */
+}
 
-  .toggle-menu {
-      display: block; /* Show the toggle menu button */
-  }
+/* Dropdown Menu */
+.dropdown-menu a:hover {
+  background-color: #ddd;
+  border-radius: 5px;
+}
+
+/* Mobile Sidebar Links Hover */
+.sidebar a:hover {
+  color: #41c24e; /* Teal highlight */
+}
+
+/* Mobile Menu Toggle Button Hover */
+.toggle-menu:hover {
+  color: #f4a261;
+}
+
+/* Close Button Hover */
+.close-btn:hover {
+  color: red;
 }

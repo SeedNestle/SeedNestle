@@ -1,31 +1,35 @@
-import { Component, Inject, PLATFORM_ID } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { isPlatformBrowser } from '@angular/common';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-header',
   standalone: true,
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.css'],
+  imports: [CommonModule],
 })
 export class HeaderComponent {
-  constructor(private router: Router, @Inject(PLATFORM_ID) private platformId: object) {}
+  menuOpen = false;
+  dropdownOpen = false;
 
-  menuOpen: boolean = false;
+  constructor(private router: Router) {}
 
-  toggleMenu(): void {
+  toggleMenu() {
     this.menuOpen = !this.menuOpen;
   }
 
-  navigateTo(path: string) {
-    // Check if running in the browser before navigating
-    if (isPlatformBrowser(this.platformId)) {
-      this.router.navigate([path]);
-      this.closeMenu();
-    }
+  closeMenu() {
+    this.menuOpen = false;
+    this.dropdownOpen = false;
   }
 
-  closeMenu() {
-    this.menuOpen = false; // Close the menu when a link is clicked
+  navigateTo(path: string) {
+    this.router.navigate([path]);
+    this.closeMenu(); // Close menu after navigation
+  }
+
+  toggleDropdown() {
+    this.dropdownOpen = !this.dropdownOpen;
   }
 }

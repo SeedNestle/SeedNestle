@@ -1,20 +1,44 @@
 <nav class="navbar">
-  <!-- Logo and Brand -->
-  <a class="navbar-brand" href="#">
-    <img src="../../../assets/logo.jpeg" width="50" height="50" class="d-inline-block align-top" alt="Company Logo">
+  <!-- Logo -->
+  <a class="navbar-brand" (click)="navigateTo('/home')">
+    <img src="../../../assets/logo.jpeg" alt="Company Logo" />
     SEEDNESTLE
   </a>
 
-  <!-- Toggle Button (Visible on Mobile) -->
-  <div class="toggle-menu" (click)="toggleMenu()">
-    ☰
+  <!-- Desktop Navigation (Visible on large screens) -->
+  <div class="nav-links">
+    <a (click)="navigateTo('/home')">Home</a>
+    <a (click)="navigateTo('/achivements')">About Us</a>
+    <a (click)="navigateTo('/gallery')">Gallery</a>
+    <a (click)="navigateTo('/products')">Products</a>
+
+    
+    
+    
   </div>
 
-  <!-- Navigation Links -->
-  <nav class="nav-links" [class.active]="menuOpen">
-    <a (click)="navigateTo('/home');">Home</a>
-    <a (click)="navigateTo('/achivements');">About Us</a>
-    <a (click)="navigateTo('/gallery');">Gallery</a>
-    <a (click)="navigateTo('/products');">Products</a>
-  </nav>
+  <!-- Toggle Button (Mobile) -->
+  <div class="toggle-menu" (click)="toggleMenu()">☰</div>
+
+  <!-- Overlay (Click to close menu) -->
+  <div class="overlay" *ngIf="menuOpen" (click)="closeMenu()"></div>
+
+  <!-- Sidebar Menu (Slide-in from Right) -->
+  <div class="sidebar" [class.active]="menuOpen">
+    <button class="close-btn" (click)="closeMenu()">✖</button>
+
+    <a (click)="navigateTo('/home')">Home</a>
+    <a (click)="navigateTo('/achivements')">About Us</a>
+    <a (click)="navigateTo('/gallery')">Gallery</a>
+
+    <!-- Dropdown for Products -->
+    <div class="dropdown">
+      <a (click)="toggleDropdown()">Products ▼</a>
+      <div class="dropdown-menu" *ngIf="dropdownOpen">
+        <a (click)="navigateTo('/products')">Seeds</a>
+        <a (click)="navigateTo('/products')">Plants</a>
+        <a (click)="navigateTo('/products')">Gardening Tools</a>
+      </div>
+    </div>
+  </div>
 </nav>

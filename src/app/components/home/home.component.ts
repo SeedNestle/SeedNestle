@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component , OnInit,OnDestroy} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -12,7 +12,7 @@ import { EmailService } from '../../services/email.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit,OnDestroy {
   email: string = '';
   message : string = '';
   
@@ -68,4 +68,54 @@ export class HomeComponent {
   toggleAnswer(question: any): void {
     question.expanded = !question.expanded;
   }
+
+
+
+  reviews = [
+    {
+      text: "Chandru did an exceptional job both with the plants and keeping me updated so that I wouldn't stress while I was away. I have already booked Sam for my next trip and would recommend her to anyone needing a reliable and knowledgeable plant sitter.",
+      author: "— Aishwaraya"
+    },
+    {
+      text: "Had a smooth experience, was helped with picking out the right plants and received a lot of information on how to take care of them.",
+      author: "— Sharanya"
+    },
+    {
+      text: "Great plant care, very professional and friendly. I will definitely use this service again.",
+      author: "— Sanjay"
+    }
+  ];
+  
+  currentIndex = 0;
+  interval: any;
+
+  ngOnInit() {
+    this.startAutoSlide();
+  }
+
+  ngOnDestroy() {
+    clearInterval(this.interval);
+  }
+
+  startAutoSlide() {
+    this.interval = setInterval(() => {
+      this.nextReview();
+    }, 5000);
+  }
+
+  prevReview() {
+    this.currentIndex = (this.currentIndex - 1 + this.reviews.length) % this.reviews.length;
+    this.resetAutoSlide();
+  }
+
+  nextReview() {
+    this.currentIndex = (this.currentIndex + 1) % this.reviews.length;
+    this.resetAutoSlide();
+  }
+
+  resetAutoSlide() {
+    clearInterval(this.interval);
+    this.startAutoSlide();
+  }
+
 }
