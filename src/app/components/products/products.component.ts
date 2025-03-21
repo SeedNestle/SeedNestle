@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
-  categories = ['Succulents & Cactus', 'Terrarium Plants', 'Accessories', 'Gift Hampers', 'Fertilizers'];
+  categories = ['Succulents & Cactus', 'Terrarium Plants', 'Accessories', 'Gift Hampers', 'Fertilizers','Seeds'];
   selectedCategory = 'Succulents & Cactus';
   cartCount = 0; // ✅ Track cart item count
 
@@ -22,7 +22,7 @@ export class ProductsComponent implements OnInit {
     { id: 3, name: 'Euphorbia Japonica', originalPrice: 249, price: 169, discount: '18% OFF', image: 'assets/top3-Euphobia japonica.webp', category: 'Succulents & Cactus', addedToCart: false },
     { id: 4, name: 'Pachyphytum Compactum', originalPrice: 199, price: 159, discount: '18% OFF', image: 'assets/top4Pachyphytum Compactum.webp', category: 'Succulents & Cactus', addedToCart: false },
     { id: 5, name: 'Echeveria Lilacina', originalPrice: 189, price: 149, discount: '18% OFF', image: 'assets/top5-Echeveria lilacina.webp', category: 'Succulents & Cactus', addedToCart: false },
-    { id: 6, name: 'Sempervivum calcareum', originalPrice: 110, price: 99, discount: '10% OFF', image: 'assets/top6-pedpoudhe sempervivum calcareum.webp', category: 'Fertilizers', addedToCart: false },
+    { id: 6, name: 'Sempervivum calcareum', originalPrice: 410, price: 99, discount: '10% OFF', image: 'assets/medi-spray.webp', category: 'Fertilizers', addedToCart: false },
     { id: 7, name: 'Euphorbia globosa ', originalPrice: 180, price: 159, discount: '12% OFF', image: 'assets/top7-Euphorbia.webp', category: 'Succulents & Cactus', addedToCart: false },
     { id: 8, name: 'Echeveria ', originalPrice: 180, price: 159, discount: '12% OFF', image: 'assets/top8-Echeveria.webp', category: 'Succulents & Cactus', addedToCart: false },
     { id: 9, name: 'Sedum clavatum ', originalPrice: 180, price: 159, discount: '12% OFF', image: 'assets/top9-sedum clavantum.webp', category: 'Succulents & Cactus', addedToCart: false },
@@ -43,8 +43,8 @@ export class ProductsComponent implements OnInit {
     { id: 24, name: 'Sedum (Little Gem) ', originalPrice: 180, price: 159, discount: '12% OFF', image: 'assets/top24 sedum little gem.webp', category: 'Succulents & Cactus', addedToCart: false },
     { id: 25, name: 'Aloe (Pink Bluish)', originalPrice: 180, price: 159, discount: '12% OFF', image: 'assets/top25.webp', category: 'Succulents & Cactus', addedToCart: false },
     { id: 26, name: 'Haworthia retusa ', originalPrice: 180, price: 159, discount: '12% OFF', image: 'assets/top26 haworthia retusa.webp', category: 'Succulents & Cactus', addedToCart: false },
-    { id: 27, name: 'Haworthia fasciata', originalPrice: 230, price: 199, discount: '15% OFF', image: 'assets/top27 haworthia fasciata.webp', category: 'Accessories', addedToCart: false },
-    { id: 29, name: 'Haworthia fasciata', originalPrice: 230, price: 199, discount: '15% OFF', image: 'assets/top29.webp', category: 'Accessories', addedToCart: false }
+    { id: 27, name: 'Haworthia fasciata', originalPrice: 230, price: 199, discount: '15% OFF', image: 'assets/top27 haworthia fasciata.webp', category: 'Terrarium Plants', addedToCart: false },
+    { id: 29, name: 'Haworthia rouded', originalPrice: 230, price: 199, discount: '15% OFF', image: 'assets/top29.webp', category: 'Terrarium Plants', addedToCart: false }
   ];
 
   filteredProducts = [...this.products];
@@ -75,6 +75,7 @@ export class ProductsComponent implements OnInit {
   filterByCategory(category: string) {
     this.selectedCategory = category;
     this.filteredProducts = this.products.filter(p => p.category === category);
+    
   }
 
   openProductDetails(product: any) {

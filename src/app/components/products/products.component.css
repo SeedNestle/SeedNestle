@@ -178,8 +178,8 @@
     }
       .view-btn, .cart-btn {
         border: none;
-        padding: 6px 10px;
-        font-size: 13px;
+        padding: 6px 8px;
+        font-size: 11px;
         cursor: pointer;
         border-radius: 5px;
       }
