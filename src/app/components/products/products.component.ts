@@ -90,22 +90,37 @@ export class ProductsComponent implements OnInit {
   toggleCart(product: any) {
     if (!product.addedToCart) {
       this.cartService.addToCart(product).then(() => {
+        product.addedToCart = true;
+        
+        // ✅ Update filteredProducts properly
         this.filteredProducts = this.filteredProducts.map(p => 
           p.id === product.id ? { ...p, addedToCart: true } : p
         );
-        this.cartCount++; // ✅ Increase cart count
-        console.log('Added to cart:', product);
+  
+        // ✅ Force modal UI update by creating a new object reference
+        if (this.selectedProduct && this.selectedProduct.id === product.id) {
+          this.selectedProduct = Object.assign({}, this.selectedProduct, { addedToCart: true });
+        }
+  
+        this.cartCount++; // ✅ Update cart count
       }).catch(error => console.error('Error adding to cart:', error));
     } else {
       this.cartService.removeCartItem(product.id).then(() => {
+        product.addedToCart = false;
+  
         this.filteredProducts = this.filteredProducts.map(p => 
           p.id === product.id ? { ...p, addedToCart: false } : p
         );
-        this.cartCount--; // ✅ Decrease cart count
-        console.log('Removed from cart:', product);
+  
+        if (this.selectedProduct && this.selectedProduct.id === product.id) {
+          this.selectedProduct = Object.assign({}, this.selectedProduct, { addedToCart: false });
+        }
+  
+        this.cartCount--; // ✅ Update cart count
       }).catch(error => console.error('Error removing from cart:', error));
     }
   }
+  
 
   goToCart() {
     this.router.navigate(['/cart']);

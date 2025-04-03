@@ -895,3 +895,91 @@ button:hover .icon-3 {
     font-size: 12px;
   }
 }
+
+
+
+/* featured */
+
+
+.featured {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.featured .product {
+  text-align: center;
+  max-width: 250px;
+  position: relative;
+  padding: 10px;
+  border-radius: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.featured .product img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.featured .product .product-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.featured .product-price {
+  font-size: 14px;
+  color: #666;
+  font-weight: bold;
+}
+
+.featured .product-price::before {
+  content: "₹";  /* Adds the Indian Rupee symbol */
+}
+
+.featured .buy-now {
+  display: none;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #28a745;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.featured .product:hover {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.featured .product:hover .buy-now {
+  display: block;
+}
+
+/* Responsive Design: Two products per row on smaller screens */
+@media (max-width: 768px) {
+  .featured {
+    justify-content: space-around;
+  }
+
+  .featured .product {
+    flex: 1 1 45%; /* Two items per row */
+  }
+}
+
+@media (max-width: 420px) {
+  .featured .product {
+    flex: 1 1 100%; /* One item per row on very small screens */
+  }
+}
