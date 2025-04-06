@@ -978,7 +978,7 @@ button:hover .icon-3 {
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 320px) {
   .featured .product {
     flex: 1 1 100%; /* One item per row on very small screens */
   }

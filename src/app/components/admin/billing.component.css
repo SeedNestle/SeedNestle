@@ -1,0 +1,73 @@
+.billing-wrapper {
+    font-family: Arial, sans-serif;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    max-width: 600px;
+    background: #f9f9f9;
+  }
+  
+  .header {
+    text-align: center;
+  }
+  
+  .logo {
+    width: 100px;
+    margin-bottom: 10px;
+  }
+  
+  .bill-info {
+    margin-top: 10px;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  select {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .payment-info {
+    margin-top: 15px;
+    font-size: 16px;
+  }
+  
+  .footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .footer a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .thank-you {
+    font-style: italic;
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: center;
+  }
+  
