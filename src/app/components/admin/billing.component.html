@@ -1,6 +1,6 @@
 <div class="billing-wrapper">
     <div class="header">
-      <img src="assets/logo.png" alt="SeedNestle Logo" class="logo">
+      
       <h2>SeedNestle - Invoice</h2>
     </div>
   
@@ -21,11 +21,12 @@
       </thead>
       <tbody>
         <tr *ngFor="let item of items; let i = index">
-          <td><input [(ngModel)]="item.name" /></td>
-          <td><input type="number" [(ngModel)]="item.qty" /></td>
-          <td><input type="number" [(ngModel)]="item.price" /></td>
-          <td>₹{{ item.qty * item.price }}</td>
-          <td><button (click)="removeItem(i)">🗑</button></td>
+          <td data-label="Item"><input [(ngModel)]="item.name" /></td>
+<td data-label="Qty"><input type="number" [(ngModel)]="item.qty" /></td>
+<td data-label="Price"><input type="number" [(ngModel)]="item.price" /></td>
+<td data-label="Total">₹{{ item.qty * item.price }}</td>
+<td data-label="Action"><button (click)="removeItem(i)">🗑</button></td>
+
         </tr>
       </tbody>
     </table>
@@ -41,15 +42,13 @@
         <select [(ngModel)]="paymentMode">
           <option value="UPI">UPI</option>
           <option value="Cash">Cash</option>
-          <option value="Card">Card</option>
+          
         </select>
       </label>
     </div>
   
     <button (click)="generateBill()">✅ Generate Bill</button>
   
-    <div class="footer">
-      <p>Visit us at <a href="https://seednestle.in" target="_blank">www.seednestle.in</a></p>
-    </div>
+    
   </div>
   

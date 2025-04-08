@@ -1,73 +1,146 @@
 .billing-wrapper {
-    font-family: Arial, sans-serif;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-    max-width: 600px;
-    background: #f9f9f9;
-  }
-  
-  .header {
-    text-align: center;
-  }
-  
-  .logo {
-    width: 100px;
-    margin-bottom: 10px;
-  }
-  
-  .bill-info {
-    margin-top: 10px;
-    font-size: 16px;
-    text-align: center;
-  }
-  
-  table {
+  font-family: Arial, sans-serif;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  max-width: 600px;
+  background: #f9f9f9;
+}
+
+.header {
+  text-align: center;
+}
+
+.bill-info {
+  margin-top: 10px;
+  font-size: 16px;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.payment-info {
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+.footer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.thank-you {
+  font-style: italic;
+  font-weight: bold;
+  margin-top: 15px;
+  text-align: center;
+}
+
+/* ✅ Responsive styles for tablets and mobile */
+@media (max-width: 768px) {
+  .billing-wrapper {
+    padding: 15px;
     width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
+    margin: 0;
+    box-sizing: border-box;
   }
-  
-  th, td {
+
+  table, thead, tbody, th, td, tr {
+    display: block;
+    width: 100%;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    margin-bottom: 15px;
     border: 1px solid #ccc;
-    padding: 8px;
-    text-align: left;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
   }
-  
+
+  td {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 6px 0;
+  }
+
+  td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    margin-bottom: 4px;
+    color: #333;
+  }
+
+  .bill-info,
+  .payment-info {
+    text-align: left;
+    font-size: 14px;
+  }
+
+  button {
+    width: 100%;
+    font-size: 14px;
+  }
+
   input[type="text"],
   input[type="number"],
   select {
-    width: 100%;
-    box-sizing: border-box;
+    font-size: 14px;
+    padding: 6px;
   }
-  
-  button {
-    margin-top: 10px;
-    padding: 5px 10px;
-    cursor: pointer;
-  }
-  
-  .payment-info {
-    margin-top: 15px;
-    font-size: 16px;
-  }
-  
-  .footer {
-    margin-top: 20px;
-    text-align: center;
+}
+
+/* ✅ Further optimization for ultra-small screens (<= 400px) */
+@media (max-width: 400px) {
+  .billing-wrapper {
+    padding: 10px;
+    margin: 10px;
     font-size: 14px;
   }
-  
-  .footer a {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
+
+  td input,
+  td select {
+    font-size: 13px;
+    padding: 4px;
   }
-  
-  .thank-you {
-    font-style: italic;
-    font-weight: bold;
-    margin-top: 15px;
-    text-align: center;
+
+  button {
+    font-size: 13px;
+    padding: 6px;
   }
-  
+}
