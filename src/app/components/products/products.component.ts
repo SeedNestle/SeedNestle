@@ -36,7 +36,7 @@ export class ProductsComponent implements OnInit {
     { id: 17, name: 'Euphorbia trigona ', originalPrice: 180, price: 159, discount: '12% OFF', image: 'assets/top17 euphorbia trigona.webp', category: 'Succulents & Cactus', addedToCart: false },
     { id: 18, name: 'Mammillaria gracilis ', originalPrice: 180, price: 159, discount: '12% OFF', image: 'assets/top18 mammilaria gracillis.webp', category: 'Succulents & Cactus', addedToCart: false },
     { id: 19, name: 'Pachyphytum oviferum ', originalPrice: 180, price: 159, discount: '12% OFF', image: 'assets/top19.webp', category: 'Succulents & Cactus', addedToCart: false },
-    { id: 20, name: 'Agave (Burnt Burgundy) ', originalPrice: 180, price: 159, discount: '12% OFF', image: 'assets/top20.webp', category: 'Succulents & Cactus', addedToCart: false },
+    { id: 20, name: 'Agave (Burnt Burgundy) ', originalPrice: 180, price: 159, discount: '13% OFF', image: 'assets/top20.webp', category: 'Succulents & Cactus', addedToCart: false },
     { id: 21, name: 'Mammillaria elongata (Green) ', originalPrice: 180, price: 159, discount: '12% OFF', image: 'assets/top21.webp', category: 'Succulents & Cactus', addedToCart: false },
     { id: 22, name: 'Haworthia cooperi ', originalPrice: 180, price: 159, discount: '12% OFF', image: 'assets/top22 Haworthia cooperi.webp', category: 'Succulents & Cactus', addedToCart: false },
     { id: 23, name: 'Lenophyllum texanum ', originalPrice: 180, price: 159, discount: '12% OFF', image: 'assets/top23.webp', category: 'Succulents & Cactus', addedToCart: false },
