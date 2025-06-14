@@ -170,15 +170,15 @@ h1 {
   background: rgb(245, 243, 243);
 }
 .block:nth-child(2) {
-  background: rgba(208, 211, 172, 0.735);
+  background: rgba(18, 223, 206, 0.735);
   width: 600px;
   height: 180px;
 }
 .block:nth-child(3) {
-  background: rgb(36, 217, 127);
+  background: rgb(217, 36, 202);
 }
 .block:nth-child(4) {
-  background: rgba(208, 211, 172, 0.735);
+  background: rgba(11, 32, 224, 0.735);
   width: 700px;
   height: 180px;
 }
@@ -186,7 +186,7 @@ h1 {
   background: rgb(250, 201, 82);
 }
 .block:nth-child(6) {
-  background: rgba(208, 211, 172, 0.735);
+  background: rgba(211, 18, 108, 0.735);
   width: 600px;
   height: 170px;
 }
@@ -197,14 +197,14 @@ h1 {
   height: 220px;
 }
 .block:nth-child(9) {
-  background: rgb(232, 88, 67);
+  background: rgb(67, 232, 75);
 }
 .block:nth-child(10) {
-  background: rgb(250, 201, 82);
+  background: rgb(204, 12, 221);
   width: 700px;
 }
 .block:nth-child(11) {
-  background: rgba(208, 211, 172, 0.735);
+  background: rgba(176, 211, 172, 0.735);
   width: 600px;
   height: 180px;
 }
