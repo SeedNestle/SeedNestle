@@ -44,7 +44,36 @@ export class ProductsComponent implements OnInit {
     { id: 25, name: 'Aloe (Pink Bluish)', originalPrice: 180, price: 159, discount: '12% OFF', image: 'assets/top25.webp', category: 'Succulents & Cactus', addedToCart: false },
     { id: 26, name: 'Haworthia retusa ', originalPrice: 180, price: 159, discount: '12% OFF', image: 'assets/top26 haworthia retusa.webp', category: 'Succulents & Cactus', addedToCart: false },
     { id: 27, name: 'Haworthia fasciata', originalPrice: 230, price: 199, discount: '15% OFF', image: 'assets/top27 haworthia fasciata.webp', category: 'Terrarium Plants', addedToCart: false },
-    { id: 29, name: 'Haworthia rouded', originalPrice: 230, price: 199, discount: '15% OFF', image: 'assets/top29.webp', category: 'Terrarium Plants', addedToCart: false }
+    { id: 28, name: 'Haworthia rouded', originalPrice: 230, price: 199, discount: '15% OFF', image: 'assets/top29.webp', category: 'Terrarium Plants', addedToCart: false },
+    { id: 29, name: 'Beans seeds', originalPrice: 230, price: 199, discount: '15% OFF', image: 'assets/seeds_img/beans.jpg', category: 'Seeds', addedToCart: false },
+    { id: 30, name: 'Beetroot', originalPrice: 230, price: 199, discount: '15% OFF', image: 'assets/seeds_img/beetroot_1.jpg', category: 'Seeds', addedToCart: false },
+    { id: 31, name: 'Beetroot', originalPrice: 230, price: 199, discount: '15% OFF', image: 'assets/seeds_img/beetroot_2.jpg', category: 'Seeds', addedToCart: false },
+    { id: 32, name: 'Bitter Gourd', originalPrice: 230, price: 199, discount: '15% OFF', image: 'assets/seeds_img/bitter_gourd_1.jpg', category: 'Seeds', addedToCart: false },
+    { id: 33, name: 'Bitter Gourd ', originalPrice: 230, price: 199, discount: '15% OFF', image: 'assets/seeds_img/bitter_gourd_2.jpg', category: 'Seeds', addedToCart: false },
+    { id: 34, name: 'Brinjal ', originalPrice: 230, price: 199, discount: '15% OFF', image: 'assets/seeds_img/brinjal.jpg', category: 'Seeds', addedToCart: false },
+    { id: 35, name: 'Cabbage', originalPrice: 230, price: 199, discount: '15% OFF', image: 'assets/seeds_img/cabbage.jpg', category: 'Seeds', addedToCart: false },
+    { id: 36, name: 'Capsicum', originalPrice: 230, price: 199, discount: '15% OFF', image: 'assets/seeds_img/capsicum.jpg', category: 'Seeds', addedToCart: false },
+    { id: 37, name: 'Carrot', originalPrice: 230, price: 199, discount: '15% OFF', image: 'assets/seeds_img/carrot.jpg', category: 'Seeds', addedToCart: false },
+    { id: 38, name: 'Choyote', originalPrice: 230, price: 199, discount: '15% OFF', image: 'assets/seeds_img/choyote.jpg', category: 'Seeds', addedToCart: false },
+    { id: 39, name: 'Corn', originalPrice: 230, price: 199, discount: '15% OFF', image: 'assets/seeds_img/corn.jpg', category: 'Seeds', addedToCart: false },
+    { id: 40, name: 'Cucumber', originalPrice: 230, price: 199, discount: '15% OFF', image: 'assets/seeds_img/cucumber.jpg', category: 'Seeds', addedToCart: false },
+    { id: 41, name: 'Green Chilli', originalPrice: 230, price: 199, discount: '15% OFF', image: 'assets/seeds_img/green_chilli.jpg', category: 'Seeds', addedToCart: false },
+    { id: 42, name: 'Green Lettuce', originalPrice: 230, price: 199, discount: '15% OFF', image: 'assets/seeds_img/green_lettuce.jpg', category: 'Seeds', addedToCart: false },
+    { id: 43, name: 'Kohlrabi', originalPrice: 230, price: 199, discount: '15% OFF', image: 'assets/seeds_img/kohlrabi.jpg', category: 'Seeds', addedToCart: false },
+    { id: 44, name: 'Ladies Finger', originalPrice: 230, price: 199, discount: '15% OFF', image: 'assets/seeds_img/ladies_finger.jpg', category: 'Seeds', addedToCart: false },
+    { id: 45, name: 'Long Beans', originalPrice: 230, price: 199, discount: '15% OFF', image: 'assets/seeds_img/long_beans.jpg', category: 'Seeds', addedToCart: false },
+    { id: 46, name: 'Onion', originalPrice: 230, price: 199, discount: '15% OFF', image: 'assets/seeds_img/onion.jpg', category: 'Seeds', addedToCart: false },
+    { id: 47, name: 'Pea', originalPrice: 230, price: 199, discount: '15% OFF', image: 'assets/seeds_img/pea_1.jpg', category: 'Seeds', addedToCart: false },
+    { id: 48, name: 'Pea', originalPrice: 230, price: 199, discount: '15% OFF', image: 'assets/seeds_img/pea.jpg', category: 'Seeds', addedToCart: false },
+    { id: 49, name: 'Pumpkin', originalPrice: 230, price: 199, discount: '15% OFF', image: 'assets/seeds_img/pumpkin.jpg', category: 'Seeds', addedToCart: false },
+    { id: 50, name: 'Red Round Radish', originalPrice: 230, price: 199, discount: '15% OFF', image: 'assets/seeds_img/red_round_radish.jpg', category: 'Seeds', addedToCart: false },
+    { id: 51, name: 'Tomato', originalPrice: 230, price: 199, discount: '15% OFF', image: 'assets/seeds_img/tomato.jpg', category: 'Seeds', addedToCart: false },
+    { id: 52, name: 'White radish', originalPrice: 230, price: 199, discount: '15% OFF', image: 'assets/seeds_img/white_raddish.jpg', category: 'Seeds', addedToCart: false },
+    { id: 53, name: 'White Round Radish', originalPrice: 230, price: 199, discount: '15% OFF', image: 'assets/seeds_img/white_round_radish_1.jpg', category: 'Seeds', addedToCart: false },
+    { id: 54, name: 'White Round Radish', originalPrice: 230, price: 199, discount: '15% OFF', image: 'assets/seeds_img/white_round_radish_2.jpg', category: 'Seeds', addedToCart: false },
+
+
+
   ];
 
   filteredProducts = [...this.products];
