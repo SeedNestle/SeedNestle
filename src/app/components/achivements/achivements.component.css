@@ -16,11 +16,21 @@
 .card, .card2 {
   position: relative;
   width: 90%;
-  max-width: 400px;
-  margin-bottom: 20px;
-  border-radius: 14px;
+  max-width: 1200px;
+  margin: 10px auto; /* Center the card horizontally */
+  padding: 10px; /* Add internal spacing */
+  border-radius: 8px;
   overflow: hidden;
   box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  background-color: #fff; /* Optional: looks better on most sites */
+  box-sizing: border-box;
+}
+
+/* Optional: For very small screens, make sure content fits well */
+@media (max-width: 480px) {
+  .card, .card2 {
+    padding: 15px;
+  }
 }
 
 /* Background styling */
