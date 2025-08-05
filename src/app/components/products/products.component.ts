@@ -74,18 +74,18 @@ export class ProductsComponent implements OnInit {
     { id: 55, name: 'Black Small', originalPrice: 230, price: 199, discount: '15% OFF', image: 'assets/Stones_img/blach_small.jpeg', category: 'Stones', addedToCart: false },
     { id: 56, name: 'Brown Big', originalPrice: 230, price: 199, discount: '15% OFF', image: 'assets/Stones_img/Brown_big.jpeg', category: 'Stones', addedToCart: false },
     { id: 57, name: 'Brown Chips', originalPrice: 230, price: 199, discount: '15% OFF', image: 'assets/Stones_img/brown_chips.jpeg', category: 'Stones', addedToCart: false },
-    { id: 58, name: 'Brown Normal', originalPrice: 230, price: 199, discount: '15% OFF', image: 'assets/Stones_img/brown_cluster.jpeg', category: 'Stones', addedToCart: false },
-    { id: 59, name: 'Green Chips', originalPrice: 230, price: 199, discount: '15% OFF', image: 'assets/Stones_img/green_chips.jpeg', category: 'Stones', addedToCart: false },
-    { id: 60, name: 'Grey Big', originalPrice: 230, price: 199, discount: '15% OFF', image: 'assets/Stones_img/grey_big.jpeg', category: 'Stones', addedToCart: false },
-    { id: 61, name: 'Light Emerald Green', originalPrice: 230, price: 199, discount: '15% OFF', image: 'assets/Stones_img/light_emerald_green.jpeg', category: 'Stones', addedToCart: false },
-    { id: 62, name: 'Light Grey', originalPrice: 230, price: 199, discount: '15% OFF', image: 'assets/Stones_img/light_grey.jpeg', category: 'Stones', addedToCart: false },
-    { id: 63, name: 'Mixed Medium Mix', originalPrice: 230, price: 199, discount: '15% OFF', image: 'assets/Stones_img/medium_mix.jpeg', category: 'Stones', addedToCart: false },
-    { id: 64, name: 'Mixed Chips', originalPrice: 230, price: 199, discount: '15% OFF', image: 'assets/Stones_img/mixed_chips.jpeg', category: 'Stones', addedToCart: false },
-    { id: 65, name: 'Red Chips', originalPrice: 230, price: 199, discount: '15% OFF', image: 'assets/Stones_img/red_chips.jpeg', category: 'Stones', addedToCart: false },
-    { id: 66, name: 'White Big', originalPrice: 230, price: 199, discount: '15% OFF', image: 'assets/Stones_img/white_big.jpeg', category: 'Stones', addedToCart: false },
-    { id: 67, name: 'White Medium', originalPrice: 230, price: 199, discount: '15% OFF', image: 'assets/Stones_img/white_medium.jpeg', category: 'Stones', addedToCart: false },
-    { id: 68, name: 'White Mid Medium', originalPrice: 230, price: 199, discount: '15% OFF', image: 'assets/Stones_img/white_mif_medium.jpeg', category: 'Stones', addedToCart: false },
-    { id: 69, name: 'White Small', originalPrice: 230, price: 199, discount: '15% OFF', image: 'assets/Stones_img/white_small.jpeg', category: 'Stones', addedToCart: false }
+    { id: 58, name: 'Brown Normal', originalPrice: 230, price: 40, discount: '15% OFF', image: 'assets/Stones_img/brown_cluster.jpeg', category: 'Stones', addedToCart: false },
+    { id: 59, name: 'Green crushed gravel chips', originalPrice: 40, price: 199, discount: '15% OFF', image: 'assets/Stones_img/green_chips.jpeg', category: 'Stones', addedToCart: false },
+    { id: 60, name: 'Grey Big', originalPrice: 230, price: 50, discount: '15% OFF', image: 'assets/Stones_img/grey_big.jpeg', category: 'Stones', addedToCart: false },
+    { id: 61, name: 'Light Emerald Green', originalPrice: 50, price: 199, discount: '15% OFF', image: 'assets/Stones_img/light_emerald_green.jpeg', category: 'Stones', addedToCart: false },
+    { id: 62, name: 'Grey crushed gravel chips', originalPrice: 230, price: 50, discount: '15% OFF', image: 'assets/Stones_img/light_grey.jpeg', category: 'Stones', addedToCart: false },
+    { id: 63, name: 'Natural mix tumbled pebbles', originalPrice: 100, price: 60, discount: '15% OFF', image: 'assets/Stones_img/medium_mix.jpeg', category: 'Stones', addedToCart: false },
+    { id: 64, name: 'Mixed Small Pebbles', originalPrice: 90, price: 50, discount: '15% OFF', image: 'assets/Stones_img/mixed_chips.jpeg', category: 'Stones', addedToCart: false },
+    { id: 65, name: 'Red crushed gravel chips', originalPrice: 80, price: 50, discount: '15% OFF', image: 'assets/Stones_img/red_chips.jpeg', category: 'Stones', addedToCart: false },
+    { id: 66, name: 'White Big', originalPrice: 90, price: 60, discount: '15% OFF', image: 'assets/Stones_img/white_big.jpeg', category: 'Stones', addedToCart: false },
+    { id: 67, name: 'White Medium', originalPrice: 90, price: 60, discount: '15% OFF', image: 'assets/Stones_img/white_medium.jpeg', category: 'Stones', addedToCart: false },
+    { id: 68, name: 'White Mid Medium', originalPrice: 90, price: 60, discount: '15% OFF', image: 'assets/Stones_img/white_mif_medium.jpeg', category: 'Stones', addedToCart: false },
+    { id: 69, name: 'White Small', originalPrice: 90, price: 60, discount: '15% OFF', image: 'assets/Stones_img/white_small.jpeg', category: 'Stones', addedToCart: false }
 
 
 
