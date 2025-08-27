@@ -12,7 +12,7 @@ import { BillingComponent } from './components/admin/billing.component';
 import { InvoicesComponent } from './components/admin/invoices.component';
 import { DummySalesComponent } from './components/admin/dummy-sales.component';
 import { DummyExpensesComponent } from './components/admin/dummy-expenses.component';
-
+import { ServiceComponent } from './components/service/service.component';
 export const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'achivements', component: AchivementsComponent },
@@ -20,6 +20,7 @@ export const routes: Routes = [
   { path: 'products', component: ProductsComponent },
   { path: 'cart', component: CartComponent },
   { path: 'admin-login', component: AdminLoginComponent },
+  { path: 'services', component: ServiceComponent },
 
   {
     path: 'admin-dashboard',

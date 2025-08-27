@@ -1,0 +1,272 @@
+:host {
+  display: block;
+  color: #0f172a;
+  --sn-green: #179b45;
+  --sn-green-2: #1db954;
+  --sn-bg: #f7fbf8;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* General container */
+.sn-container {
+  width: 92%;
+  max-width: 1100px;
+  margin-inline: auto;
+}
+
+/* Hero Section */
+.sn-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 2rem 0 4.5rem;
+  background: linear-gradient(180deg, #f0fff5, #ffffff);
+}
+
+.sn-hero-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.sn-logo {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+}
+
+.sn-hero-content {
+  margin-top: 2rem;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.sn-title {
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  line-height: 1.1;
+  margin: 0 0 0.75rem;
+}
+
+.sn-subtitle {
+  font-size: 1rem;
+  color: #475569;
+  max-width: 52ch;
+  margin: 0 auto 1.5rem;
+}
+
+.sn-cta {
+  display: inline-block;
+  background: var(--sn-green);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.sn-cta:hover {
+  background: var(--sn-green-2);
+}
+
+/* USP Cards */
+.sn-usps-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  padding: 2rem 0;
+}
+
+.sn-usp-card {
+  background: #fff;
+  padding: 1.2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.sn-ico {
+  font-size: 1.8rem;
+  margin-bottom: 0.6rem;
+}
+
+/* Services Grid */
+.sn-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.sn-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 14px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+}
+
+.sn-card-ico {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.sn-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+.sn-list {
+  margin: 0.8rem 0 1rem;
+  padding-left: 1.2rem;
+}
+
+.sn-list li {
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+  color: #334155;
+}
+
+.sn-link {
+  color: var(--sn-green);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.sn-link:hover {
+  text-decoration: underline;
+}
+
+/* Process Section */
+.sn-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 2rem;
+  padding-left: 0;
+}
+
+.sn-step-num {
+  background: var(--sn-green);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.8rem;
+}
+
+.sn-steps li {
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
+}
+
+/* FAQ */
+.sn-faq-wrap {
+  margin-top: 2rem;
+}
+
+.sn-faq-item {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 0.8rem;
+  background: #fff;
+}
+
+.sn-faq-item summary {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sn-faq-item p {
+  margin-top: 0.5rem;
+  color: #475569;
+}
+
+/* Contact Section */
+.sn-contact {
+  background: var(--sn-bg);
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+}
+
+.sn-contact-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.sn-cta-secondary {
+  background: #fff;
+  border: 2px solid var(--sn-green);
+  color: var(--sn-green);
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.sn-cta-secondary:hover {
+  background: var(--sn-green);
+  color: #fff;
+}
+
+/* Footer */
+.sn-mini {
+  background: #f1f5f9;
+  padding: 1rem 0;
+  font-size: 0.85rem;
+}
+
+.sn-mini-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.sn-mini-link {
+  color: var(--sn-green);
+  text-decoration: none;
+}
+
+/* -------------------- */
+/* RESPONSIVE BREAKPOINTS */
+/* -------------------- */
+
+/* Tablets */
+@media (min-width: 600px) {
+  .sn-usps-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .sn-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .sn-contact-grid {
+    flex-direction: row;
+    text-align: left;
+    justify-content: space-between;
+  }
+}
+
+/* Desktops */
+@media (min-width: 992px) {
+  .sn-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .sn-mini-wrap {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
