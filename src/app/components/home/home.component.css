@@ -170,7 +170,7 @@ h1 {
   background: rgb(245, 243, 243);
 }
 .block:nth-child(2) {
-  background: rgba(1, 136, 19, 0.735);
+  background: rgba(219, 219, 219, 0.735);
   width: 600px;
   height: 180px;
 }
@@ -178,7 +178,7 @@ h1 {
   background: rgb(217, 36, 202);
 }
 .block:nth-child(4) {
-  background: rgba(1, 136, 19, 0.735);
+  background: rgba(244, 247, 245, 0.735);
   width: 700px;
   height: 180px;
 }
@@ -186,13 +186,13 @@ h1 {
   background: rgb(250, 201, 82);
 }
 .block:nth-child(6) {
-  background: rgba(1, 136, 19, 0.735);
+  background: rgba(244, 247, 245, 0.735);
   width: 600px;
   height: 170px;
 }
 /* gif */
 .block:nth-child(8) {
-  background: rgba(1, 136, 19, 0.735);
+  background: rgba(244, 247, 244, 0.735);
   width: 600px;
   height: 220px;
 }
