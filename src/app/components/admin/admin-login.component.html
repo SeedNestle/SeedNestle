@@ -1,7 +1,70 @@
-<div class="admin-login">
-    <h2>Admin Login</h2>
-    <input [(ngModel)]="email" placeholder="Email" />
-    <input [(ngModel)]="password" type="password" placeholder="Password" />
-    <button (click)="login()">Login</button>
+
+<div
+  style="min-height:60vh;display:flex;align-items:center;justify-content:center;padding:20px;box-sizing:border-box;
+         font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+         background: linear-gradient(180deg, #f7f9fb 0%, #ffffff 100%);"
+>
+  <div
+    role="form"
+    aria-labelledby="admin-login-title"
+    style="width:100%;max-width:420px;background:#ffffff;border-radius:12px;
+           box-shadow:0 8px 30px rgba(16,24,40,0.08);padding:22px;box-sizing:border-box;
+           border:1px solid rgba(0,0,0,0.04);"
+  >
+    <h2 id="admin-login-title" style="margin:0 0 14px 0;font-size:20px;color:#0f172a;text-align:center;letter-spacing:0.2px;">
+      Admin Login
+    </h2>
+
+    <!-- Email -->
+    <label style="display:flex;flex-direction:column;gap:6px;margin-bottom:12px;">
+      <span style="font-size:13px;color:#475569;font-weight:600;">Email</span>
+      <input
+        [(ngModel)]="email"
+        type="email"
+        placeholder="you@company.com"
+        value="seednestle@gmail.com"
+        aria-label="Email"
+        style="width:100%;padding:10px 12px;border-radius:8px;border:1px solid #e6eef6;
+               background:#fbfdff;outline:none;font-size:14px;box-sizing:border-box;"
+      />
+    </label>
+
+    <!-- Password -->
+    <label style="display:flex;flex-direction:column;gap:6px;margin-bottom:12px;">
+      <span style="font-size:13px;color:#475569;font-weight:600;">Password</span>
+      <input
+        [(ngModel)]="password"
+        type="password"
+        placeholder="Enter password"
+        aria-label="Password"
+        style="width:100%;padding:10px 12px;border-radius:8px;border:1px solid #e6eef6;
+               background:#fbfdff;outline:none;font-size:14px;box-sizing:border-box;"
+      />
+    </label>
+
+    <!-- Buttons row -->
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:6px;">
+      <button
+        (click)="login()"
+        type="button"
+        style="padding:10px 14px;border-radius:8px;border:none;cursor:pointer;font-weight:600;font-size:14px;
+               background:linear-gradient(90deg,#2b6ef6,#6b8cff);color:#fff;box-shadow:0 6px 18px rgba(43,110,246,0.16);"
+      >
+        Login
+      </button>
+
+      <button
+        
+        style="background:transparent;color:#2563eb;border:none;cursor:pointer;padding:8px;font-size:13px;
+               text-decoration:underline;"
+      >
+        Forgot password?
+      </button>
+    </div>
+
+    <p style="font-size:13px;color:#64748b;margin-top:12px;text-align:center;">
+      Don't click forget password it won't work Cozz you getting yourself fucked up here!.
+    </p>
   </div>
-  
+</div>
+

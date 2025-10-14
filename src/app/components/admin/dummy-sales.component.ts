@@ -35,7 +35,9 @@ import { FormsModule } from '@angular/forms';
 export class DummySalesComponent implements AfterViewInit {
   cost: number = 0;
   total: number = 0;
-  costs: number[] = [];
+
+  // store the full sale objects (amount, timestamp, optional name)
+  sales: { amount: number; timestamp?: any; name?: string; id?: string }[] = [];
 
   constructor(private firestore: Firestore) {}
 
@@ -43,8 +45,33 @@ export class DummySalesComponent implements AfterViewInit {
     const salesRef = collection(this.firestore, 'sales');
 
     onSnapshot(salesRef, (snapshot) => {
-      this.costs = snapshot.docs.map(doc => doc.data()['amount']);
-      this.total = this.costs.reduce((sum, val) => sum + val, 0);
+      // map docs to objects with amount, timestamp and optional name
+      this.sales = snapshot.docs.map(doc => {
+        const d = doc.data() as any;
+        return {
+          id: doc.id,
+          amount: typeof d['amount'] === 'number' ? d['amount'] : Number(d['amount']) || 0,
+          timestamp: d['timestamp'],
+          name: d['name'] || '' // show name if present, else blank
+        };
+      });
+
+      // sort descending by timestamp (newest first). Handles number or Firestore Timestamp.
+      const getTime = (val: any) => {
+        if (!val) return 0;
+        if (typeof val === 'number') return val;
+        if (val instanceof Date) return val.getTime();
+        if (typeof val.toDate === 'function') return val.toDate().getTime();
+        const parsed = Date.parse(String(val));
+        return Number.isNaN(parsed) ? 0 : parsed;
+      };
+
+      this.sales.sort((a, b) => getTime(b.timestamp) - getTime(a.timestamp));
+
+      // recompute total
+      this.total = this.sales.reduce((sum, s) => sum + (s.amount || 0), 0);
+
+      // render list showing index, name (if present) and amount in the sorted order
       this.renderCosts();
     });
   }
@@ -56,6 +83,7 @@ export class DummySalesComponent implements AfterViewInit {
     }
 
     const salesRef = collection(this.firestore, 'sales');
+    // NO CHANGE to existing write behaviour (still writes amount & timestamp only)
     await addDoc(salesRef, {
       amount: this.cost,
       timestamp: Date.now()
@@ -68,9 +96,10 @@ export class DummySalesComponent implements AfterViewInit {
     const listDiv = document.getElementById('costList');
     if (listDiv) {
       listDiv.innerHTML = '';
-      this.costs.forEach((amount, index) => {
+      this.sales.forEach((entry, index) => {
         const div = document.createElement('div');
-        div.textContent = `#${index + 1} - ₹${amount}`;
+        const namePart = entry.name && entry.name.trim() ? ` - ${entry.name.trim()}` : '';
+        div.textContent = `#${index + 1}${namePart} - ₹${entry.amount}`;
         listDiv.appendChild(div);
       });
     }

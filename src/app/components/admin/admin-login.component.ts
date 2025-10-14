@@ -8,8 +8,7 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-admin-login',
   standalone: true,
   imports: [CommonModule, FormsModule, RouterModule],
-  templateUrl: './admin-login.component.html',
-  styleUrls: ['./admin-login.component.css']
+  templateUrl: './admin-login.component.html'
 })
 export class AdminLoginComponent {
   email = '';

@@ -1,4 +1,3 @@
-
 import { Component, OnInit } from '@angular/core';
 import { Firestore, collection, addDoc, onSnapshot, doc, updateDoc } from '@angular/fire/firestore';
 import { CommonModule } from '@angular/common';
@@ -59,10 +58,37 @@ export class DummyExpensesComponent implements OnInit {
   ngOnInit(): void {
     const billsRef = collection(this.firestore, 'expenses');
     onSnapshot(billsRef, (snapshot) => {
+      // map docs to objects
       this.bills = snapshot.docs.map(doc => ({
         id: doc.id,
         ...doc.data()
       }));
+
+      // client-side sort: descending (newest first)
+      // prefer createdAt (supports number timestamp or Firestore Timestamp)
+      const getTime = (val: any) => {
+        if (!val) return 0;
+        if (typeof val === 'number') return val;
+        if (val instanceof Date) return val.getTime();
+        if (typeof val.toDate === 'function') return val.toDate().getTime();
+        const parsed = Date.parse(String(val));
+        return Number.isNaN(parsed) ? 0 : parsed;
+      };
+
+      this.bills.sort((a, b) => {
+        const ta = getTime(a.createdAt);
+        const tb = getTime(b.createdAt);
+        if (tb !== ta) return tb - ta; // newer first by createdAt
+
+        // fallback: sort by total descending
+        const an = a.total || 0;
+        const bn = b.total || 0;
+        if (bn !== an) return bn - an;
+
+        // final fallback: id string compare (descending)
+        return String(b.id).localeCompare(String(a.id));
+      });
+
       this.calculateGrandTotal();
     });
   }
