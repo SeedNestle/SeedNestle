@@ -8,7 +8,7 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-sales',
   imports: [CommonModule, FormsModule],
   template: `
-    <div style="max-width: 500px; margin: auto; padding: 20px; font-family: Arial;">
+    <div style="max-width: 900px; margin: auto; padding: 20px; font-family: Arial;">
       <h2 style="text-align: center; margin-bottom: 20px;">Sales Entry</h2>
 
       <div style="margin-bottom: 15px; display: flex; gap: 10px;">
@@ -16,7 +16,8 @@ import { FormsModule } from '@angular/forms';
         <button (click)="addCost()" style="padding: 8px 16px;">Add</button>
       </div>
 
-      <div id="costList" style="margin-bottom: 20px;"></div>
+      <!-- grid of columns: each column contains up to ITEMS_PER_COLUMN items -->
+      <div id="costGrid" class="gridContainer" style="margin-bottom: 20px;"></div>
 
       <div style="font-size: 18px; font-weight: bold; text-align: center;">
         Total Sales: ₹{{ total }}
@@ -24,11 +25,33 @@ import { FormsModule } from '@angular/forms';
     </div>
   `,
   styles: [`
-    #costList div {
+    /* layout: columns flow left-to-right; horizontal scroll when many columns */
+    .gridContainer {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto; /* allow horizontal scroll if many columns */
+      padding-bottom: 6px;
+    }
+
+    .column {
+      min-width: 160px; /* column width */
+      max-width: 220px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      padding: 6px;
+      background: transparent;
+    }
+
+    .column .item {
       background: #f0f0f0;
       padding: 8px;
-      margin-bottom: 5px;
       border-radius: 4px;
+      height: 40px; /* fixed item height */
+      display: flex;
+      align-items: center;
+      box-sizing: border-box;
     }
   `]
 })
@@ -36,8 +59,11 @@ export class DummySalesComponent implements AfterViewInit {
   cost: number = 0;
   total: number = 0;
 
-  // store the full sale objects (amount, timestamp, optional name)
-  sales: { amount: number; timestamp?: any; name?: string; id?: string }[] = [];
+  // store the full sale objects (amount, timestamp)
+  sales: { amount: number; timestamp?: any; id?: string }[] = [];
+
+  private _initialLoad = true; // track first snapshot
+  private readonly ITEMS_PER_COLUMN = 10; // change this to alter how many items appear per column
 
   constructor(private firestore: Firestore) {}
 
@@ -45,34 +71,46 @@ export class DummySalesComponent implements AfterViewInit {
     const salesRef = collection(this.firestore, 'sales');
 
     onSnapshot(salesRef, (snapshot) => {
-      // map docs to objects with amount, timestamp and optional name
-      this.sales = snapshot.docs.map(doc => {
-        const d = doc.data() as any;
-        return {
-          id: doc.id,
-          amount: typeof d['amount'] === 'number' ? d['amount'] : Number(d['amount']) || 0,
-          timestamp: d['timestamp'],
-          name: d['name'] || '' // show name if present, else blank
-        };
-      });
+      // On the very first snapshot, populate the list in the order returned by Firestore
+      if (this._initialLoad) {
+        this.sales = snapshot.docs.map(doc => {
+          const d = doc.data() as any;
+          return {
+            id: doc.id,
+            amount: typeof d['amount'] === 'number' ? d['amount'] : Number(d['amount']) || 0,
+            timestamp: d['timestamp']
+          };
+        });
+        this._initialLoad = false;
+      } else {
+        // For subsequent snapshots, apply docChanges so that newly added docs are appended to the end
+        const changes = snapshot.docChanges();
+        changes.forEach(change => {
+          const doc = change.doc;
+          const d = doc.data() as any;
+          const entry = {
+            id: doc.id,
+            amount: typeof d['amount'] === 'number' ? d['amount'] : Number(d['amount']) || 0,
+            timestamp: d['timestamp']
+          };
 
-      // sort descending by timestamp (newest first). Handles number or Firestore Timestamp.
-      const getTime = (val: any) => {
-        if (!val) return 0;
-        if (typeof val === 'number') return val;
-        if (val instanceof Date) return val.getTime();
-        if (typeof val.toDate === 'function') return val.toDate().getTime();
-        const parsed = Date.parse(String(val));
-        return Number.isNaN(parsed) ? 0 : parsed;
-      };
+          if (change.type === 'added') {
+            // append new entries to the end
+            this.sales.push(entry);
+          } else if (change.type === 'modified') {
+            const idx = this.sales.findIndex(s => s.id === doc.id);
+            if (idx !== -1) this.sales[idx] = entry;
+          } else if (change.type === 'removed') {
+            this.sales = this.sales.filter(s => s.id !== doc.id);
+          }
+        });
+      }
 
-      this.sales.sort((a, b) => getTime(b.timestamp) - getTime(a.timestamp));
-
-      // recompute total
+      // recompute total using current array order
       this.total = this.sales.reduce((sum, s) => sum + (s.amount || 0), 0);
 
-      // render list showing index, name (if present) and amount in the sorted order
-      this.renderCosts();
+      // render grid columns with ITEMS_PER_COLUMN items each; newest entries are at the end and will create new columns when needed
+      this.renderGrid();
     });
   }
 
@@ -83,7 +121,6 @@ export class DummySalesComponent implements AfterViewInit {
     }
 
     const salesRef = collection(this.firestore, 'sales');
-    // NO CHANGE to existing write behaviour (still writes amount & timestamp only)
     await addDoc(salesRef, {
       amount: this.cost,
       timestamp: Date.now()
@@ -92,16 +129,31 @@ export class DummySalesComponent implements AfterViewInit {
     this.cost = 0; // reset input
   }
 
-  renderCosts(): void {
-    const listDiv = document.getElementById('costList');
-    if (listDiv) {
-      listDiv.innerHTML = '';
-      this.sales.forEach((entry, index) => {
-        const div = document.createElement('div');
-        const namePart = entry.name && entry.name.trim() ? ` - ${entry.name.trim()}` : '';
-        div.textContent = `#${index + 1}${namePart} - ₹${entry.amount}`;
-        listDiv.appendChild(div);
-      });
+  renderGrid(): void {
+    const grid = document.getElementById('costGrid');
+    if (!grid) return;
+
+    grid.innerHTML = '';
+
+    if (this.sales.length === 0) return;
+
+    const cols = Math.ceil(this.sales.length / this.ITEMS_PER_COLUMN);
+
+    for (let c = 0; c < cols; c++) {
+      const colDiv = document.createElement('div');
+      colDiv.className = 'column';
+
+      const start = c * this.ITEMS_PER_COLUMN;
+      const end = Math.min(start + this.ITEMS_PER_COLUMN, this.sales.length);
+      for (let i = start; i < end; i++) {
+        const entry = this.sales[i];
+        const item = document.createElement('div');
+        item.className = 'item';
+        item.textContent = `#${i + 1} - ₹${entry.amount}`;
+        colDiv.appendChild(item);
+      }
+
+      grid.appendChild(colDiv);
     }
   }
 }
