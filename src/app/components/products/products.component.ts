@@ -1,8 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { CartService } from '../../services/cart.service';
-import { Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+
+interface Product {
+  id: number;
+  name: string;
+  originalPrice: number;
+  price: number;
+  discount: string;
+  image: string;
+  category: string;
+  addedToCart: boolean;
+  fullImage?: string; // <-- declared so TS knows about it
+}
 
 @Component({
   selector: 'app-products',
@@ -11,12 +22,14 @@ import { Router } from '@angular/router';
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css']
 })
-export class ProductsComponent implements OnInit {
+export class ProductsComponent implements OnInit, AfterViewInit {
   categories = ['Succulents & Cactus', 'Terrarium Plants', 'Accessories', 'Gift Hampers', 'Fertilizers','Seeds','Stones'];
   selectedCategory = 'Succulents & Cactus';
-  cartCount = 0; // ✅ Track cart item count
+  cartCount = 0;
 
-  products = [
+  private readonly placeholder = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="14"></svg>';
+
+  products: Product[] = [
     { id: 1, name: 'Mammillaria carmenae', originalPrice: 229, price: 159, discount: '12% OFF', image: 'assets/top1-Mammillaria carmenae.webp', category: 'Succulents & Cactus', addedToCart: false },
     { id: 2, name: 'Chocolate Plant (Kalanchoe)', originalPrice: 199, price: 149, discount: '12% OFF', image: 'assets/top2-chocolate soldier-Kalanchoe tomentosa.webp', category: 'Succulents & Cactus', addedToCart: false },
     { id: 3, name: 'Euphorbia Japonica', originalPrice: 249, price: 169, discount: '18% OFF', image: 'assets/top3-Euphobia japonica.webp', category: 'Succulents & Cactus', addedToCart: false },
@@ -86,21 +99,29 @@ export class ProductsComponent implements OnInit {
     { id: 67, name: 'White Medium', originalPrice: 90, price: 60, discount: '15% OFF', image: 'assets/Stones_img/white_medium.jpeg', category: 'Stones', addedToCart: false },
     { id: 68, name: 'White Mid Medium', originalPrice: 90, price: 60, discount: '15% OFF', image: 'assets/Stones_img/white_mif_medium.jpeg', category: 'Stones', addedToCart: false },
     { id: 69, name: 'White Small', originalPrice: 90, price: 60, discount: '15% OFF', image: 'assets/Stones_img/white_small.jpeg', category: 'Stones', addedToCart: false }
-
-
-
-
-
   ];
 
   filteredProducts = [...this.products];
   selectedProduct: any = null;
   cartItems: any[] = [];
 
+  private observer?: IntersectionObserver;
+
   constructor(private cartService: CartService, private router: Router) {}
 
   ngOnInit() {
+    // store original path and replace image with placeholder (TS-only)
+    this.products.forEach(p => {
+      p.fullImage = p.image; // now allowed because Product has fullImage
+      p.image = this.placeholder;
+    });
+
+    this.filteredProducts = [...this.products];
     this.subscribeToCart();
+  }
+
+  ngAfterViewInit() {
+    setTimeout(() => this.initLazyLoad(), 0);
   }
 
   subscribeToCart() {
@@ -115,18 +136,19 @@ export class ProductsComponent implements OnInit {
       product.addedToCart = this.cartItems.some(cartItem => cartItem.id === product.id);
     });
 
-    this.cartCount = this.cartItems.length; // ✅ Update floating cart count
+    this.cartCount = this.cartItems.length;
   }
 
   filterByCategory(category: string) {
     this.selectedCategory = category;
     this.filteredProducts = this.products.filter(p => p.category === category);
-    
+    setTimeout(() => this.initLazyLoad(), 0);
   }
 
   openProductDetails(product: any) {
     console.log('Opening product:', product);
-    this.selectedProduct = this.products.find(p => p.id === product.id);
+    const productWithRealImage = Object.assign({}, product, { image: product.fullImage || product.image });
+    this.selectedProduct = productWithRealImage;
   }
 
   closeProductDetails() {
@@ -137,38 +159,66 @@ export class ProductsComponent implements OnInit {
     if (!product.addedToCart) {
       this.cartService.addToCart(product).then(() => {
         product.addedToCart = true;
-        
-        // ✅ Update filteredProducts properly
-        this.filteredProducts = this.filteredProducts.map(p => 
+
+        this.filteredProducts = this.filteredProducts.map(p =>
           p.id === product.id ? { ...p, addedToCart: true } : p
         );
-  
-        // ✅ Force modal UI update by creating a new object reference
+
         if (this.selectedProduct && this.selectedProduct.id === product.id) {
           this.selectedProduct = Object.assign({}, this.selectedProduct, { addedToCart: true });
         }
-  
-        this.cartCount++; // ✅ Update cart count
+
+        this.cartCount++;
       }).catch(error => console.error('Error adding to cart:', error));
     } else {
       this.cartService.removeCartItem(product.id).then(() => {
         product.addedToCart = false;
-  
-        this.filteredProducts = this.filteredProducts.map(p => 
+
+        this.filteredProducts = this.filteredProducts.map(p =>
           p.id === product.id ? { ...p, addedToCart: false } : p
         );
-  
+
         if (this.selectedProduct && this.selectedProduct.id === product.id) {
           this.selectedProduct = Object.assign({}, this.selectedProduct, { addedToCart: false });
         }
-  
-        this.cartCount--; // ✅ Update cart count
+
+        this.cartCount--;
       }).catch(error => console.error('Error removing from cart:', error));
     }
   }
-  
 
   goToCart() {
     this.router.navigate(['/cart']);
+  }
+
+  private initLazyLoad() {
+    if (this.observer) {
+      this.observer.disconnect();
+    }
+
+    this.observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target as HTMLImageElement;
+          const full = img.dataset['full']; // <-- bracket notation to satisfy TS
+          if (full) {
+            img.src = full;
+            img.onload = () => img.classList.add('loaded');
+            this.observer?.unobserve(img);
+          }
+        }
+      });
+    }, { rootMargin: '200px', threshold: 0.01 });
+
+    const domImgs = Array.from(document.querySelectorAll('.product-grid .product-card img')) as HTMLImageElement[];
+
+    domImgs.forEach((imgEl, index) => {
+      const prod = this.filteredProducts[index];
+      if (!prod) return;
+
+      imgEl.dataset['full'] = prod.fullImage || prod.image; // <-- bracket notation again
+      imgEl.loading = 'lazy';
+      this.observer?.observe(imgEl);
+    });
   }
 }
