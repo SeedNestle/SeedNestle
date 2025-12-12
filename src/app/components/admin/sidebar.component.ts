@@ -11,6 +11,7 @@ import { RouterModule } from '@angular/router';
       <a routerLink="./expenses">Expenses</a>
       <a routerLink="./billing">Billing</a>
       <a routerLink="./invoices">Past Invoices</a>
+      <a routerLink="./quotation">Quotation</a>
     </nav>
   `,
   styles: [`

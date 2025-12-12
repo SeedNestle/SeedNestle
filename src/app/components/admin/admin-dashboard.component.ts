@@ -13,6 +13,7 @@ import { RouterModule } from '@angular/router';
           <li><a routerLink="expenses">Expenses</a></li>
           <li><a routerLink="billing">Billing</a></li>
           <li><a routerLink="invoices">Past Invoices</a></li>
+          <li><a routerLink="quotation">Quotation</a></li>
         </ul>
       </aside>
       <main class="content">

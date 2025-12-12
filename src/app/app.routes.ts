@@ -13,6 +13,7 @@ import { InvoicesComponent } from './components/admin/invoices.component';
 import { DummySalesComponent } from './components/admin/dummy-sales.component';
 import { DummyExpensesComponent } from './components/admin/dummy-expenses.component';
 import { ServiceComponent } from './components/service/service.component';
+
 export const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'achivements', component: AchivementsComponent },
@@ -31,6 +32,13 @@ export const routes: Routes = [
       { path: 'invoices', component: InvoicesComponent },
       { path: 'sales', component: DummySalesComponent },
       { path: 'expenses', component: DummyExpensesComponent },
+      {
+      path: 'quotation',
+      loadComponent: () =>
+        import('./components/admin/quotation.component')
+          .then(m => m.QuotationComponent)
+    },
+      
       { path: '', redirectTo: 'billing', pathMatch: 'full' }
     ]
   },

@@ -1,0 +1,100 @@
+<div class="container">
+  <!-- Form Section -->
+  <div *ngIf="!showPreview" class="form-section">
+    <h2>Create Quotation</h2>
+    
+    <form [formGroup]="quotationForm">
+      <!-- Customer Details -->
+      <div class="form-group">
+        <label>Customer Name *</label>
+        <input 
+          type="text" 
+          formControlName="customerName" 
+          placeholder="Enter customer name"
+          class="form-control">
+        <span class="error" *ngIf="quotationForm.get('customerName')?.touched && quotationForm.get('customerName')?.invalid">
+          Customer name is required
+        </span>
+      </div>
+
+      <!-- Items Section -->
+      <div class="items-section">
+        <div class="section-header">
+          <h3>Items</h3>
+          <button type="button" class="btn-add" (click)="addItem()">+ Add Item</button>
+        </div>
+
+        <div formArrayName="items">
+          <div *ngFor="let item of items.controls; let i = index" [formGroupName]="i" class="item-card">
+            <div class="item-header">
+              <span>Item {{ i + 1 }}</span>
+              <button type="button" class="btn-remove" (click)="removeItem(i)" *ngIf="items.length > 1">
+                Remove
+              </button>
+            </div>
+
+            <div class="item-row">
+              <div class="form-group">
+                <label>Item Name *</label>
+                <input type="text" formControlName="name" placeholder="Product/Service name" class="form-control">
+              </div>
+
+              <div class="form-group">
+                <label>Quantity *</label>
+                <input type="number" formControlName="quantity" min="1" class="form-control">
+              </div>
+
+              <div class="form-group">
+                <label>Price (₹) *</label>
+                <input type="number" formControlName="price" min="0" step="0.01" class="form-control">
+              </div>
+
+              <div class="form-group">
+                <label>Total (₹)</label>
+                <input 
+                  type="text" 
+                  [value]="calculateItemTotal(item.value)" 
+                  readonly 
+                  class="form-control readonly">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Summary -->
+      <div class="summary-section">
+        <h3>Total Amount</h3>
+        <div class="total-amount">
+          ₹{{ calculateGrandTotal() | number:'1.2-2' }}
+        </div>
+      </div>
+
+      <!-- Terms and Conditions -->
+      <div class="form-group">
+        <label>Terms & Conditions</label>
+        <textarea 
+          formControlName="termsAndConditions" 
+          rows="4" 
+          class="form-control"
+          placeholder="Enter terms and conditions..."></textarea>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="actions">
+        <button type="button" class="btn btn-secondary" (click)="resetForm()">Reset</button>
+        <button type="button" class="btn btn-primary" (click)="previewQuotation()">Preview & Download</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Preview Section -->
+  <div *ngIf="showPreview" class="preview-section">
+    <div class="preview-actions">
+      <button type="button" class="btn btn-secondary" (click)="closePreview()">← Back to Edit</button>
+      <button type="button" class="btn btn-primary" (click)="downloadPDF()">📥 Download PDF</button>
+    </div>
+
+    <!-- <div id="quotation-preview" class="quotation-document">
+      <div class="header">
+        <img src="data:image/png;base64,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 -->
