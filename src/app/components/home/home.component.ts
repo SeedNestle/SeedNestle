@@ -1,9 +1,9 @@
-import { Component , OnInit,OnDestroy} from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { EmailService } from '../../services/email.service';
-
+import { SeoService } from '../../services/seo.service';
 
 @Component({
   selector: 'app-home',
@@ -12,55 +12,54 @@ import { EmailService } from '../../services/email.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit,OnDestroy {
+export class HomeComponent implements OnInit, OnDestroy {
   email: string = '';
-  message : string = '';
-  
-  isError: boolean = false; 
+  message: string = '';
+  isError: boolean = false;
 
-  constructor(private emailService: EmailService,private router: Router) {}
+  constructor(
+    private emailService: EmailService,
+    private router: Router,
+    private seo: SeoService   // ✅ injected
+  ) {}
 
   navigateTo(path: string) {
-    this.router.navigate([path]); // Navigate to the given path
+    this.router.navigate([path]);
   }
 
   subscribe() {
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-
     if (!this.email || !emailPattern.test(this.email)) {
       this.isError = true;
       this.message = 'Please enter a valid email.';
       return;
     }
-
     this.emailService.addEmail(this.email)
       .then(() => {
         this.isError = false;
         this.message = 'Email stored successfully!';
-        this.email = ''; // Clear input
+        this.email = '';
       })
       .catch(() => {
         this.isError = true;
         this.message = 'Error storing email. Please try again.';
       });
   }
-  
-
 
   questions = [
     {
       title: 'I want to style my house/business with plants',
-      description: 'Let’s create a green oasis together! Our personalised Plant Design Services can transform your space into a lush, welcoming environment. Schedule a consultation contact us!.',
+      description: 'Let\'s create a green oasis together! Our personalised Plant Design Services can transform your space into a lush, welcoming environment. Schedule a consultation contact us!.',
       expanded: false,
     },
     {
       title: "I need someone to look after my plants while I'm away",
-      description: 'No worries! I offer reliable Plant Sitting Services to ensure your plants are well-cared for while you’re away.  Our plant care experts will take care of your plants.',
+      description: 'No worries! I offer reliable Plant Sitting Services to ensure your plants are well-cared for while you\'re away. Our plant care experts will take care of your plants.',
       expanded: false,
     },
     {
       title: 'I need someone to look after plants (personal or commercial) on an ongoing basis',
-      description: 'I’m here to help your plants thrive! Our Plant Maintenance Services keep your plants happy and healthy. Grab a quote for maintenance plan here. We offer ongoing plant care and maintenance services.',
+      description: 'I\'m here to help your plants thrive! Our Plant Maintenance Services keep your plants happy and healthy. Grab a quote for maintenance plan here. We offer ongoing plant care and maintenance services.',
       expanded: false,
     },
   ];
@@ -68,8 +67,6 @@ export class HomeComponent implements OnInit,OnDestroy {
   toggleAnswer(question: any): void {
     question.expanded = !question.expanded;
   }
-
-
 
   reviews = [
     {
@@ -85,11 +82,19 @@ export class HomeComponent implements OnInit,OnDestroy {
       author: "— Sanjay"
     }
   ];
-  
+
   currentIndex = 0;
   interval: any;
 
   ngOnInit() {
+    // ✅ Set page-specific SEO
+    this.seo.updateSeo({
+      title: 'Premium Succulents, Seeds & Plant Care Services',
+      description: 'SeedNestle — Buy rare succulents, cactus, vegetable seeds & plant gift hampers online. Expert plant care, maintenance & landscaping services. Shop now.',
+      keywords: 'buy succulents online, rare cactus plants, vegetable seeds India, plant care services, succulent garden, plant gift hampers, Echeveria, Haworthia, plant maintenance',
+      canonical: '/home'
+    });
+
     this.startAutoSlide();
   }
 
@@ -98,9 +103,7 @@ export class HomeComponent implements OnInit,OnDestroy {
   }
 
   startAutoSlide() {
-    this.interval = setInterval(() => {
-      this.nextReview();
-    }, 5000);
+    this.interval = setInterval(() => this.nextReview(), 5000);
   }
 
   prevReview() {
@@ -117,5 +120,4 @@ export class HomeComponent implements OnInit,OnDestroy {
     clearInterval(this.interval);
     this.startAutoSlide();
   }
-
 }

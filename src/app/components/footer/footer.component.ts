@@ -1,4 +1,3 @@
-// footer.component.ts
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
@@ -10,4 +9,7 @@ import { RouterModule } from '@angular/router';
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.css']
 })
-export class FooterComponent {}
+export class FooterComponent {
+  // ✅ Dynamic copyright year — never goes stale
+  currentYear = new Date().getFullYear();
+}
