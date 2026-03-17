@@ -1,0 +1,12 @@
+# robots.txt — SeedNestle
+# Allow all crawlers to index public pages
+
+User-agent: *
+Allow: /
+
+# Block admin routes from being indexed
+Disallow: /admin-login
+Disallow: /admin-dashboard
+
+# Sitemap location
+Sitemap: https://www.seednestle.com/sitemap.xml

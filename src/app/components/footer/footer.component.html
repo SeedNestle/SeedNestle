@@ -1,52 +1,90 @@
-<footer class="footer">
-    <div class="footer-container">
-      <!-- Logo Section -->
-      <div class="footer-logo">
-        <img src="../../../assets/logo.jpeg" alt="Plant Collector Logo" class="logo" />
-        <h2>SEEDNESTLE</h2>
-      </div>
-  
-      <!-- About Us Section -->
-      <div class="footer-about">
-        <p>
-            SeedNestle, your one-stop destination for everything nature! At SeedNestle, we believe in "Sowing the seeds of a greener tomorrow." We are passionate about providing high-quality plant seeds, tools, and equipment that empower you to nurture and grow your own piece of nature. Whether you’re a beginner or a seasoned gardener, we have everything you need to cultivate your dream garden.
-        </p>
-        <!-- <p><strong>Address:</strong> 356 Victoria St, Richmond, VIC, 3121</p> -->
-      </div>
-  
-      <!-- Explore Section -->
-      <div class="footer-explore">
-        <h3>Explore</h3>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="/achivements()">About US</a></li>
-          <li><a href="/gallery()">Gallery</a></li>
-          <li><a href="/products()">Products</a></li>
-          <!-- <li><a href="#">FAQs</a></li> -->
-          <li><a [routerLink]="['/admin-login']">Admin</a></li>
+<footer class="footer" itemscope itemtype="https://schema.org/WPFooter">
+  <div class="footer-container">
 
-          
-        </ul>
-      </div>
-  
-      <!-- Contact Us Section -->
-      <div class="footer-contact">
-        <h3>Contact Us</h3>
-        <ul>
-          <!-- <li><i class="fas fa-phone"></i> +61 123 456 789</li> -->
-          <li><i class="fas fa-envelope"></i> seednestle&#64;gmail.com</li>
-          <li>
-            <a href="https://www.instagram.com/seednestle/" target="_blank">
-              <img
-                src="../../../assets/instagram.png"
-                alt="Instagram Logo"
-                class="instagram-logo"
-              />
-              
-            </a>
-          </li>
-        </ul>
-      </div>
+    <!-- ✅ Logo Section -->
+    <div class="footer-logo">
+      <img src="../../../assets/logo.jpeg"
+           alt="SeedNestle logo — premium succulents, seeds and plant care"
+           class="logo"
+           loading="lazy"
+           width="80"
+           height="80" />
+      <h2>SEEDNESTLE</h2>
     </div>
-  </footer>
-  
+
+    <!-- ✅ About Section -->
+    <div class="footer-about">
+      <p>
+        SeedNestle — your one-stop destination for everything nature. We believe in
+        <em>"Sowing the seeds of a greener tomorrow."</em> We provide high-quality
+        plant seeds, rare succulents, tools, and expert plant care services that
+        empower you to nurture and grow your own piece of nature. Whether you're a
+        beginner or a seasoned gardener, we have everything you need.
+      </p>
+    </div>
+
+    <!-- ✅ Explore Section — fixed Angular routerLink on all links -->
+    <nav class="footer-explore" aria-label="Footer navigation">
+      <h3>Explore</h3>
+      <ul>
+        <li><a [routerLink]="['/home']">Home</a></li>
+        <li><a [routerLink]="['/achivements']">About Us</a></li>
+        <li><a [routerLink]="['/gallery']">Gallery</a></li>
+        <li><a [routerLink]="['/products']">Products</a></li>
+        <li><a [routerLink]="['/services']">Services</a></li>
+      </ul>
+    </nav>
+
+    <!-- ✅ Contact Section -->
+    <div class="footer-contact"
+         itemscope itemtype="https://schema.org/Organization">
+      <h3>Contact Us</h3>
+      <ul>
+        <li>
+          <a href="mailto:seednestle@gmail.com"
+             itemprop="email"
+             aria-label="Email SeedNestle at seednestle@gmail.com">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            seednestle&#64;gmail.com
+          </a>
+        </li>
+        <li>
+          <a href="https://wa.me/918217225662"
+             target="_blank"
+             rel="noopener noreferrer"
+             aria-label="Chat with SeedNestle on WhatsApp">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+            WhatsApp Us
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/seednestle/"
+             target="_blank"
+             rel="noopener noreferrer"
+             itemprop="sameAs"
+             aria-label="Follow SeedNestle on Instagram">
+            <img src="../../../assets/instagram.png"
+                 alt="SeedNestle on Instagram"
+                 class="instagram-logo"
+                 loading="lazy"
+                 width="24"
+                 height="24" />
+            &#64;seednestle
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- ✅ Bottom bar with copyright -->
+  <div class="footer-bottom">
+    <p>
+      &copy; {{ currentYear }} SeedNestle. All rights reserved.
+      &nbsp;|&nbsp;
+      <a [routerLink]="['/home']">Home</a> &nbsp;·&nbsp;
+      <a [routerLink]="['/products']">Products</a> &nbsp;·&nbsp;
+      <a [routerLink]="['/services']">Services</a>
+    </p>
+  </div>
+</footer>
