@@ -24,7 +24,7 @@ interface Product {
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit, AfterViewInit {
-  categories = ['Succulents & Cactus', 'Terrarium Plants', 'Accessories', 'Gift Hampers', 'Fertilizers', 'Seeds', 'Stones'];
+  categories = ['Succulents & Cactus', 'Terrarium Plants', 'Accessories', 'Gift Hampers', 'Fertilizers', 'Seeds', 'Stones', 'Soils'];
   selectedCategory = 'Succulents & Cactus';
   cartCount = 0;
 
@@ -99,7 +99,32 @@ export class ProductsComponent implements OnInit, AfterViewInit {
     { id: 66, name: 'White Big Decorative Stones',             originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/Stones_img/white_big.jpeg',                                  category: 'Stones',              addedToCart: false },
     { id: 67, name: 'White Medium Decorative Stones',          originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/Stones_img/white_medium.jpeg',                               category: 'Stones',              addedToCart: false },
     { id: 68, name: 'White Mid-Medium Decorative Stones',      originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/Stones_img/white_mif_medium.jpeg',                           category: 'Stones',              addedToCart: false },
-    { id: 69, name: 'White Small Decorative Stones',           originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/Stones_img/white_small.jpeg',                                category: 'Stones',              addedToCart: false }
+    { id: 69, name: 'White Small Decorative Stones',           originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/Stones_img/white_small.jpeg',                                category: 'Stones',              addedToCart: false },
+     { id: 70, name: 'Black Soil',                             originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/soil_photos/blacksoil.png',                                category: 'Soils',              addedToCart: false },
+     { id: 71, name: 'Burn Rice Husk',                         originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/soil_photos/burntricehusk.png',                                category: 'Soils',              addedToCart: false },
+     { id: 72, name: 'Coco',                                   originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/soil_photos/coco.png',                                category: 'Soils',              addedToCart: false },
+     { id: 73, name: 'Coco Husk',                              originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/soil_photos/cocohusk.png',                                category: 'Soils',              addedToCart: false },
+     { id: 74, name: 'Coco Peat Block',                        originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/soil_photos/cocopeakblock.png',                                category: 'Soils',              addedToCart: false },
+     { id: 75, name: 'Coco Peat Powder',                       originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/soil_photos/cocopeatpowder.png',                                category: 'Soils',              addedToCart: false },
+     { id: 76, name: 'Cow Manure Compost',                     originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/soil_photos/cowmanurecompost.png',                                category: 'Soils',              addedToCart: false },
+     { id: 77, name: 'Farm Yard Manure',                       originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/soil_photos/farmyardmanure.png',                                category: 'Soils',              addedToCart: false },
+     { id: 78, name: 'Garden Soil Mix',                        originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/soil_photos/gardensoilmix.png',                                category: 'Soils',              addedToCart: false },
+     { id: 79, name: 'Goat Manure Compost',                    originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/soil_photos/goatmanurecompost.png',                                category: 'Soils',              addedToCart: false },
+     { id: 80, name: 'Leaf Compost',                           originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/soil_photos/leafcompost.png',                                category: 'Soils',              addedToCart: false },
+     { id: 81, name: 'Neem Cake Powder',                       originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/soil_photos/neemcakepowder.png',                                category: 'Soils',              addedToCart: false },
+     { id: 82, name: 'Organic compost',                        originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/soil_photos/organiccompost.png',                                category: 'Soils',              addedToCart: false },
+     { id: 83, name: 'Organic Soil Mix',                       originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/soil_photos/organicsoilmix.png',                                category: 'Soils',              addedToCart: false },
+     { id: 84, name: 'Peat Moss',                              originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/soil_photos/peatmoss.png',                                category: 'Soils',              addedToCart: false },
+     { id: 85, name: 'Perlite',                                originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/soil_photos/perlite.png',                                category: 'Soils',              addedToCart: false },
+     { id: 86, name: 'Potting Soil Mix',                       originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/soil_photos/pottingsoilmix.png',                                category: 'Soils',              addedToCart: false },
+     { id: 87, name: 'Raised Bed Soil',                        originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/soil_photos/raisedbedsoil.png',                                category: 'Soils',              addedToCart: false },
+     { id: 88, name: 'Red Soil',                               originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/soil_photos/redsoil.png',                                category: 'Soils',              addedToCart: false },
+    { id: 88, name: 'Rice Husk',                               originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/soil_photos/ricehusk.png',                                category: 'Soils',              addedToCart: false },
+     { id: 88, name: 'Top Soil',                               originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/soil_photos/topsoil.png',                                category: 'Soils',              addedToCart: false },
+     { id: 88, name: 'Vermicompost',                           originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/soil_photos/vermicompost.png',                                category: 'Soils',              addedToCart: false },
+     { id: 88, name: 'Vermiculite',                            originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/soil_photos/vermiculite.png',                                category: 'Soils',              addedToCart: false },
+
+
   ];
 
   filteredProducts = [...this.products];
