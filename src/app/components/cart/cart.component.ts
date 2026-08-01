@@ -61,7 +61,7 @@ export class CartComponent implements OnInit {
     message += `%0A*Total Amount: ₹${totalAmount}*%0A%0A`;
     message += 'Proceeding with the order. Please confirm.';
 
-    const whatsappNumber = '918217225662';
+    const whatsappNumber = '918970117954';
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
     window.open(whatsappUrl, '_blank');
   }
