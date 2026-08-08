@@ -1,4 +1,4 @@
-<marquee behavior="" direction="" style="color: #87e241;">🌱 Our online store is now live with a limited selection of products. If you're looking for any specific plants, feel free to reach out — we'll gladly source them for you. Stay connected as we continue to grow! 🌟</marquee>
+<div class="announcement-bar">🌱 Our online store is now live with a limited selection of products. If you're looking for any specific plants, feel free to reach out — we'll gladly source them for you. Stay connected as we continue to grow! 🌟</div>
 
 
 
@@ -59,73 +59,66 @@
   </div>
 
 
-  <!-- effects    -->
-<div class="view">
-  <div class="block">
-    <img src="../../../assets/pick4.jpg" alt="Gardening Tools" />
-    
-    <span>- John Doe</span>
-  </div>
-  <div class="block">
-    <p style="font-family: Arial, sans-serif; font-size: 16px; color: #3a3a3a; line-height: 1.6; margin: 0;">
-      <strong>Your Journey to a Greener Space Starts Here</strong><br>
-      At SeedNEstle, we're dedicated to guiding you on your plant journey with top-tier products, expert services, and personalised education. Whether you’re looking to beautify your space with high-quality plants.
-    </p>
-    
-  </div>
-  <div class="block">
-    <img src="../../../assets/pic1.webp" alt="Plant Growth" />
-    <p>See your garden flourish with our high-quality seeds.</p>
-  </div>
-  <div class="block">
+  <section class="view" aria-labelledby="green-space-title">
+    <div class="view-grid">
+      <article class="block image-card">
+        <img src="../../../assets/hero.jpg" alt="Collection of indoor plants" />
+        <span>- John Doe</span>
+      </article>
 
-    <p style="font-family: Arial, sans-serif; font-size: 16px; color: #3a3a3a; line-height: 1.6; margin: 0;">
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color: orange;">Quality Products</strong><br>
-      <strong>Handpicked, Premium Quality Plants</strong><br>
-      Explore our curated selection of premium plants, chosen for their beauty and quality. Perfect for adding a touch of nature to any space.
-    </p>
+      <article class="block intro-card">
+        <p>
+          <strong id="green-space-title">Your Journey to a Greener Space Starts Here</strong><br>
+          At SeedNEstle, we're dedicated to guiding you on your plant journey with top-tier products, expert services, and personalised education. Whether you’re looking to beautify your space with high-quality plants.
+        </p>
+      </article>
 
-  
-    <div class="product-button-container">
-      <button class="btn-product" (click)="navigateTo('/products')">Explore Products</button>
+      <article class="block image-card image-card-tall">
+        <img src="../../../assets/Monstera.jpg" alt="Monstera plant" />
+        <p>See your garden flourish with our high-quality seeds.</p>
+      </article>
     </div>
-    
 
+    <section class="product-highlight" aria-label="Product highlights">
+      <article class="highlight-copy quality-copy">
+        <p>
+          <strong class="eyebrow">Quality Products</strong><br>
+          <strong>Handpicked, Premium Quality Plants</strong><br>
+          Explore our curated selection of premium plants, chosen for their beauty and quality. Perfect for adding a touch of nature to any space.
+        </p>
+        <div class="product-button-container">
+          <button class="btn-product" (click)="navigateTo('/products')">Explore Products</button>
+        </div>
+      </article>
 
-    
-    
+      <article class="highlight-copy">
+        <p>
+          <strong class="eyebrow">Professional Services</strong><br>
+          <strong>Expert Plant Care & Maintenance Services</strong><br>
+          Our professional plant care and maintenance services ensure your plants thrive. Trust us to keep your green friends healthy and vibrant.
+        </p>
+      </article>
 
-    
-   
+      <article class="highlight-image">
+        <img src="../../../assets/hero1.jpg" alt="Plants growing in a bright space" />
+      </article>
 
+      <article class="highlight-image gift-image">
+        <img src="../../../assets/gift.jpg" alt="Curated plant gift hamper" />
+      </article>
 
-  </div>
-  <div class="block">
-    <img src="../../../assets/pick2.jpeg" alt="Special Offers" />
-    <p></p>
-  </div>
-  <div class="block">
-    <p style="font-family: Arial, sans-serif; font-size: 16px; color: #3a3a3a; line-height: 1.6; margin: 0;">
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color: orange;">Professional Services</strong><br>
-      <strong>Expert Plant Care & Maintenance Services</strong><br>
-      Our professional plant care and maintenance services ensure your plants thrive. Trust us to keep your green friends healthy and vibrant.
-    </p>
-  </div>
-  <div class="block">
-    <img src="../../../assets/gift.jpg" alt="Special Offers" />
-    <p></p>
-  </div>
-  <div class="block">
-    <p style="font-family: Arial, sans-serif; font-size: 16px; color: #3a3a3a; line-height: 1.6; margin: 0;">
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong style="color: orange;">Curated Plant Gift Services</strong><br>
-      <strong>Plant Gift Hampers – The Perfect Gift for Plant Lovers!</strong><br>
-      Looking for a unique gift that’s both thoughtful and vibrant? Our Plant Gift Hampers are the perfect choice for plant lovers. Curated with care.
-    </p>
-    <div class="product-button-container">
-      <button class="btn-product" (click)="navigateTo('/products')">Explore more</button>
-    </div>
-  </div>
-</div>
+      <article class="highlight-copy gift-copy">
+        <p>
+          <strong class="eyebrow">Curated Plant Gift Services</strong><br>
+          <strong>Plant Gift Hampers – The Perfect Gift for Plant Lovers!</strong><br>
+          Looking for a unique gift that’s both thoughtful and vibrant? Our Plant Gift Hampers are the perfect choice for plant lovers. Curated with care.
+        </p>
+        <div class="product-button-container">
+          <button class="btn-product" (click)="navigateTo('/products')">Explore more</button>
+        </div>
+      </article>
+    </section>
+  </section>
 
 <div class="qa-container">
   <h2>How Can We Help You?</h2>
@@ -142,7 +135,7 @@
 <h2 style="text-align: center; font-size: 24px; font-weight: bold; margin-bottom: 20px;">Featured Collections</h2>
 <p style="text-align: center; margin-bottom: 20px;">
   <a (click)="navigateTo('/products')" 
-     style="color: #f18e1c; text-decoration: underline; font-size: 16px; font-weight: bold; transition: color 0.3s ease; cursor: pointer;"
+      style="color: #f18e1c; text-decoration: underline; font-size: 16px; font-weight: bold; cursor: pointer;"
      onmouseover="this.style.color='blue'" 
      onmouseout="this.style.color='#007bff'">
     See More →
