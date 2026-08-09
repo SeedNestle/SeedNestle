@@ -34,30 +34,21 @@ export class ProductsComponent implements OnInit, AfterViewInit {
 
 
      //Soils and growing medium
-    
-    { id: 1, name: 'Black Soil',                             originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/soil_photos/blacksoil.png',                                category: 'Soils and growing medium',              addedToCart: false },
-     { id: 2, name: 'Burn Rice Husk',                         originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/soil_photos/burntricehusk.png',                                category: 'Soils and growing medium',              addedToCart: false },
-     { id: 3, name: 'Coco',                                   originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/soil_photos/coco.png',                                category: 'Soils and growing medium',              addedToCart: false },
-     { id: 4, name: 'Coco Husk',                              originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/soil_photos/cocohusk.png',                                category: 'Soils and growing medium',              addedToCart: false },
-          { id: 5, name: 'Neem Cake Powder',                       originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/soil_photos/neemcakepowder.png',                                category: 'Soils and growing medium',              addedToCart: false },
-     { id: 6, name: 'Organic compost',                        originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/soil_photos/organiccompost.png',                                category: 'Soils and growing medium',              addedToCart: false },
-     
-     
-     
-     
-     { id: 7, name: 'Organic Soil Mix',                       originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/soil_photos/organicsoilmix.png',                                category: 'Soils and growing medium',              addedToCart: false },
-     { id: 8, name: 'Peat Moss',                              originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/soil_photos/peatmoss.png',                                category: 'Soils and growing medium',              addedToCart: false },
-     { id: 9, name: 'Perlite',                                originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/soil_photos/perlite.png',                                category: 'Soils and growing medium',              addedToCart: false },
-     { id: 10, name: 'Potting Soil Mix',                       originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/soil_photos/pottingsoilmix.png',                                category: 'Soils and growing medium',              addedToCart: false },
-     { id: 11, name: 'Raised Bed Soil',                        originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/soil_photos/raisedbedsoil.png',                                category: 'Soils and growing medium',              addedToCart: false },
-     { id: 12, name: 'Red Soil',                               originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/soil_photos/redsoil.png',                                category: 'Soils and growing medium',              addedToCart: false },
-    { id: 13, name: 'Rice Husk',                               originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/soil_photos/ricehusk.png',                                category: 'Soils and growing medium',              addedToCart: false },
-     { id: 14, name: 'Top Soil',                               originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/soil_photos/topsoil.png',                                category: 'Soils and growing medium',              addedToCart: false },
-     { id: 15, name: 'Vermiculite',                            originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/soil_photos/vermiculite.png',                                category: 'Soils and growing medium',              addedToCart: false },
+// Soils and growing medium
+/*
+{ id: 1, name: 'Black Soil', originalPrice: 90, price: 60, discount: '15% OFF', image: 'assets/soil_photos/blacksoil.png', category: 'Soils and growing medium', addedToCart: false },
+{ id: 2, name: 'Burn Rice Husk', originalPrice: 90, price: 60, discount: '15% OFF', image: 'assets/soil_photos/burntricehusk.png', category: 'Soils and growing medium', addedToCart: false },
+...
+{ id: 15, name: 'Vermiculite', originalPrice: 90, price: 60, discount: '15% OFF', image: 'assets/soil_photos/vermiculite.png', category: 'Soils and growing medium', addedToCart: false },
+*/
 
+{ id: 93, name: 'Vermicompost', originalPrice: 500, price: 400, discount: '20% OFF', image: 'assets/soil_photos/Sn_Vermicompost.png', category: 'Soils and growing medium', addedToCart: false },
+{ id: 94, name: 'Red Soil', originalPrice: 250, price: 200, discount: '20% OFF', image: 'assets/soil_photos/Sn_Red_Soil.png', category: 'Soils and growing medium', addedToCart: false },
+{ id: 95, name: 'Potting Mix', originalPrice: 350, price: 250, discount: '29% OFF', image: 'assets/soil_photos/SN_Potting_Mix.png', category: 'Soils and growing medium', addedToCart: false },
+{ id: 96, name: 'Coco Peat', originalPrice: 300, price: 200, discount: '33% OFF', image: 'assets/soil_photos/Sn_Coco_Peat.png', category: 'Soils and growing medium', addedToCart: false },
 
-    //fertilizers
-
+/*
+// Fertilizers
     { id: 16,  name: 'Sempervivum calcareum',                   originalPrice: 410, price: 99,  discount: '10% OFF', image: 'assets/medi-spray.webp',                                            category: 'Fertilizers',         addedToCart: false },
      { id: 17, name: 'Vermicompost',                           originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/soil_photos/vermicompost.png',                                category: 'Fertilizers',              addedToCart: false },
      { id: 18, name: 'Coco Peat Block',                        originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/soil_photos/cocopeakblock.png',                                category: 'Fertilizers',              addedToCart: false },
@@ -68,7 +59,7 @@ export class ProductsComponent implements OnInit, AfterViewInit {
      { id: 23, name: 'Goat Manure Compost',                    originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/soil_photos/goatmanurecompost.png',                                category: 'Fertilizers',              addedToCart: false },
      { id: 24, name: 'Leaf Compost',                           originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/soil_photos/leafcompost.png',                                category: 'Fertilizers',              addedToCart: false },
 
-
+  */
     // Succulents & Cactus
 
 
