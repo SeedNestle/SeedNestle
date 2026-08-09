@@ -47,6 +47,7 @@ export class ProductsComponent implements OnInit, AfterViewInit {
 { id: 95, name: 'Potting Mix', originalPrice: 350, price: 250, discount: '29% OFF', image: 'assets/soil_photos/SN_Potting_Mix.png', category: 'Soils and growing medium', addedToCart: false },
 { id: 96, name: 'Coco Peat', originalPrice: 300, price: 200, discount: '33% OFF', image: 'assets/soil_photos/Sn_Coco_Peat.png', category: 'Soils and growing medium', addedToCart: false },
 
+/*
 // Fertilizers
     { id: 16,  name: 'Sempervivum calcareum',                   originalPrice: 410, price: 99,  discount: '10% OFF', image: 'assets/medi-spray.webp',                                            category: 'Fertilizers',         addedToCart: false },
      { id: 17, name: 'Vermicompost',                           originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/soil_photos/vermicompost.png',                                category: 'Fertilizers',              addedToCart: false },
@@ -58,7 +59,7 @@ export class ProductsComponent implements OnInit, AfterViewInit {
      { id: 23, name: 'Goat Manure Compost',                    originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/soil_photos/goatmanurecompost.png',                                category: 'Fertilizers',              addedToCart: false },
      { id: 24, name: 'Leaf Compost',                           originalPrice: 90,  price: 60,  discount: '15% OFF', image: 'assets/soil_photos/leafcompost.png',                                category: 'Fertilizers',              addedToCart: false },
 
-
+  */
     // Succulents & Cactus
 
 
