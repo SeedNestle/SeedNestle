@@ -192,6 +192,15 @@ padding: 0;
   grid-row: span 2;
 }
 
+.highlight-inline-image {
+  display: block;
+  width: calc(100% + 56px);
+  height: 184px;
+  margin: -28px -28px 24px;
+  object-fit: cover;
+  object-position: center;
+}
+
 .eyebrow {
   display: inline-block;
   margin-bottom: 10px;
